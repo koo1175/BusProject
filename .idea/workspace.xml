@@ -6,19 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="92c98f30-6511-43a9-a1b3-5f30a1a794fc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/driver/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/driver/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/driver/app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/driver/assets/adaptive-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/driver/assets/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/driver/assets/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/driver/assets/splash.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/driver/babel.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/driver/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/driver/package.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/user/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/user/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/user/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/user/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/user/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/user/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +34,9 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2VQqvB0HfVVR4OtXy9crA4GBgAY" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -64,6 +57,11 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/songdongjun/Desktop/BusProject/user/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -83,7 +81,11 @@
       <workItem from="1695384298832" duration="582000" />
       <workItem from="1695385045549" duration="191000" />
       <workItem from="1695385506636" duration="3156000" />
-      <workItem from="1695388677351" duration="1203000" />
+      <workItem from="1695388677351" duration="3949000" />
+      <workItem from="1695394584984" duration="105000" />
+      <workItem from="1695394815250" duration="3895000" />
+      <workItem from="1695403392793" duration="14474000" />
+      <workItem from="1695466498032" duration="6527000" />
     </task>
     <servers />
   </component>
