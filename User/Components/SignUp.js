@@ -12,14 +12,11 @@ const SignUp = () => {
     const [inputName, setInputName] = useState("");
     const [idValidationMessage, setIdValidationMessage] = useState(""); // 아이디 유효성 검사 결과 메시지를 저장할 상태 변수
 
-    // 알파벳 대소문자 또는 숫자로 시작하고 끝나며 4~12자리인지 검사
-    let regexrId = /^[a-zA-Z0-9]{4,12}$/;
-    // 알파벳 대소문자 또는 숫자로 시작하고 끝나며 4~12자리인지 검사
-    let regexrPw = /^[a-zA-Z0-9]{4,12}$/;
-    // 이름
-    let regexrName = /^[가-힣]{2,4}$/;
-    // 전화 번호 형식
-    let regexrPhone = /\d{3}-\d{3,4}-\d{4}/g;
+    // 정규 표현식 패턴들
+    const regexrId = /^[a-zA-Z0-9]{4,12}$/;
+    const regexrPw = /^[a-zA-Z0-9]{4,12}$/;
+    const regexrName = /^[가-힣]{2,4}$/;
+    const regexrPhone = /\d{3}-\d{3,4}-\d{4}/g;
 
     // 아이디 유효성 검사 버튼을 눌렀을 때 호출되는 함수
     const handleIdValidation = () => {
@@ -35,13 +32,9 @@ const SignUp = () => {
 
         // 유효성 검사를 통과하면 메시지 초기화
         setIdValidationMessage("사용할 수 있는 아이디 입니다.");
-
-
-
     };
 
     const handleSignUp = () => {
-
         if (inputId === "") {
             Alert.alert("아이디를 입력하세요.");
             return;
@@ -57,22 +50,21 @@ const SignUp = () => {
             return;
         }
 
+        if (inputPassword !== inputPassword2) {
+            Alert.alert("입력된 비밀번호의 값이 다릅니다. 확인해주세요.");
+            return;
+        }
+
+        if (inputPassword.length < 4 || inputPassword.length > 10) {
+            Alert.alert("비밀번호는 4~10글자로 입력해주세요.");
+            return;
+        }
+
         // 이름 유효성 검사 (2글자 이상)
         if (inputName.length < 2) {
             Alert.alert("이름은 2글자 이상이어야 합니다.");
             return;
         }
-
-        if(inputPassword !== inputPassword2){
-            Alert.alert("입력된 비밀번호의 값이 다릅니다. 확인해주세요.")
-            return;
-        }
-
-        if(inputPassword > 4 && inputPassword < 10){
-            Alert.alert("비밀번호는 4~10글자로 입력해주세요.")
-            return;
-        }
-
 
         // 전화번호 유효성 검사 (10 또는 11자리 숫자)
         if (!regexrPhone.test(inputPhoneNumber)) {
@@ -82,7 +74,6 @@ const SignUp = () => {
 
         // 회원가입 로직을 수행하고, 성공/실패 메시지를 표시하거나 원하는 동작을 수행하세요.
         Alert.alert('회원가입이 완료되었습니다.');
-
         navigation.navigate('LogIn'); // 모든 검사를 통과한 후 로그인 화면으로 이동
     };
 
@@ -102,7 +93,7 @@ const SignUp = () => {
                     style={styles.validationButton}
                     onPress={handleIdValidation}
                 >
-                    <Text style={styles.buttonText}>아이디 유효성 검사</Text>
+                    <Text style={styles.buttonText}>확인</Text>
                 </TouchableOpacity>
                 <Text style={styles.validationMessage}>{idValidationMessage}</Text>
             </View>
@@ -151,7 +142,6 @@ const SignUp = () => {
             <TouchableOpacity
                 style={styles.button}
                 onPress={handleSignUp}
-
             >
                 <Text style={styles.buttonText}>회원가입</Text>
             </TouchableOpacity>
@@ -172,22 +162,27 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     inputContainer: {
+        flexDirection: 'row',
         marginBottom: 20,
         width: '80%',
+        alignItems: 'center', // 왼쪽 정렬을 위한 스타일
     },
     inputLabel: {
         fontSize: 18,
         marginBottom: 10,
         color: 'gray',
+        width: '20%', // 왼쪽 정렬을 위한 스타일
+        textAlign: 'left', // 왼쪽 정렬을 위한 스타일
     },
     textInput: {
         borderColor: "#000000",
         borderWidth: 1,
-        width: '100%',
+        width: '60%',
         height: 40,
         fontSize: 18,
         borderRadius: 5,
         paddingLeft: 10,
+        textAlign: 'left', // 왼쪽 정렬을 위한 스타일
     },
     button: {
         backgroundColor: 'blue',
@@ -204,7 +199,7 @@ const styles = StyleSheet.create({
     },
     validationButton: {
         backgroundColor: 'gray',
-        width: '80%',
+        width: '25%',
         height: 40,
         justifyContent: 'center',
         alignItems: 'center',
@@ -214,6 +209,7 @@ const styles = StyleSheet.create({
     validationMessage: {
         color: 'red',
         marginTop: 5,
+        flex: 2,
     },
 });
 

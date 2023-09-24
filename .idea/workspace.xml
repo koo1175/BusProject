@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dc3f63f6-918e-47bd-8699-7493615cb4e7" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/Components/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/SignUp.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +38,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -51,6 +53,7 @@
       <workItem from="1695537271359" duration="626000" />
       <workItem from="1695539214811" duration="9000" />
       <workItem from="1695539231434" duration="64000" />
+      <workItem from="1695540836555" duration="2498000" />
     </task>
     <servers />
   </component>
