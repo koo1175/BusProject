@@ -1,43 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import { Alert, StyleSheet, Text, View, Button } from 'react-native';
+import React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import Login from './src/components/Login';
+import Main from './src/components/Main';
+import RoadSetting from './src/components/RoadSetting';
+import CheckRoad from './src/components/CheckRoad';
+import RideBus from './src/components/RideBus';
+import BusStop from './src/components/BusStop';
+import HowLong from './src/components/HowLong';
+import CheckRideBus from './src/components/CheckRideBus';
 
-export default function App() {
+const Stack = createNativeStackNavigator();
+
+function App() {
   return (
-    <View style={styles.container}>
-      <Text>버튼을 만들어보자</Text>
-      <StatusBar style="auto" />
-      <View style={styles.fixToText}>
-        <Button 
-          title="회원가입"
-          onPress = {() => Alert.alert("alert 띄우기")}
-        />
-        <Button 
-          title="로그인"
-          onPress = {() => Alert.alert("alert 띄우기")}
-        />
-      </View>
-      
-
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Login">
+        <Stack.Screen name="로그인" component={Login} />
+        <Stack.Screen name="Main" component={Main} />
+        <Stack.Screen name="RoadSetting" component={RoadSetting} />
+        <Stack.Screen name="CheckRoad" component={CheckRoad} />
+        <Stack.Screen name="RideBus" component={RideBus} />
+        <Stack.Screen name="BusStop" component={BusStop} />
+        <Stack.Screen name="HowLong" component={HowLong} />
+        <Stack.Screen name="CheckRideBus" component={CheckRideBus} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-  },
-  fixToText: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  buttonSize: {
-    margin: 10,
-  },
-  button: {
-    alignItems: 'center',
-    backgroundColor: "#DDDDDD",
-    padding: 10,
-  },
-});
+export default App;
