@@ -3,28 +3,34 @@ import React, { useState, useEffect } from 'react';
 import { View, Button, Text, TextInput, FlatList } from 'react-native';
 import axios from 'axios';
 
-function Login({navigation}) {
+function Sign({navigation}) {
   const [userId, setUserId] = useState('');
   const [password, setPassword] = useState('');
+  const [name, setName] = useState(''); // 이름을 추가합니다.
+  const [phoneNum, setPhoneNum] = useState('');
+  const [rideORgetOff, setRideORgetOff] = useState(false);
 
   const registerUser = async () => {
+    
     try {
-        await axios.post("http://bus-project.kro.kr/user/login",null, {
-          params: {
-            user_id: userId,
+        await axios.post("http://bus-project.kro.kr/user/create", null,
+        {
+          params : {user_id: userId,
+            name: name,
             password: password,
-          }
-        }).then(response => {
+            ride_or_getoff: rideORgetOff,
+            phone_num: phoneNum}
+          })
+        .then(response => {
           // 성공적으로 요청을 보낸 경우의 처리
           console.log('요청 성공:', response.data);
-          navigation.navigate('Main');
+          navigation.navigate('Login');
           // 서버에서 보낸 응답 데이터는 response.data에서 접근할 수 있음
         })
         .catch(error => {
           // 요청이 실패한 경우의 처리
-          console.error('아이디 또는 비밀번호가 일치하지 않습니다.', error);
+          console.error('요청 실패:', error);
         });
-        
     } 
     catch (error) {
         console.error('Error registering user:', error);
@@ -46,10 +52,23 @@ function Login({navigation}) {
               value={password}
               onChangeText={text => setPassword(text)}
           />
+          <Text>Name:</Text>
+          <TextInput
+              placeholder="Enter name"
+              value={name}
+              onChangeText={text => setName(text)} // 이름을 상태로 업데이트합니다.
+          />
+          <Text>Phone Number:</Text>
+          <TextInput
+                placeholder="Enter phoneNum"
+                secureTextEntry={true}
+                value={phoneNum}
+                onChangeText={text => setPhoneNum(text)}
+            />
             
           <Button title="Submit" onPress={registerUser} />
       </View>
   );
 };
 
-export default Login;
+export default Sign;
