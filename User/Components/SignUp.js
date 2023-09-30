@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 import { useNavigation } from "@react-navigation/native";
-import { isThatRight } from "./check"; // check.js 파일에서 isValidId 함수를 가져옵니다.
 
 const SignUp = () => {
     const navigation = useNavigation();
@@ -95,8 +94,8 @@ const SignUp = () => {
                 >
                     <Text style={styles.buttonText}>확인</Text>
                 </TouchableOpacity>
-                <Text style={styles.validationMessage}>{idValidationMessage}</Text>
             </View>
+            <Text style={styles.validationMessage}>{idValidationMessage}</Text>
             <View style={styles.inputContainer}>
                 <Text style={styles.inputLabel}>비밀번호</Text>
                 <TextInput
@@ -165,14 +164,14 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         marginBottom: 20,
         width: '80%',
-        alignItems: 'center', // 왼쪽 정렬을 위한 스타일
+        alignItems: 'center',
     },
     inputLabel: {
         fontSize: 18,
         marginBottom: 10,
         color: 'gray',
-        width: '20%', // 왼쪽 정렬을 위한 스타일
-        textAlign: 'left', // 왼쪽 정렬을 위한 스타일
+        width: '20%',
+        textAlign: 'left',
     },
     textInput: {
         borderColor: "#000000",
@@ -182,7 +181,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
         borderRadius: 5,
         paddingLeft: 10,
-        textAlign: 'left', // 왼쪽 정렬을 위한 스타일
+        textAlign: 'left',
     },
     button: {
         backgroundColor: 'blue',
@@ -199,17 +198,18 @@ const styles = StyleSheet.create({
     },
     validationButton: {
         backgroundColor: 'gray',
-        width: '25%',
+        width: '20%',
         height: 40,
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 5,
-        marginTop: 10,
+        marginLeft: 10,
     },
     validationMessage: {
         color: 'red',
         marginTop: 5,
-        flex: 2,
+        width: '80%',
+        textAlign: 'left',
     },
 });
 

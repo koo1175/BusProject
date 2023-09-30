@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc3f63f6-918e-47bd-8699-7493615cb4e7" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bddc51b4-084b-4168-8688-09c5b8db40b9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bddc51b4-084b-4168-8688-09c5b8db40b9.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/Components/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/SignUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/user/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +21,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/동준" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -112,7 +117,7 @@
       <workItem from="1695652197539" duration="2457000" />
       <workItem from="1695655211041" duration="1161000" />
       <workItem from="1695743265234" duration="599000" />
-      <workItem from="1696046293819" duration="742000" />
+      <workItem from="1696046293819" duration="769000" />
     </task>
     <servers />
   </component>
