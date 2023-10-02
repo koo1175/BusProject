@@ -20,47 +20,43 @@ public class XmlParsing_test {
     }
 
     public static void getData() {
-//        int page = 1;	// 페이지 초기값
         try{
-            while(true){
-                // parsing할 url 지정(API 키 포함해서)
-                String url = "http://ws.bus.go.kr/api/rest/arrive/getArrInfoByRouteAll?ServiceKey=t2qs2a1o15tXR1NhKWY%2FTplsMnvey2e3kTFt8BIlR8dJ6JsaALNvYI6%2B5dKPSJbl%2FJ9C0dF7%2Boi2NwGJKHikSQ%3D%3D&busRouteId=100100118";
+            // parsing할 url 지정(API 키 포함해서)
+            String url = "http://ws.bus.go.kr/api/rest/arrive/getArrInfoByRouteAll?ServiceKey=t2qs2a1o15tXR1NhKWY%2FTplsMnvey2e3kTFt8BIlR8dJ6JsaALNvYI6%2B5dKPSJbl%2FJ9C0dF7%2Boi2NwGJKHikSQ%3D%3D&busRouteId=100100118";
 
-                DocumentBuilderFactory dbFactoty = DocumentBuilderFactory.newInstance();
-                DocumentBuilder dBuilder = dbFactoty.newDocumentBuilder();
-                Document doc = dBuilder.parse(url);
+            DocumentBuilderFactory dbFactoty = DocumentBuilderFactory.newInstance();
+            DocumentBuilder dBuilder = dbFactoty.newDocumentBuilder();
+            Document doc = dBuilder.parse(url);
 
-                // root tag
-                doc.getDocumentElement().normalize();
-                System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
-                // doc.getDocumentElement().getNodeName()는 XML의 최상위 tag값 ; Root element : <ServiceResult>
+            // root tag
+            doc.getDocumentElement().normalize();
+            System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
+            // doc.getDocumentElement().getNodeName()는 XML의 최상위 tag값 ; Root element : <ServiceResult>
 
-                // 파싱할 tag
-                NodeList nList = doc.getElementsByTagName("itemList");
-//                System.out.println("파싱할 리스트 수 : "+ nList.getLength());
+            // 파싱할 tag
+            NodeList nList = doc.getElementsByTagName("itemList");
+            System.out.println("파싱할 리스트 수 : "+ nList.getLength());
 
-                for(int temp = 0; temp < nList.getLength(); temp++){
-                    Node nNode = nList.item(temp);
-                    if(nNode.getNodeType() == Node.ELEMENT_NODE){
+            String previousStationName = null; // 이전 정류소명을 저장하기 위한 변수
 
-                        Element eElement = (Element) nNode;
-                        System.out.println("######################");
-                        //System.out.println(eElement.getTextContent());
-                        System.out.println("도착예정차량번호  : " + getTagValue("stNm", eElement));
-//                        System.out.println("상품 코드  : " + getTagValue("fin_prdt_cd", eElement));
-//                        System.out.println("상품명 : " + getTagValue("fin_prdt_nm", eElement));
-//                        System.out.println("연평균 수익률  : " + getTagValue("avg_prft_rate", eElement));
-//                        System.out.println("공시 이율  : " + getTagValue("dcls_rate", eElement));
+            for(int temp = 0; temp < nList.getLength(); temp++){
+                Node nNode = nList.item(temp);
+                if(nNode.getNodeType() == Node.ELEMENT_NODE){
+
+                    Element eElement = (Element) nNode;
+//                    System.out.println("######################");
+//                    System.out.println("정류소명  : " + getTagValue("stNm", eElement));
+                    String stationName = getTagValue("stNm", eElement);
+
+                    // 현재 정류소명과 이전 정류소명 비교
+                    if (stationName != null && !stationName.equals(previousStationName)) {
+                        System.out.println("정류소명  : " + stationName);
+                        previousStationName = stationName;
+                    }else{
+                        break;
                     }
                 }
-
-//                page += 1;
-//                System.out.println("page number : "+page);
-//                if(page > 12){
-//                    break;
-//                }
             }
-
         } catch (Exception e){
             e.printStackTrace();
         }

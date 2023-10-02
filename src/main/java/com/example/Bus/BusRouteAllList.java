@@ -30,7 +30,6 @@ public class BusRouteAllList {
         BufferedReader rd;
 
         if(conn.getResponseCode() >= 200 && conn.getResponseCode() <= 300) {
-            System.out.println("!@@!@!@!");
             rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
             // XML 데이터 파싱 및 출력
             XmlParsing_test.getData();
@@ -47,7 +46,7 @@ public class BusRouteAllList {
 
         rd.close();
         conn.disconnect();
-        System.out.println(sb.toString());
+//        System.out.println(sb.toString());
     }
 
 }
