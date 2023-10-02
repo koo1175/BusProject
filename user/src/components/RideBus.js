@@ -1,9 +1,10 @@
 // 메인 -> 버스 정거장 등록 페이지
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Text, FlatList, TouchableOpacity } from 'react-native';
 import { ListItem } from 'react-native-elements';
-
+import { PermissionsAndroid } from 'react-native';
+// import Geolocation from 'react-native-geolocation-service';
 
 const busStops = [
     { id: 1, title: '연화마을 7단지' },
@@ -25,11 +26,20 @@ const RideBus = ({navigation}) => {
           itemTitle: item.title,
         });
       };
+    useEffect(() => {
+      PermissionsAndroid.requestMultiple([
+        PermissionsAndroid.PERMISSIONS.ACCESS_COARSE_LOCATION,
+        PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+      ]);
+    }, []);
+
+
     return (
         <View>
         <Text style={ styles.titleStyle }>
             가까운 정류장
         </Text>
+
         <FlatList
             data={busStops}
             keyExtractor={(item) => item.id.toString()}

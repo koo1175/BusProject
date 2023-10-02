@@ -1,3 +1,5 @@
+// Main -> 경로 확인 버튼 눌렀을 때 페이지
+
 import React from 'react';
 import { View, TextInput, StyleSheet } from 'react-native';
 

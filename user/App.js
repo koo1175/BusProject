@@ -2,6 +2,7 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Login from './src/components/Login';
+import Sign from './src/components/Sign';
 import Main from './src/components/Main';
 import RoadSetting from './src/components/RoadSetting';
 import CheckRoad from './src/components/CheckRoad';
@@ -17,6 +18,7 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Login">
         <Stack.Screen name="로그인" component={Login} />
+        <Stack.Screen name="Sign" component={Sign} />
         <Stack.Screen name="Main" component={Main} />
         <Stack.Screen name="RoadSetting" component={RoadSetting} />
         <Stack.Screen name="CheckRoad" component={CheckRoad} />

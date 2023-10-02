@@ -24,7 +24,6 @@ function Login({navigation}) {
           // 요청이 실패한 경우의 처리
           console.error('아이디 또는 비밀번호가 일치하지 않습니다.', error);
         });
-        
     } 
     catch (error) {
         console.error('Error registering user:', error);
@@ -46,8 +45,8 @@ function Login({navigation}) {
               value={password}
               onChangeText={text => setPassword(text)}
           />
-            
-          <Button title="Submit" onPress={registerUser} />
+          <Button title="Sign up" onPress={navigation.navigate('Sign')} />
+          <Button title="Login" onPress={registerUser} />
       </View>
   );
 };
