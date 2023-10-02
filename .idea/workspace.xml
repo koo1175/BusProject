@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc3f63f6-918e-47bd-8699-7493615cb4e7" name="변경" comment="" />
+    <list default="true" id="dc3f63f6-918e-47bd-8699-7493615cb4e7" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/Driver/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Driver/package-lock.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -112,6 +114,7 @@
       <workItem from="1695814977965" duration="86000" />
       <workItem from="1696242368824" duration="660000" />
       <workItem from="1696249292594" duration="6000" />
+      <workItem from="1696252295619" duration="634000" />
     </task>
     <servers />
   </component>
