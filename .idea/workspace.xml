@@ -4,7 +4,66 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc3f63f6-918e-47bd-8699-7493615cb4e7" name="변경" comment="" />
+    <list default="true" id="dc3f63f6-918e-47bd-8699-7493615cb4e7" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Driver/Components/LogIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/Driver/Components/LogIn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/.idea/BusProject.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/.idea/dataSources/bddc51b4-084b-4168-8688-09c5b8db40b9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/.idea/dataSources/bddc51b4-084b-4168-8688-09c5b8db40b9/storage_v2/_src_/schema/BusProject.mfAluQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/.idea/dataSources/bddc51b4-084b-4168-8688-09c5b8db40b9/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/.idea/dataSources/bddc51b4-084b-4168-8688-09c5b8db40b9/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/.idea/dataSources/bddc51b4-084b-4168-8688-09c5b8db40b9/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/.idea/dataSources/bddc51b4-084b-4168-8688-09c5b8db40b9/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/.idea/libraries/mysql_connector_j_8_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/Driver/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/Driver/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/Driver/Components/Catch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/Driver/Components/HomeScreen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/Driver/Components/LogIn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/Driver/Components/Main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/Driver/Components/StackNavigator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/Driver/app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/Driver/assets/adaptive-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/Driver/assets/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/Driver/assets/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/Driver/assets/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/Driver/babel.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/Driver/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/Driver/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/User/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/User/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/User/Components/Catch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/User/Components/HomeScreen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/User/Components/LogIn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/User/Components/Main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/User/Components/SignUp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/User/Components/StackNavigator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/User/Components/check.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/User/app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/User/assets/adaptive-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/User/assets/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/User/assets/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/User/assets/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/User/babel.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/User/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/User/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/User/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/UserBack/demo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/UserBack/demo/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/UserBack/demo/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/UserBack/demo/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/UserBack/demo/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/UserBack/demo/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/UserBack/demo/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BusProject/UserBack/demo/src/main/resources/application.properties" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,31 +94,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;동준&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/songdongjun/Desktop/BusProject&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;라이브러리&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "동준",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "/Users/songdongjun/Desktop/BusProject",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "project.structure.last.edited": "라이브러리",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="애플리케이션.DemoApplication">
     <configuration name="DemoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.demo.DemoApplication" />
@@ -113,8 +172,6 @@
       <workItem from="1696242368824" duration="660000" />
       <workItem from="1696249292594" duration="6000" />
       <workItem from="1696255275007" duration="293000" />
-      <workItem from="1696256942008" duration="658000" />
-      <workItem from="1696257938964" duration="2000" />
     </task>
     <servers />
   </component>
