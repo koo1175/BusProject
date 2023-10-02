@@ -7,7 +7,7 @@ const LogIn = () => {
    
     return (
     
-      <View backgroundColor='#FFFFFF'>
+      <View >
         <View style={styles.container}>
            <Text style={styles.text_title}>로그인</Text>
            <Text style={styles.text}>전화번호</Text>
@@ -25,14 +25,14 @@ const LogIn = () => {
 const styles = StyleSheet.create({
     
     container : {
-     padding : 30,
-     alignItems : 'center'
+     alignItems : 'center',
+     height : '100%',
+     backgroundColor : '#FFFFFF'
     },
     text_title : {
-      marginTop : 20,
-      marginBottom : 150,
+      marginTop : 40,
+      marginBottom : 120,
       fontSize : 50,
-      alignSelf : 'flex-start'
     },
     text : {
       fontSize : 25

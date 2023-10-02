@@ -9,6 +9,7 @@ import Main from './Main';
 import Catch from './Catch';
 
 
+
 const Stack = createNativeStackNavigator();
 
 // StackNavigator 함수 
@@ -23,6 +24,7 @@ const StackNavigator = () => {
             <Stack.Screen name="Home" component={HomeScreen}/>
             <Stack.Screen name="Main" component={Main}/>
             <Stack.Screen name="Catch" component={Catch}/>
+            
         </Stack.Navigator>
     )
 }

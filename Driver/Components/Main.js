@@ -7,11 +7,14 @@ const Main = () => {
     const navigation = useNavigation();
     
     return (
-        <View backgroundColor="#FFFFFF">
-            <View style={styles.container}>
+        <View style={styles.container}>
+            <View>
                 <Text style={styles.title}>메인화면</Text>
                     <TouchableOpacity style = {styles.pan} onPress={() => navigation.navigate('Catch')}> 
-                    <Text style = {styles.text}>탑승 확인</Text> 
+                    <Text style = {styles.text}>탑승 현황</Text> 
+                    </TouchableOpacity> 
+                    <TouchableOpacity style = {styles.pan} onPress={() => navigation.navigate('Catch')}> 
+                    <Text style = {styles.text}>알림 설정</Text> 
                     </TouchableOpacity> 
             </View>
         </View>
@@ -20,24 +23,25 @@ const Main = () => {
 
 const styles = StyleSheet.create({
     container : {
-        padding : 30,
         alignItems : 'center',
-        backgroundColor : '#FFFFFF'
+        backgroundColor : '#FFFFFF',
+        height : '100%'
        },
     pan :{
-        width: '80%',
-        height : '40%', 
+        width: 200,
+        height : 100, 
         backgroundColor :'gray',
-        marginTop : '30%'
+        marginTop : 100
     },
     text : {
         color :'white',
         textAlign : 'center',
-        paddingTop : '15%',
+        marginTop : 30,
         fontSize : 25,
     },
     title : {
         fontSize : 60,
+        marginTop : 20
     }
     
   
