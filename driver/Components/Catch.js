@@ -35,16 +35,16 @@ const RideNotifications = () => {
     )}
 */
   return (
-    <View>
+    <View style = {styles.container}>
       <Text style = {styles.title}>승차 알림 목록</Text>
-
       <FlatList
         data={rideData}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({ item }) => (
-          <View >
+          <View>
             <View >
             <TouchableOpacity style = {styles.listItem}> 
+              <Text style = {styles.itemText}>탑승 예약</Text>
               <Text style = {styles.itemText}>버스 번호: {item.busNumber}</Text>
               <Text style = {styles.itemText}>사용자 이름: {item.userName}</Text>
               <Text style = {styles.itemText}>정류장 이름: {item.busStop}</Text> 
@@ -59,8 +59,8 @@ const RideNotifications = () => {
 
 const styles = StyleSheet.create({
   container : {
-      alignItems : 'center',
-      backgroundColor : '#FFFFFF'
+      backgroundColor : '#FFFFFF',
+      height : '100%'
      },
   listItem :{ 
       backgroundColor :'#ffffff',
@@ -72,7 +72,8 @@ const styles = StyleSheet.create({
     marginBottom : 5
   },
   title : {
-      fontSize : 40,
+    fontSize : 40,
+    alignSelf : 'center',
   }
   
 
