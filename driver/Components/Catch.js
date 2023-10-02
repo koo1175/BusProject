@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
+import { useNavigation } from "@react-navigation/native";
 
 const RideNotifications = () => {
   // 하드코딩된 데이터로 초기화
@@ -34,16 +35,18 @@ const RideNotifications = () => {
       </View>
     )}
 */
+  const navigation = useNavigation();
   return (
+    
     <View style = {styles.container}>
       <Text style = {styles.title}>승차 알림 목록</Text>
       <FlatList
         data={rideData}
-        keyExtractor={(item, index) => index.toString()}
+        keyExtractor={(item, index) => index.toString()}  
         renderItem={({ item }) => (
           <View>
             <View >
-            <TouchableOpacity style = {styles.listItem}> 
+            <TouchableOpacity style = {styles.listItem} onPress={() => navigation.navigate('CatchInfo')} > 
               <Text style = {styles.itemText}>탑승 예약</Text>
               <Text style = {styles.itemText}>버스 번호: {item.busNumber}</Text>
               <Text style = {styles.itemText}>사용자 이름: {item.userName}</Text>
