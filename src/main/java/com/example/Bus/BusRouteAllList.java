@@ -23,6 +23,7 @@ import java.io.IOException;
 @RestController
 public class BusRouteAllList {
     @GetMapping("/getArrInfoByRouteAll")
+    // http://localhost:8080/getArrInfoByRouteAll?busRouteId=100100118
     public void getArrInfoByRouteAllList(@RequestParam String busRouteId) throws IOException {
         StringBuilder urlBuilder = new StringBuilder("http://ws.bus.go.kr/api/rest/arrive/getArrInfoByRouteAll"); /*URL*/
         urlBuilder.append("?" + URLEncoder.encode("serviceKey","UTF-8") + "=t2qs2a1o15tXR1NhKWY%2FTplsMnvey2e3kTFt8BIlR8dJ6JsaALNvYI6%2B5dKPSJbl%2FJ9C0dF7%2Boi2NwGJKHikSQ%3D%3D"); /*Service Key*/

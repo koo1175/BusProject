@@ -18,6 +18,7 @@ import java.io.IOException;
 @RestController
 public class ArriveBusList {
     @GetMapping("/getStationByUid")
+    // http://localhost:8080/getStationByUid?arsId=13118
     public void ABList(String arsId) throws IOException {
         StringBuilder urlBuilder = new StringBuilder("http://ws.bus.go.kr/api/rest/stationinfo/getStationByUid"); /*URL*/
         urlBuilder.append("?" + URLEncoder.encode("serviceKey","UTF-8") + "=t2qs2a1o15tXR1NhKWY%2FTplsMnvey2e3kTFt8BIlR8dJ6JsaALNvYI6%2B5dKPSJbl%2FJ9C0dF7%2Boi2NwGJKHikSQ%3D%3D"); /*Service Key*/
