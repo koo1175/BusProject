@@ -1,9 +1,8 @@
 // 버스 탑승 확인/취소 페이지
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Text, FlatList, TouchableOpacity } from 'react-native';
 import { ListItem } from 'react-native-elements';
-
 
 
 
