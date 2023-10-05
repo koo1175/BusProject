@@ -45,8 +45,8 @@ function Login({navigation}) {
               value={password}
               onChangeText={text => setPassword(text)}
           />
-          <Button title="Sign up" onPress={navigation.navigate('Sign')} />
           <Button title="Login" onPress={registerUser} />
+          <Button title="Sign up" onPress={() => navigation.navigate('Sign')} />
       </View>
   );
 };
