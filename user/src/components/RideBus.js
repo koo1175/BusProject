@@ -8,13 +8,17 @@ import axios from 'axios';
 
 
   
-const RideBus = ({navigation}) => {
+const RideBus = ({ navigation,route }) => {
+
+  // 이전 Main페이지에서 받아온 위치
+  const { latitude, longitude } = route.params;
+
   // 버스 정류장 데이터 관리
   const [busStops, setBusStops] = useState([]);
 
       useEffect(() => {
         // 스프링 부트 서버(BusRouteAllListController)에서 api에 요청해서 받아온 정류장 데이터를 가져온다
-        axios.get('http://bus-project.kro.kr/getArrInfoByRouteAll?busRouteId=100100118') 
+        axios.get(`http://bus-project.kro.kr/getStationByPos?X=${latitude}&Y=${longitude}`) 
           .then(response => {
             // 가져온 데이터를 상태에 저장
             setBusStops(response.data);
@@ -27,7 +31,7 @@ const RideBus = ({navigation}) => {
       const handleItemPress = (item) => {
         // 선택한 문자열을 다음 페이지인 'BusStop' 페이지로 전달
         navigation.navigate('BusStop', {
-          selectedItem: item.stationName,
+          selectedItem: item.nearStationName,
         });
       };
 
@@ -36,7 +40,10 @@ const RideBus = ({navigation}) => {
         <Text style={ styles.titleStyle }>
             가까운 정류장
         </Text>
-
+        <View>
+            <Text>Latitude: {latitude}</Text>
+            <Text>Longitude: {longitude}</Text>
+        </View>
         <FlatList
             data={busStops}
             keyExtractor={(item, index) => index.toString()}
@@ -44,7 +51,7 @@ const RideBus = ({navigation}) => {
                 <TouchableOpacity onPress={() => handleItemPress(item)}>
                     <ListItem bottomDivider>
                     <ListItem.Content>
-                        <ListItem.Title>{item.stationName}</ListItem.Title>
+                        <ListItem.Title>{item.nearStationName}</ListItem.Title>
                     </ListItem.Content>
                     </ListItem>
                 </TouchableOpacity>

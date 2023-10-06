@@ -1,4 +1,4 @@
-Main.js
+//Main.js
 
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, Button, TouchableOpacity, Platform } from 'react-native';
@@ -54,7 +54,10 @@ function Main({navigation}) {
           <Text style={styles.text}>경로 확인</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('RideBus')}>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('RideBus', {
+          latitude: 126.924145806, // latitude 전달 {location.coords.latitude}
+          longitude: 37.56205, // longitude 전달 {location.coords.longitude}
+        })}>
           <Text style={styles.text}>버스 탑승 등록</Text>
         </TouchableOpacity>
       </View>
