@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc3f63f6-918e-47bd-8699-7493615cb4e7" name="변경" comment="" />
+    <list default="true" id="dc3f63f6-918e-47bd-8699-7493615cb4e7" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/User/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/src/components/CheckRideBus.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/components/CheckRideBus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/components/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/src/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/components/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/src/components/RideBus.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/components/RideBus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/src/components/RoadSetting.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/components/RoadSetting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/user/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/user/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,6 +127,8 @@
       <workItem from="1696261122496" duration="7194000" />
       <workItem from="1696421905090" duration="693000" />
       <workItem from="1696491660639" duration="1975000" />
+      <workItem from="1696509303682" duration="4761000" />
+      <workItem from="1696588850142" duration="85000" />
     </task>
     <servers />
   </component>

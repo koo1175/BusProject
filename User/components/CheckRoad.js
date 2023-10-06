@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, TextInput, StyleSheet } from 'react-native';
 
-function RoadSetting ({navigation}) {
+function CheckRoad ({navigation}) {
   return (
     <View style={styles.container}>
       {/* 상단 컨텐츠 */}
@@ -48,4 +48,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default RoadSetting;
+export default CheckRoad;
