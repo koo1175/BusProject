@@ -1,7 +1,8 @@
 // Login.js
 import React, { useState, useEffect } from 'react';
-import { View, Button, Text, TextInput, FlatList } from 'react-native';
+import {View, Button, Text, TextInput, FlatList, TouchableOpacity, StyleSheet} from 'react-native';
 import axios from 'axios';
+import LogIn from "../../components/Login";
 
 function Login({navigation}) {
     const [userId, setUserId] = useState('');
@@ -31,24 +32,97 @@ function Login({navigation}) {
     };
 
     return (
-        <View>
-            <Text>Id:</Text>
+        <View backgroundColor='#FFFFFF' style={styles.container}>
+            <Text style={styles.text_title}>로그인</Text>
+            <Text style={styles.text}>아이디</Text>
             <TextInput
-                placeholder="Enter Id"
+                style={styles.textInput}
+                keyboardType='default'
+                placeholder='아이디를 입력하세요'
                 value={userId}
                 onChangeText={text => setUserId(text)}
             />
-            <Text>Password:</Text>
+            <Text style={styles.text}>비밀번호</Text>
             <TextInput
-                placeholder="Enter password"
+                style={styles.textInput}
+                keyboardType='default'
                 secureTextEntry={true}
+                placeholder='비밀번호를 입력하세요'
                 value={password}
                 onChangeText={text => setPassword(text)}
             />
-            <Button title="Login" onPress={registerUser} />
-            <Button title="Sign up" onPress={() => navigation.navigate('Sign')} />
+            <TouchableOpacity
+                style={styles.button}
+                onPress={registerUser}
+            >
+                <Text style={styles.buttonText}>로그인</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+                style={styles.signupButton}
+                onPress={() => navigation.navigate('Sign')}
+            >
+                <Text style={styles.signupButtonText}>회원가입</Text>
+            </TouchableOpacity>
         </View>
     );
-};
+}
 
-export default Login;
+
+const styles = StyleSheet.create({
+    container: {
+        padding: 30,
+        alignItems: 'center'
+    },
+    text_title: {
+        marginTop: 20,
+        marginBottom: 20,
+        fontSize: 50,
+        alignSelf: 'flex-start'
+    },
+    text: {
+        fontSize: 25,
+        alignSelf: 'flex-start',
+        marginBottom: 10
+    },
+    textInput: {
+        borderColor: "#000000",
+        borderWidth: 1,
+        width: '70%',
+        height: '8%',
+        marginTop: 8,
+        marginBottom: 20,
+        fontSize: 25,
+        borderRadius: 5,
+        paddingLeft: 10
+    },
+    button: {
+        backgroundColor: 'blue',
+        width: '50%',
+        padding: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
+        fontSize: 20,
+        borderRadius: 5,
+        marginBottom: 10
+    },
+    buttonText: {
+        color: 'white',
+        fontSize: 20
+    },
+    signupButton: {
+        backgroundColor: 'green',
+        width: '50%',
+        padding: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
+        fontSize: 20,
+        borderRadius: 5
+    },
+    signupButtonText: {
+        color: 'white',
+        fontSize: 20
+    }
+});
+
+
+export default LogIn;

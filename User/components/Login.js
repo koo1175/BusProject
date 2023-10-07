@@ -16,9 +16,13 @@ const LogIn = () => {
                     password: password,
                 }
             }).then(response => {
+                // 성공적으로 요청을 보낸 경우의 처리
                 console.log('요청 성공:', response.data);
                 navigation.navigate('Main');
-            }).catch(error => {
+                // 서버에서 보낸 응답 데이터는 response.data에서 접근할 수 있음
+            })
+                .catch(error => {
+                    // 요청이 실패한 경우의 처리
                 console.error('아이디 또는 비밀번호가 일치하지 않습니다.', error);
             });
         } catch (error) {
@@ -54,7 +58,7 @@ const LogIn = () => {
             </TouchableOpacity>
             <TouchableOpacity
                 style={styles.signupButton}
-                onPress={() => navigation.navigate('SignUp')}
+                onPress={() => navigation.navigate('Sign')}
             >
                 <Text style={styles.signupButtonText}>회원가입</Text>
             </TouchableOpacity>
