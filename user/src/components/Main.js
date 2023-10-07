@@ -9,6 +9,10 @@ function Main({navigation}) {
   const [location, setLocation] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
 
+  const [latitude, setLatitude] = useState(null);
+  const [longitude, setLongitude] = useState(null);
+  
+
   useEffect(() => {
     (async () => {
       let { status } = await Location.requestForegroundPermissionsAsync();
@@ -19,6 +23,8 @@ function Main({navigation}) {
 
       let location = await Location.getCurrentPositionAsync({});
       setLocation(location);
+      setLatitude(location.coords.latitude);
+      setLongitude(location.coords.longitude);
     })();
   }, []);
 
@@ -55,8 +61,8 @@ function Main({navigation}) {
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('RideBus', {
-          latitude: 126.924145806, // latitude 전달 {location.coords.latitude}
-          longitude: 37.56205, // longitude 전달 {location.coords.longitude}
+          latitude: 126.924145806, // latitude 전달   126.924145806  {latitude}
+          longitude: 37.56205, // longitude 전달   37.56205   {longitude}
         })}>
           <Text style={styles.text}>버스 탑승 등록</Text>
         </TouchableOpacity>
