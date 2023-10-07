@@ -6,14 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dc3f63f6-918e-47bd-8699-7493615cb4e7" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/User/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/src/components/CheckRideBus.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/components/CheckRideBus.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/components/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/src/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/components/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/src/components/RideBus.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/components/RideBus.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/src/components/RoadSetting.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/components/RoadSetting.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/user/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/user/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +20,15 @@
       </list>
     </option>
   </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="test" />
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="loginMerge" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -46,31 +46,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;동준&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/songdongjun/Desktop/BusProject&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;라이브러리&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "동준",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "/Users/songdongjun/Desktop/BusProject",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "project.structure.last.edited": "라이브러리",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="애플리케이션.DemoApplication">
     <configuration name="DemoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.demo.DemoApplication" />
@@ -94,6 +94,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="애플리케이션.SQLtest" />
+        <item itemvalue="애플리케이션.DemoApplication" />
         <item itemvalue="애플리케이션.DemoApplication" />
         <item itemvalue="애플리케이션.SQLtest" />
       </list>
@@ -120,6 +122,8 @@
       <workItem from="1695652197539" duration="2457000" />
       <workItem from="1695655211041" duration="1161000" />
       <workItem from="1695743265234" duration="599000" />
+      <workItem from="1696046293819" duration="769000" />
+      <workItem from="1696656742018" duration="835000" />
       <workItem from="1695814977965" duration="86000" />
       <workItem from="1696242368824" duration="660000" />
       <workItem from="1696249292594" duration="6000" />
