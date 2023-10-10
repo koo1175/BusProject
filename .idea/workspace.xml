@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d8dc476-c3cf-47ec-bf48-7da97b20820c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/BusApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/BusApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/NearBusStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/NearBusStation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -311,7 +309,7 @@
       <workItem from="1696672374085" duration="1259000" />
       <workItem from="1696755645877" duration="4460000" />
       <workItem from="1696766337742" duration="4472000" />
-      <workItem from="1696863033145" duration="2852000" />
+      <workItem from="1696863033145" duration="6307000" />
     </task>
     <servers />
   </component>

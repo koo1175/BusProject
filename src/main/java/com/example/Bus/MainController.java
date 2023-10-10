@@ -11,7 +11,7 @@ import java.net.*;
 import java.util.*;
 
 @RestController
-//@CrossOrigin(origins = "http://bus-project.kro.kr/") // 리액트 네이티브와 스프링 부트의 포트를 통일하기 위함
+@CrossOrigin(origins = "https://port-0-java-springboot-12fhqa2blnemug25.sel5.cloudtype.app/") // 리액트 네이티브와 스프링 부트의 포트를 통일하기 위함
 @RequiredArgsConstructor
 public class MainController {
 
