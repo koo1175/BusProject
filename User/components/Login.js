@@ -3,14 +3,15 @@ import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity } from 'rea
 import axios from 'axios';
 import { useNavigation } from "@react-navigation/native";
 
-const LogIn = () => {
+const Login = () => {
     const navigation = useNavigation();
     const [userId, setUserId] = useState('');
     const [password, setPassword] = useState('');
 
     const registerUser = async () => {
         try {
-            await axios.post("http://bus-project.kro.kr/user/login", null, {
+            // await axios.post("http://bus-project.kro.kr/user/login", null, {
+                await axios.post("http://localhost:8081/user/login", null, {
                 params: {
                     user_id: userId,
                     password: password,
@@ -58,7 +59,7 @@ const LogIn = () => {
             </TouchableOpacity>
             <TouchableOpacity
                 style={styles.signupButton}
-                onPress={() => navigation.navigate('Sign')}
+                onPress={() => navigation.navigate('SignUp')}
             >
                 <Text style={styles.signupButtonText}>회원가입</Text>
             </TouchableOpacity>
@@ -123,4 +124,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default LogIn;
+export default Login;
