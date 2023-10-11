@@ -15,23 +15,32 @@ const RideBus = ({ navigation,route }) => {
 
   // 버스 정류장 데이터 관리
   const [busStops, setBusStops] = useState([]);
+  const [busUIDs, setBusUIDs] = useState([]);
+  const [busNames, setBusNames] = useState([]);
 
       useEffect(() => {
         // 스프링 부트 서버(BusRouteAllListController)에서 api에 요청해서 받아온 정류장 데이터를 가져온다
-        axios.get(`http://bus-project.kro.kr/getStationByPos?X=${latitude}&Y=${longitude}`) 
+        axios.get(`http://10.20.106.96:8080/getStationByPos?X=126.9407&Y=37.56223`) 
           .then(response => {
-            // 가져온 데이터를 상태에 저장
+            // 가져온 데이터를 상태에 저장 <- busStop 클래스를 들고옴 stationNames와 nearStationNames라는 필드 존재
             setBusStops(response.data);
+
+            setBusNames(response.data.nearStationName);
+            setBusUIDs(response.data.nearStationUIDs);
+            
           })
           .catch(error => {
             console.error('Error fetching bus stops:', error);
           });
       }, []); // 빈 배열을 두 번째 인수로 전달하여 컴포넌트가 마운트될 때 한 번만 실행
       
-      const handleItemPress = (item) => {
+      const handleItemPress = (item, index) => {
+        const selectedName = busNames[index]; 
+        const selectedUID = busUIDs[index];
         // 선택한 문자열을 다음 페이지인 'BusStop' 페이지로 전달
         navigation.navigate('BusStop', {
-          selectedItem: item.nearStationName,
+          selectedName,
+          selectedUID,
         });
       };
 
@@ -43,15 +52,17 @@ const RideBus = ({ navigation,route }) => {
         <View>
             <Text>Latitude: {latitude}</Text>
             <Text>Longitude: {longitude}</Text>
+            {/* <Text>busStops: {busStops.nearStationName}</Text> */}
+            <Text>busNames: {busNames}</Text>
+            <Text>busUIDs: {busUIDs}</Text>
         </View>
         <FlatList
-            data={busStops}
-            keyExtractor={(item, index) => index.toString()}
-            renderItem={({ item }) => (
-                <TouchableOpacity onPress={() => handleItemPress(item)}>
+            data={busNames}
+            renderItem={({ item, index }) => (
+                <TouchableOpacity onPress={() => handleItemPress(item, index)}>
                     <ListItem bottomDivider>
                     <ListItem.Content>
-                        <ListItem.Title>{item.nearStationName}</ListItem.Title>
+                        <ListItem.Title>{item}</ListItem.Title>
                     </ListItem.Content>
                     </ListItem>
                 </TouchableOpacity>

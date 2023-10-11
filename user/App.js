@@ -17,7 +17,7 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Login">
-        <Stack.Screen name="로그인" component={Login} />
+        <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Sign" component={Sign} />
         <Stack.Screen name="Main" component={Main} />
         <Stack.Screen name="RoadSetting" component={RoadSetting} />

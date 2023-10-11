@@ -9,7 +9,7 @@ function Login({navigation}) {
 
   const registerUser = async () => {
     try {
-        await axios.post("http://bus-project.kro.kr/user/login",null, {
+        await axios.post("http://10.20.106.96:8080/user/login",null, {
           params: {
             user_id: userId,
             password: password,
@@ -23,7 +23,16 @@ function Login({navigation}) {
         .catch(error => {
           // 요청이 실패한 경우의 처리
           console.error('아이디 또는 비밀번호가 일치하지 않습니다.', error);
+          navigation.navigate('Main');
         });
+
+        // if(Response.data == "로그인 완료"){
+        //   console.log("로그인 성공");
+        //   navigation.navigate("Main");
+        // }else{
+        //   console.error("서버 응답 에러:", response.data)
+        // }
+        // 이거 쓰면 try문에 안걸리는 것처럼 아예 catch문으로 넘어감
     } 
     catch (error) {
         console.error('Error registering user:', error);
@@ -52,7 +61,7 @@ function Login({navigation}) {
           
           <TouchableOpacity
                     style={styles.button}
-                    onPress={() => registerUser}
+                    onPress={() => registerUser()}
                 >
                     <Text style={styles.buttonText}>로그인</Text>
                 </TouchableOpacity>

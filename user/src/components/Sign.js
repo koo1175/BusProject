@@ -1,4 +1,4 @@
-// Login.js
+// Sign.js
 import React, { useState, useEffect } from 'react';
 import { View, Button, Text, TextInput, FlatList, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 import axios from 'axios';
@@ -17,7 +17,7 @@ function Sign({navigation}) {
   const regexrId = /^[a-zA-Z0-9]{4,12}$/;
   const regexrPw = /^[a-zA-Z0-9]{4,12}$/;
   const regexrName = /^[가-힣]{2,4}$/;
-  const regexrPhone = /\d{3}-\d{3,4}-\d{4}/g;
+  const regexrPhone = /^[0-9]{4}/g;
 
 
   const handleSignUp = () => {
@@ -61,7 +61,7 @@ function Sign({navigation}) {
 
     // 전화번호 유효성 검사 (10 또는 11자리 숫자)
     if (!regexrPhone.test(phoneNum)) {
-        Alert.alert("전화번호는 000-0000-0000 형식으로 입력하세요.");
+        Alert.alert("전화번호는 -없이 입력하세요.");
         return;
     }
     
@@ -78,7 +78,7 @@ function Sign({navigation}) {
         console.error("정보를 정확하게 입력해주세요.");
         return;
       }
-        await axios.post("http://bus-project.kro.kr/user/create", null,
+        await axios.post("http://10.20.106.96:8080/user/create", null,
         {
           params : {user_id: userId,
             name: name,
@@ -147,7 +147,7 @@ function Sign({navigation}) {
                 onChangeText={text => setPhoneNum(text)}
             />
             
-          <Button style={styles.signupButton} title="회원가입" onPress={registerUser} />
+          <Button style={styles.signupButton} title="회원가입" onPress={() => registerUser()} />
       </View>
   );
 };
