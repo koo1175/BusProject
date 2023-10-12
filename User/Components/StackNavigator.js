@@ -8,6 +8,13 @@ import Main from './Main';
 import Catch from './Catch';
 import SignUp from "./SignUp";
 import Login from "./Login";
+import RoadSetting from "./RoadSetting";
+import RideBus from "./RideBus";
+import CheckRoad from "./CheckRoad";
+import CheckRideBus from "./CheckRideBus";
+import BusStop from "./BusStop";
+import HowLong from "./HowLong";
+
 
 
 const Stack = createNativeStackNavigator();
@@ -20,11 +27,22 @@ const StackNavigator = () => {
         // 화면을 추가해서 이동할 화면이 늘어나면 StackNavigation에게 어떤 화면들이 있는지 알려줘야 함
         // name은 id나 변수같은거라 내가 이름 지정 / component에는 js파일명
         <Stack.Navigator>
-            <Stack.Screen name="Login" component={Login}/>
-            <Stack.Screen name="Home" component={HomeScreen}/>
-            <Stack.Screen name="Main" component={Main}/>
+            <Stack.Screen name="Home" component={Login}/>
+            <Stack.Screen name="BusStop" component={BusStop}/>
             <Stack.Screen name="Catch" component={Catch}/>
+            <Stack.Screen name="CheckRideBus" component={CheckRideBus}/>
+            <Stack.Screen name="CheckRoad" component={CheckRoad}/>
+            <Stack.Screen name="HowLong" component={HowLong}/>
+            <Stack.Screen name="Main" component={Main}/>
+            <Stack.Screen name="RideBus" component={RideBus}/>
+            <Stack.Screen name="RoadSetting" component={RoadSetting}/>
             <Stack.Screen name="SignUp" component={SignUp}/>
+
+
+
+
+
+
         </Stack.Navigator>
     )
 }

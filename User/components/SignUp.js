@@ -3,7 +3,7 @@ import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity, Alert, Tou
 import { useNavigation } from "@react-navigation/native";
 import axios from 'axios';
 
-const SignUp = () => {
+const Sign = () => {
     const navigation = useNavigation();
     const [userId, setUserId] = useState('');
     const [password, setPassword] = useState('');
@@ -38,7 +38,7 @@ const SignUp = () => {
     const registerUser = async () => {
         try {
             // await axios.post("http://bus-project.kro.kr/user/create", null, {
-            await axios.post("http://localhost:8081/", null, {
+            await axios.post("http://10.20.100.72:8080/user/login", null, {
                 params: {
                     user_id: userId,
                     name: name,
@@ -46,13 +46,11 @@ const SignUp = () => {
                     ride_or_getoff: rideORgetOff,
                     phone_num: phoneNum
                 }
-
             }).then(response => {
                 console.log('요청 성공:', response.data);
                 Alert.alert('회원가입이 완료되었습니다.');
                 navigation.navigate('Login');
             }).catch(error => {
-                console.log(userId, name, password, phoneNum);
                 console.error('요청 실패:', error);
             });
         } catch (error) {
@@ -241,4 +239,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default SignUp;
+export default Sign;

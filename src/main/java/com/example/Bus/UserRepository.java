@@ -7,7 +7,6 @@ import com.example.Bus.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.Optional;
 
 @Repository
 @RequiredArgsConstructor
@@ -29,8 +28,9 @@ public class UserRepository {
         return em.find(User.class, id);
     }
 
+    // 유저 이름
     public User findByName(String findName){
-        return em.createQuery("SELECT id, name FROM User u WHERE u.name = :findName", User.class)
+        return em.createQuery("SELECT u FROM User u WHERE u.name = :findName", User.class)
                 .setParameter("findName", findName)
                 .getSingleResult();
     }

@@ -10,21 +10,17 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 
+//@CrossOrigin(origins = "http://bus-project.kro.kr") // 리액트 네이티브와 스프링 부트의 포트를 통일하기 위함
+@CrossOrigin(origins = "*")
 @RestController
-//@CrossOrigin(origins = "http://bus-project.kro.kr/") // 리액트 네이티브와 스프링 부트의 포트를 통일하기 위함
 @RequiredArgsConstructor
 public class MainController {
-
-
-    @Autowired
-    private UserRepository userRepository;
 
     private final UserService userService;
 
     @PostMapping("/user/create")
-    public String create(@RequestParam(name = "user_id") String user_id, @RequestParam("name") String name,
-                         @RequestParam("password") String password, @RequestParam("phone_num") String phone_num){
-        if(isPrimary(user_id)){
+    public String create(@RequestParam(name = "user_id") String user_id, @RequestParam("name") String name, @RequestParam("password") String password, @RequestParam("phone_num") String phone_num){
+//        if(isPrimary(user_id)){
             User user = new User();
             user.setUserId(user_id);
             user.setName(name);
@@ -34,10 +30,9 @@ public class MainController {
 
             Long newUserId = userService.save(user);
             return newUserId + "번 유저 등록 완료";
-        }else{
-            return "이미 존재하는 아이디입니다.";
-        }
-
+//        }else{
+//            return "이미 존재하는 아이디입니다.";
+//        }
     }
 
     // 아이디와 비밀번호 검증을 위한 메서드
@@ -72,7 +67,6 @@ public class MainController {
         }else{
             return "아이디 또는 비밀번호가 일치하지 않습니다.";
         }
-
     }
 
     @PutMapping("/user/update/{id}")
@@ -100,4 +94,9 @@ public class MainController {
     public String readAll(){
         return userService.findAll().toString();
     }
+
+
+
+
+
 }

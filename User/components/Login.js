@@ -3,7 +3,7 @@ import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity } from 'rea
 import axios from 'axios';
 import { useNavigation } from "@react-navigation/native";
 
-const Login = () => {
+const LogIn = () => {
     const navigation = useNavigation();
     const [userId, setUserId] = useState('');
     const [password, setPassword] = useState('');
@@ -11,7 +11,7 @@ const Login = () => {
     const registerUser = async () => {
         try {
             // await axios.post("http://bus-project.kro.kr/user/login", null, {
-                await axios.post("http://localhost:8081/user/login", null, {
+            await axios.post("http://10.20.100.72:8080/user/login", null, {
                 params: {
                     user_id: userId,
                     password: password,
@@ -19,7 +19,7 @@ const Login = () => {
             }).then(response => {
                 // 성공적으로 요청을 보낸 경우의 처리
                 console.log('요청 성공:', response.data);
-                navigation.navigate('Main');
+                navigation.navigate('Main', {userId: userId});
                 // 서버에서 보낸 응답 데이터는 response.data에서 접근할 수 있음
             })
                 .catch(error => {
@@ -124,4 +124,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default Login;
+export default LogIn;

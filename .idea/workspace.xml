@@ -5,12 +5,64 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d8dc476-c3cf-47ec-bf48-7da97b20820c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/BusProject___2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_10_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/580827ce-fd9a-4a05-9e1b-8a40e36b7327.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/580827ce-fd9a-4a05-9e1b-8a40e36b7327.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-10-10T233629.400.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-10-10T233711.400.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-10-10T233851.400.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-10-10T235026.400.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/Bus.main.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/Components/StackNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/StackNavigator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/components/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/components/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/components/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/components/SignUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/User/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/src/components/BusStop.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/src/components/CheckRideBus.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/src/components/CheckRoad.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/src/components/HowLong.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/src/components/Main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/src/components/RideBus.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/src/components/RoadSetting.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/User/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ad/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/ad/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ad/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ad/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/ArriveBusList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/BusApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/BusApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/BusRouteAllList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/NearBusStation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/ArriveBusList.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/BusApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/BusApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/BusRouteAllList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/NearBusStation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/user/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +106,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -76,14 +128,16 @@
     &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;동준&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/songdongjun/Downloads/BusProject-- 2&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;모듈&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;라이브러리&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.3757094&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.applicationServers&quot;,
@@ -96,24 +150,72 @@
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/example/Bus" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="gradle bootjar" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.Bus [bootRun]">
-    <configuration name="Bus [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Spring Boot.BusApplication">
+    <configuration name="Example (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Example" />
+      <module name="Bus.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Example" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.Bus.Example" />
+      <module name="Bus.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.Bus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+      <module name="Bus.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VoiceApi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="VoiceApi" />
+      <module name="Bus.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BusProject-- 2 [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="bootJar" />
+            <option value="dependencies" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -122,56 +224,6 @@
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="Bus [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="bootRun" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="F:/Intellij Project/BusProject [bootjar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="bootjar" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="단일 요청 실행">
-      <method v="2" />
-    </configuration>
-    <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" requestIdentifier="#2" runType="단일 요청 실행">
       <method v="2" />
     </configuration>
     <configuration name="BusApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -261,21 +313,21 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.Bus [bootJar]" />
-      <item itemvalue="Gradle.Bus [bootRun]" />
-      <item itemvalue="Gradle.F:/Intellij Project/BusProject [bootjar]" />
-      <item itemvalue="HTTP 요청.generated-requests | #1" />
-      <item itemvalue="HTTP 요청.generated-requests | #2" />
+      <item itemvalue="Gradle.BusProject-- 2 [dependencies]" />
       <item itemvalue="Spring Boot.BusApplication" />
       <item itemvalue="Tomcat 서버.Tomcat 9.0.80" />
+      <item itemvalue="애플리케이션.Main" />
+      <item itemvalue="애플리케이션.Example (1)" />
+      <item itemvalue="애플리케이션.VoiceApi" />
+      <item itemvalue="애플리케이션.Example" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Bus [bootRun]" />
-        <item itemvalue="HTTP 요청.generated-requests | #2" />
-        <item itemvalue="HTTP 요청.generated-requests | #1" />
-        <item itemvalue="Gradle.F:/Intellij Project/BusProject [bootjar]" />
-        <item itemvalue="Gradle.Bus [bootJar]" />
+        <item itemvalue="애플리케이션.VoiceApi" />
+        <item itemvalue="애플리케이션.Main" />
+        <item itemvalue="애플리케이션.Example" />
+        <item itemvalue="애플리케이션.Example (1)" />
+        <item itemvalue="Gradle.BusProject-- 2 [dependencies]" />
       </list>
     </recent_temporary>
   </component>
@@ -304,8 +356,19 @@
       <workItem from="1696932560559" duration="2782000" />
       <workItem from="1696935414288" duration="6000" />
       <workItem from="1696944052611" duration="43000" />
-      <workItem from="1696945408610" duration="7002000" />
-      <workItem from="1696952433889" duration="1367000" />
+      <workItem from="1696945408610" duration="691000" />
+      <workItem from="1697023355728" duration="7563000" />
+      <workItem from="1697033205799" duration="15000" />
+      <workItem from="1697033230912" duration="9667000" />
+      <workItem from="1697075749487" duration="3349000" />
+      <workItem from="1697085162273" duration="529000" />
+      <workItem from="1697090192996" duration="33000" />
+      <workItem from="1697090237167" duration="8820000" />
+      <workItem from="1697107254997" duration="220000" />
+      <workItem from="1697117801297" duration="608000" />
+      <workItem from="1697119336411" duration="679000" />
+      <workItem from="1697120633912" duration="30000" />
+      <workItem from="1697120701441" duration="858000" />
     </task>
     <servers />
   </component>
