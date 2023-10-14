@@ -4,7 +4,9 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, Button, TouchableOpacity, Platform } from 'react-native';
 import * as Location from 'expo-location';
 
-function Main({navigation}) {
+function Main({navigation, route}) {
+  
+  const { userId } = route.params;
   
   const [location, setLocation] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
@@ -63,6 +65,7 @@ function Main({navigation}) {
         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('RideBus', {
           latitude: 126.924145806, // latitude 전달   126.924145806  {latitude}
           longitude: 37.56205, // longitude 전달   37.56205   {longitude}
+          userId: userId,
         })}>
           <Text style={styles.text}>버스 탑승 등록</Text>
         </TouchableOpacity>

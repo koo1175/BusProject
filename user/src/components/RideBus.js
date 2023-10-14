@@ -11,19 +11,17 @@ import axios from 'axios';
 const RideBus = ({ navigation,route }) => {
 
   // 이전 Main페이지에서 받아온 위치
-  const { latitude, longitude } = route.params;
+  const { latitude, longitude, userId } = route.params;
 
   // 버스 정류장 데이터 관리
-  const [busStops, setBusStops] = useState([]);
   const [busUIDs, setBusUIDs] = useState([]);
   const [busNames, setBusNames] = useState([]);
 
       useEffect(() => {
         // 스프링 부트 서버(BusRouteAllListController)에서 api에 요청해서 받아온 정류장 데이터를 가져온다
-        axios.get(`http://10.20.106.96:8080/getStationByPos?X=126.9407&Y=37.56223`) 
+        axios.get(`http://10.20.105.164:8080/getStationByPos?X=126.9407&Y=37.56223`) 
           .then(response => {
-            // 가져온 데이터를 상태에 저장 <- busStop 클래스를 들고옴 stationNames와 nearStationNames라는 필드 존재
-            setBusStops(response.data);
+
 
             setBusNames(response.data.nearStationName);
             setBusUIDs(response.data.nearStationUIDs);
@@ -41,6 +39,7 @@ const RideBus = ({ navigation,route }) => {
         navigation.navigate('BusStop', {
           selectedName,
           selectedUID,
+          userId: userId,
         });
       };
 

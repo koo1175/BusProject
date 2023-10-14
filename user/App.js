@@ -10,6 +10,7 @@ import RideBus from './src/components/RideBus';
 import BusStop from './src/components/BusStop';
 import HowLong from './src/components/HowLong';
 import CheckRideBus from './src/components/CheckRideBus';
+import Buzzer from './src/components/Buzzer';
 
 const Stack = createNativeStackNavigator();
 
@@ -26,6 +27,7 @@ function App() {
         <Stack.Screen name="BusStop" component={BusStop} />
         <Stack.Screen name="HowLong" component={HowLong} />
         <Stack.Screen name="CheckRideBus" component={CheckRideBus} />
+        <Stack.Screen name="Buzzer" component={Buzzer} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -7,9 +7,9 @@ function Login({navigation}) {
   const [userId, setUserId] = useState('');
   const [password, setPassword] = useState('');
 
-  const registerUser = async () => {
+  const login = async () => {
     try {
-        await axios.post("http://10.20.106.96:8080/user/login",null, {
+        await axios.post("http://10.20.105.164:8080/user/login",null, {
           params: {
             user_id: userId,
             password: password,
@@ -17,13 +17,14 @@ function Login({navigation}) {
         }).then(response => {
           // 성공적으로 요청을 보낸 경우의 처리
           console.log('요청 성공:', response.data);
-          navigation.navigate('Main');
+          navigation.navigate('Main', {
+            userId: userId
+          });
           // 서버에서 보낸 응답 데이터는 response.data에서 접근할 수 있음
         })
         .catch(error => {
           // 요청이 실패한 경우의 처리
           console.error('아이디 또는 비밀번호가 일치하지 않습니다.', error);
-          navigation.navigate('Main');
         });
 
         // if(Response.data == "로그인 완료"){
@@ -61,7 +62,7 @@ function Login({navigation}) {
           
           <TouchableOpacity
                     style={styles.button}
-                    onPress={() => registerUser()}
+                    onPress={() => login()}
                 >
                     <Text style={styles.buttonText}>로그인</Text>
                 </TouchableOpacity>

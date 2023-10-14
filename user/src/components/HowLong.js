@@ -5,21 +5,21 @@ import { View, StyleSheet, Text, FlatList, TouchableOpacity } from 'react-native
 import { ListItem } from 'react-native-elements';
 
 
-const { selectedNum,
-  selectedFirstTime,
-  selectedSecondTime,
-  selectedFirstNum,
-  selectedSecondNum,
-  selectedCurrentBusStop,
-  selectedDir } = route.params;
-
 // 클릭한 버스의 기사님에게 알림이 가도록 해주는 server url에 post요청
 
 function HowLong ({navigation, route}) {
 
+  const { selectedNum,
+    selectedFirstTime,
+    selectedSecondTime,
+    selectedFirstNum,
+    selectedSecondNum,
+    selectedCurrentBusStop,
+    selectedDir } = route.params;
+  
   useEffect(() => {
     // 스프링 부트 서버에 요청해서 해당 번호판에 해당하는 기사님에게 현재 유저가 있는 정류장 id 전달
-    axios.get(`http://10.20.106.96:8080/getStationByPos?X=126.9407&Y=37.56223`, null,{
+    axios.get(`http://10.20.105.164:8080/getStationByPos?X=126.9407&Y=37.56223`, null,{
     params : {
       
     }}) 
