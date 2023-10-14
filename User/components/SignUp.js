@@ -1,25 +1,22 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity, Alert, TouchableWithoutFeedback, Keyboard } from 'react-native';
-import { useNavigation } from "@react-navigation/native";
+import { View, Text, TextInput, StyleSheet, TouchableOpacity, Alert, Keyboard, Dimensions } from 'react-native';
 import axios from 'axios';
+import { useNavigation } from "@react-navigation/native";
 
-const Sign = () => {
+const SignUp = () => {
     const navigation = useNavigation();
     const [userId, setUserId] = useState('');
     const [password, setPassword] = useState('');
     const [password2, setPassword2] = useState('');
     const [name, setName] = useState('');
     const [phoneNum, setPhoneNum] = useState('');
-    const [rideORgetOff, setRideORgetOff] = useState(false);
     const [idValidationMessage, setIdValidationMessage] = useState('');
 
-    // 정규 표현식 패턴들
     const regexrId = /^[a-zA-Z0-9]{4,12}$/;
-    const regexrPw = /^[a-zA-Z0-9]{4,12}$/;
-    const regexrName = /^[가-힣]{2,4}$/;
-    const regexrPhone = /^\d{11}$/; // Updated phone number format to accept 11 digits only
+    const regexrPhone = /^\d{11}$/;
 
-    // 아이디 유효성 검사 버튼을 눌렀을 때 호출되는 함수
+    const screenWidth = Dimensions.get('window').width;
+
     const handleIdValidation = () => {
         if (userId === "") {
             setIdValidationMessage("아이디를 입력하세요.");
@@ -31,13 +28,11 @@ const Sign = () => {
             return;
         }
 
-        // 유효성 검사를 통과하면 메시지 초기화
         setIdValidationMessage("사용할 수 있는 아이디 입니다.");
     };
 
     const registerUser = async () => {
         try {
-            // await axios.post("http://bus-project.kro.kr/user/create", null, {
             await axios.post("http://10.20.100.72:8080/user/login", null, {
                 params: {
                     user_id: userId,
@@ -79,8 +74,8 @@ const Sign = () => {
             return;
         }
 
-        if (password.length < 4 || password.length > 10) {
-            Alert.alert("비밀번호는 4~10글자로 입력해주세요.");
+        if (password.length < 4 || password.length > 12) {
+            Alert.alert("비밀번호는 4~12글자로 입력해주세요.");
             return;
         }
 
@@ -96,30 +91,32 @@ const Sign = () => {
 
         registerUser();
 
-        // Close the keyboard (input focus)
         Keyboard.dismiss();
     };
 
     return (
-        <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
-            <View style={styles.container}>
-                <Text style={styles.text_title}>회원가입</Text>
+        <View style={styles.container}>
+            <Text style={styles.text_title}>회원가입</Text>
+            <View style={styles.formContainer}>
                 <View style={styles.inputContainer}>
                     <Text style={styles.inputLabel}>아이디</Text>
-                    <TextInput
-                        style={styles.textInput}
-                        keyboardType='default'
-                        placeholder='아이디를 입력하세요'
-                        value={userId}
-                        onChangeText={(text) => setUserId(text)}
-                    />
-                    <TouchableOpacity
-                        style={styles.validationButton}
-                        onPress={handleIdValidation}
-                    >
-                        <Text style={styles.buttonText}>확인</Text>
-                    </TouchableOpacity>
+                    <View style={styles.idInputContainer}>
+                        <TextInput
+                            style={styles.InputId}
+                            keyboardType='default'
+                            placeholder='아이디를 입력하세요'
+                            value={userId}
+                            onChangeText={(text) => setUserId(text)}
+                        />
+                        <TouchableOpacity
+                            style={styles.validationButton}
+                            onPress={handleIdValidation}
+                        >
+                            <Text style={styles.buttonText}>확인</Text>
+                        </TouchableOpacity>
+                    </View>
                 </View>
+
                 <Text style={styles.validationMessage}>{idValidationMessage}</Text>
                 <View style={styles.inputContainer}>
                     <Text style={styles.inputLabel}>비밀번호</Text>
@@ -164,22 +161,25 @@ const Sign = () => {
                     />
                 </View>
                 <TouchableOpacity
-                    style={styles.button}
+                    style={styles.signupButton}
                     onPress={handleSignUp}
                 >
                     <Text style={styles.buttonText}>회원가입</Text>
                 </TouchableOpacity>
             </View>
-        </TouchableWithoutFeedback>
+        </View>
     );
 }
 
 const styles = StyleSheet.create({
+    formContainer: {
+        width: '80%',
+    },
     container: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#F5F5F5',
+        backgroundColor: 'white',
     },
     text_title: {
         fontSize: 50,
@@ -187,35 +187,48 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     inputContainer: {
-        flexDirection: 'row',
+        flexDirection: 'column',
         marginBottom: 20,
-        width: '80%',
-        alignItems: 'center',
     },
     inputLabel: {
         fontSize: 18,
         marginBottom: 10,
         color: 'gray',
-        width: '20%',
         textAlign: 'left',
     },
     textInput: {
-        borderColor: "#000000",
+        borderColor: "#E5E5E5",
         borderWidth: 1,
-        width: '60%',
         height: 40,
         fontSize: 18,
         borderRadius: 5,
         paddingLeft: 10,
         textAlign: 'left',
+        backgroundColor: '#FAFAFA',
     },
-    button: {
-        backgroundColor: 'blue',
-        width: '80%',
+    InputId: {
+        borderColor: "#E5E5E5",
+        borderWidth: 1,
+        width : '70%',
         height: 40,
+        fontSize: 18,
+        borderRadius: 5,
+        paddingLeft: 10,
+        textAlign: 'left',
+        backgroundColor: '#FAFAFA',
+    },
+    idInputContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+    },
+    signupButton: {
+        backgroundColor: '#0095F6',
+        padding: 15,
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 5,
+        marginTop: 20,
     },
     buttonText: {
         color: 'white',
@@ -223,8 +236,8 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     validationButton: {
-        backgroundColor: 'gray',
-        width: '20%',
+        backgroundColor: '#0095F6',
+        width: 80,
         height: 40,
         justifyContent: 'center',
         alignItems: 'center',
@@ -232,11 +245,10 @@ const styles = StyleSheet.create({
         marginLeft: 10,
     },
     validationMessage: {
-        color: 'red',
+        color: '#0095F6',
         marginTop: 5,
-        width: '80%',
         textAlign: 'left',
     },
 });
 
-export default Sign;
+export default SignUp;

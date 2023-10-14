@@ -22,7 +22,7 @@ public class VoiceAPI {
             byte[] voice) {
 
         test t = new test();
-        String temp = t.applySTTToAudioSegments("//Users//songdongjun//Downloads//BusProject-- 2//voice//KOR_M_RM0276MKDH0135.pcm");
+        String temp = t.applySTTToAudioSegments("//Users//songdongjun//Downloads//BusProject-- 2//voice//hello.wav.pcm");
         System.out.println("123123123:" + temp);
         return temp;
     }

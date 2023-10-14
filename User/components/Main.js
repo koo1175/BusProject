@@ -3,7 +3,13 @@ import { View, Text, StyleSheet, TouchableOpacity, Button } from 'react-native';
 import * as Location from 'expo-location';
 import { Audio } from 'expo-av';
 import axios from 'axios';
-import { encode } from 'base-64';
+
+import MapView, { Marker } from 'react-native-maps';
+
+import { FontAwesome5 } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+
 
 const recordingOptions = {
     isMeteringEnabled: true,
@@ -32,10 +38,10 @@ const recordingOptions = {
     },
 };
 
-function Main({ navigation, route }) {
+function Main({ navigation, route }) {      //navigation 있어야
     const [location, setLocation] = useState(null);
     const [errorMsg, setErrorMsg] = useState(null);
-    let timestamp = Date.now();  // 현재 시간 타임스탬프를 사용 , formData에 저장하는 오디오 이름을 다르게 구분해주기 위함
+    let timestamp = Date.now();
     const { userId } = route.params;
 
     useEffect(() => {
@@ -50,8 +56,7 @@ function Main({ navigation, route }) {
         })();
     }, []);
 
-    const [recording, setRecordingUri] = React.useState(null);
-    //sconst [recording, setRecording] = React.useState();
+    const [isRecording, setRecording] = React.useState(false);
 
     async function startRecording() {
         try {
@@ -65,7 +70,7 @@ function Main({ navigation, route }) {
 
             console.log('음성 녹음 시작');
             const { recording } = await Audio.Recording.createAsync(Audio.RecordingOptionsPresets.HIGH_QUALITY);
-            setRecordingUri(recording);
+            setRecording(recording);
             console.log('Recording started');
         } catch (err) {
             console.error('음성 녹음 시작 실패', err);
@@ -76,20 +81,17 @@ function Main({ navigation, route }) {
         console.log('Recording 중지');
         await recording.stopAndUnloadAsync();
         const uri = recording.getURI();
-        setRecordingUri(uri);
+        setRecording(null);
 
-        let formData = new FormData();      // formData -> 서버에 오디오 파일을 직접 보내주기 위함
-
-        // FormData에 오디오 파일 추가
+        let formData = new FormData();
         formData.append('audio', {
             uri: uri,
-            type: 'audio/m4a', // 저장되는 audio타입
-            name: `recording_${timestamp}.m4a`, // 이름 감싸고 있는거 작은 따옴표 아님/ tab위에 있는 백틱임 => 문자열 안에 변수를 직접 사용하기 위함
+            type: 'audio/m4a',
+            name: `recording_${timestamp}.m4a`,
         });
         formData.append('userId', userId);
 
-        // 음성 API에 음성 파일 (FormData) 보내기
-        try{
+        try {
             await axios({
                 method: "post",
                 url: "http://10.20.100.72:8080/saveVoice",
@@ -102,7 +104,7 @@ function Main({ navigation, route }) {
                 .catch(error => {
                     console.error('음성을 보내지 못했습니다.', error);
                 });
-        }catch (error) {
+        } catch (error) {
             console.error('실패 :', error);
         }
 
@@ -113,44 +115,87 @@ function Main({ navigation, route }) {
         console.log('Recording 중지 및 저장', uri);
     }
 
-    return (
-        <View style={{ flex: 1 }}>
-            <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 16 }}>
-                <TouchableOpacity style={styles.startButton1} onPress={startRecording}>
-                    <Text style={styles.buttonText}>녹음 시작</Text>
-                </TouchableOpacity>
-                <Button
-                    title={recording ? '녹음 중지' : '녹음 시작'}
-                    onPress={recording ? stopRecording : startRecording}
-                />
-            </View>
+    async function toggleRecording() {
+        if (isRecording) {
+            stopRecording();
+        } else {
+            startRecording();
+        }
+        setRecording(!isRecording);
+    }
 
-            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                {errorMsg ? (
-                    <Text>{errorMsg}</Text>
-                ) : location ? (
-                    <View>
-                        <Text style={styles.locationText}>위도: {location.coords.latitude}</Text>
-                        <Text style={styles.locationText}>경도: {location.coords.longitude}</Text>
-                    </View>
+    return (
+        <View style={styles.container}>
+            <Text style={styles.TitleText}>busproject</Text>
+
+            <View style={styles.mapContainer}>
+                {location ? (
+                    <MapView
+                        style={styles.map}
+                        initialRegion={{
+                            latitude: location.coords.latitude,
+                            longitude: location.coords.longitude,
+                            latitudeDelta: 0.005,
+                            longitudeDelta: 0.005,
+                        }}
+                    >
+                        <Marker
+                            coordinate={{
+                                latitude: location.coords.latitude,
+                                longitude: location.coords.longitude,
+                            }}
+                            title="현재 위치"
+                            description="당신의 현재 위치입니다."
+                        />
+                    </MapView>
                 ) : (
                     <Text style={styles.loadingText}>로딩 중...</Text>
                 )}
+            </View>
 
+            <View style={styles.micContainer}>
+                <TouchableOpacity style={styles.startMic} onPress={toggleRecording}>
+                    {isRecording ? (
+                        <MaterialCommunityIcons name="stop-circle-outline" size={50} color="black" />
+                    ) : (
+                        <Feather name="mic" size={50} color="black" />
+                    )}
+                </TouchableOpacity>
+            </View>
+
+            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center',backgroundColor: 'white'  }}>
+                {/*{errorMsg ? (<Text>{errorMsg}</Text>) : location ? (*/}
+                {/*    <View>*/}
+                {/*        /!*<Text style={styles.locationText}>위도: {location.coords.latitude}</Text>*!/*/}
+                {/*        /!*<Text style={styles.locationText}>경도: {location.coords.longitude}</Text>*!/*/}
+                {/*    </View>*/}
+                {/*) : (*/}
+                {/*    <Text style={styles.loadingText}>로딩 중...</Text>*/}
+                {/*)}*/}
                 <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('RoadSetting')}>
-                    <Text style={styles.buttonText}>경로 설정</Text>
+                    <View style={styles.buttonContent}>
+                        <FontAwesome5 name="route" size={24} color="black" style={styles.icon} />
+                        <Text style={styles.buttonText}>경로 설정</Text>
+                    </View>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('CheckRoad')}>
-                    <Text style={styles.buttonText}>경로 확인</Text>
+                    <View style={styles.buttonContent}>
+                        <FontAwesome5 name="route" size={24} color="black" style={styles.icon} />
+                        <Text style={styles.buttonText}>경로 확인</Text>
+                    </View>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('RideBus', {
                     latitude: 126.924145806,
                     longitude: 37.56205,
                 })}>
-                    <Text style={styles.buttonText}>버스 탑승 등록</Text>
+                    <View style={styles.buttonContent}>
+                        <FontAwesome5 name="bus" size={24} color="black" style={styles.icon} />
+                        <Text style={styles.buttonText}>버스 탑승 등록</Text>
+                    </View>
                 </TouchableOpacity>
+
             </View>
         </View>
     );
@@ -161,41 +206,69 @@ const styles = StyleSheet.create({
         fontSize: 16,
         marginBottom: 8,
     },
+    container: {
+        flex: 1,
+        backgroundColor: 'white',
+    },
+    TitleText: {
+        fontSize: 35,
+        fontWeight: 'bold',
+        marginRight: 180,
+        marginTop: 20,
+        marginBottom: '-5%',
+        // backgroundColor: 'red', // 확인용 색
+    },
+
+    mapContainer: {
+        flex: 1,
+        marginTop: '20%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'white',
+    },
     loadingText: {
         fontSize: 16,
         marginBottom: 16,
     },
-    startButton: {
-        backgroundColor: '#bc2a8d',
-        padding: 12,
-        borderRadius: 8,
-        alignItems: 'center',
+    startMic: {
+        width: 60,
+        height: 60,
+        // backgroundColor: 'red', // 확인용 색 넣기
+        opacity: 1,
         justifyContent: 'center',
-        marginBottom: 16,
-        width: '40%',
+        alignItems: 'center',
     },
-    startButton1: {
-        backgroundColor: '#bc2a8d',
-        padding: 12,
-        borderRadius: 8,
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginTop: 30,
-        width: 150,
+    micContainer: {
+        position: 'absolute',
+        top: 10,
+        right: 10,
+        zIndex: 1,
     },
     button: {
-        backgroundColor: '#bc2a8d',
+        backgroundColor: '#0095F6',
         padding: 12,
         borderRadius: 8,
         alignItems: 'center',
         justifyContent: 'center',
-        marginBottom: 16,
-        width: '40%',
+        marginBottom: 20,
+        width: '70%',
     },
     buttonText: {
         color: 'white',
         fontSize: 18,
         textAlign: 'center',
+        marginRight: 90,
+    },
+    buttonContent: {
+        flexDirection: 'row',
+        justifyContent: 'space-between', // 아이콘과 텍스트를 양쪽 끝으로 정렬
+    },
+    icon: {
+        marginRight: 70,
+    },
+    map: {
+        width: 500,
+        height: 400,
     },
 });
 
