@@ -16,6 +16,7 @@ function CheckRideBus ({navigation, route}) {
         selectedSecondNum,
         selectedCurrentBusStop, // 현재 정류장 번호
         selectedDir,
+        selectedEndPoint, // 전해받은 destination 도착지
         userId                  // 유저 아이디
     } = route.params;
     
@@ -30,7 +31,7 @@ const handleItemPress = async () => {
                 bus_uid : selectedFirstNum,
                 bus_stop : selectedCurrentBusStop,
                 user_id: userId,
-                get_off: false,
+                destination: selectedEndPoint,
             }
         })
         .then(response => {
@@ -39,6 +40,7 @@ const handleItemPress = async () => {
             navigation.navigate('Buzzer', {
                 selectedFirstNum: selectedFirstNum,
                 selectedCurrentBusStop: selectedCurrentBusStop,
+                selectedEndPoint: selectedEndPoint,
                 userId: userId,
             });
             // 가져온 데이터를 상태에 저장 <- busStop 클래스를 들고옴 stationNames와 nearStationNames라는 필드 존재
@@ -58,7 +60,7 @@ const handleItemPress = async () => {
             <Text style={ styles.titleStyle }> 버스를 탑승하시겠습니까? </Text>
             <Text style={ styles.titleStyle }> 탑승할 버스 번호 : {selectedNum} 번</Text>
             <Text style={ styles.titleStyle }> 탑승할 버스 번호판 : {selectedFirstNum} </Text>
-            
+            <Text style={ styles.titleStyle }> 내릴 정류장 : {selectedEndPoint}</Text>
             <View  style={ styles.viewStyle }>
                 <TouchableOpacity style={styles.button} onPress={() => handleItemPress()}>
                     <Text style={ styles.text }>탑승 확인</Text>

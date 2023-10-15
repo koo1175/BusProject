@@ -16,6 +16,7 @@ const BusStop = ({navigation, route}) => {
   const [busSecondNum, setBusSecondNum] = useState([]);
   const [busDirs, setBusDirs] = useState([]);
   const [currentBusStop, setCurrentBusStop] = useState([]); // 현재 정류장 번호
+  const [busRoutedId, setBusRoutedId] = useState([]); // 노선 ID -> 다음 axiod시 필요 ( 노선 ID에 해당하는 경유 정류장 리스트 조회 )
 
     useEffect(() => {
       // const fetchData = () => {
@@ -30,7 +31,7 @@ const BusStop = ({navigation, route}) => {
           setBusSecondNum(response.data.arriveBusSecondNum); // 차 번호판(두번째)
           setCurrentBusStop(response.data.currentBusStop);   // 현재 버스 정류장 번호
           setBusDirs(response.data.arriveBusDir);            // 버스 방향
-  
+          setBusRoutedId(response.data.busRoutedId);         // 노선 ID
         })
         .catch(error => {
           console.log('error : 요청 실패');
@@ -59,8 +60,9 @@ const BusStop = ({navigation, route}) => {
     const selectedSecondNum = busSecondNum[index];
     const selectedCurrentBusStop = currentBusStop[index];
     const selectedDir = busDirs[index];
-    // 선택한 문자열을 다음 페이지인 'BusStop' 페이지로 전달
-    navigation.navigate('CheckRideBus', {
+    const seletedRoutedId = busRoutedId[index];
+    // 선택한 문자열을 다음 페이지인 'EndPoint' 페이지로 전달
+    navigation.navigate('EndPoint', {
       selectedNum,
       selectedFirstTime,
       selectedSecondTime,
@@ -69,7 +71,10 @@ const BusStop = ({navigation, route}) => {
       selectedCurrentBusStop,
       selectedDir,
       selectedName, // 현재 정류장 이름 - > 기사한테 승객이 타는 위치를 알려주기 위해 전달해두자
+      seletedRoutedId,
+      selectedUID,
       userId: userId,
+      selectedName: selectedName,
     });
   };
 

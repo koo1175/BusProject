@@ -11,6 +11,7 @@ import BusStop from './src/components/BusStop';
 import HowLong from './src/components/HowLong';
 import CheckRideBus from './src/components/CheckRideBus';
 import Buzzer from './src/components/Buzzer';
+import EndPoint from './src/components/EndPoint';
 
 const Stack = createNativeStackNavigator();
 
@@ -25,6 +26,7 @@ function App() {
         <Stack.Screen name="CheckRoad" component={CheckRoad} />
         <Stack.Screen name="RideBus" component={RideBus} />
         <Stack.Screen name="BusStop" component={BusStop} />
+        <Stack.Screen name="EndPoint" component={EndPoint} />
         <Stack.Screen name="HowLong" component={HowLong} />
         <Stack.Screen name="CheckRideBus" component={CheckRideBus} />
         <Stack.Screen name="Buzzer" component={Buzzer} />
