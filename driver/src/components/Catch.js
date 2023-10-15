@@ -1,22 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
+import { ListItem } from 'react-native-elements';
 import axios from 'axios';
 
-function Catch({navigation, route})  {
+const Catch = ({navigation, route}) => {
 
   const { busUid } = route.params;
   const [passengers, setPassengers] = useState([]);
-  const [busStops, setBusStops] = useState([]);
+  const [on, setOn] = useState([]);
+  const [off, setOff] = useState([]);
   useEffect(() => {
     axios.post(`http://10.20.105.164:8080/driver/getPassengers`, null,
     {
       params: {
-        bus_uid:busUid,}
+        bus_uid:busUid,
+      },
     })
     .then(response => {
       console.log('200 요청 성공 : passengers');
-      setPassengers(response.data.passengerID);
-      setBusStops(response.data.passengerBusStop);
+      if(response.data){
+
+        setPassengers(response.data.passengerID);
+        setOn(response.data.passengerBusStop);
+        setOff(response.data.passengerDestination);
+      }else{
+        console.log("데이터가 비어있습니다.")
+      }
     })
     .catch(error => {
       console.log('error : 요청 실패');
@@ -35,18 +44,17 @@ function Catch({navigation, route})  {
   return (
     
     <View>
-        <Text style={ styles.titleStyle }>승객</Text>
-        <Text style={ styles.titleStyle }>  정류장 에서 탑승 예정 </Text>
-        <Text style={ styles.titleStyle }> </Text>
+        <Text style={ styles.titleStyle }>승객 리스트</Text>
         <FlatList
-        data={busStops}
+        data={passengers}
         renderItem={({ item, index }) => (
             <TouchableOpacity onPress={() => handleItemPress(item,index)}>
                 <ListItem bottomDivider>
                 <ListItem.Content>
                     <ListItem.Title>{item}번</ListItem.Title>
                     <ListItem.Subtitle>{passengers[index]}</ListItem.Subtitle>
-                    <ListItem.Subtitle>{busStops[index]}</ListItem.Subtitle>
+                    <ListItem.Subtitle>탑승 장소 : {on[index]}</ListItem.Subtitle>
+                    <ListItem.Subtitle>하차 장소 : {off[index]}</ListItem.Subtitle>
                 </ListItem.Content>
                 </ListItem>
             </TouchableOpacity>

@@ -16,6 +16,7 @@ function CheckRideBus ({navigation, route}) {
         selectedSecondNum,
         selectedCurrentBusStop, // 현재 정류장 번호
         selectedDir,
+        selectedName, //  현재 정류장 이름
         selectedEndPoint, // 전해받은 destination 도착지
         userId                  // 유저 아이디
     } = route.params;
@@ -29,7 +30,7 @@ const handleItemPress = async () => {
         await axios.post(`http://10.20.105.164:8080/driver/ride`, null, {
             params : {
                 bus_uid : selectedFirstNum,
-                bus_stop : selectedCurrentBusStop,
+                bus_stop : selectedName,
                 user_id: userId,
                 destination: selectedEndPoint,
             }
