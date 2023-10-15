@@ -4,17 +4,38 @@ import React from 'react';
 import { View, StyleSheet, Text, FlatList, TouchableOpacity } from 'react-native';
 import { ListItem } from 'react-native-elements';
 
-// 버스 고유번호
-const busUids = [
-    { id: 1, title: '1234' },
-    { id: 2, title: '2345' },
-    { id: 3, title: '3456' },
-    { id: 4, title: '5678' },
-    // ... 추가 아이템들
-  ];
 
+const { selectedNum,
+  selectedFirstTime,
+  selectedSecondTime,
+  selectedFirstNum,
+  selectedSecondNum,
+  selectedCurrentBusStop,
+  selectedDir } = route.params;
+
+// 클릭한 버스의 기사님에게 알림이 가도록 해주는 server url에 post요청
 
 function HowLong ({navigation, route}) {
+
+  useEffect(() => {
+    // 스프링 부트 서버에 요청해서 해당 번호판에 해당하는 기사님에게 현재 유저가 있는 정류장 id 전달
+    axios.get(`http://10.20.106.96:8080/getStationByPos?X=126.9407&Y=37.56223`, null,{
+    params : {
+      
+    }}) 
+      .then(response => {
+        // 가져온 데이터를 상태에 저장 <- busStop 클래스를 들고옴 stationNames와 nearStationNames라는 필드 존재
+        setBusStops(response.data);
+
+        setBusNames(response.data.nearStationName);
+        setBusUIDs(response.data.nearStationUIDs);
+        
+      })
+      .catch(error => {
+        console.error('Error fetching bus stops:', error);
+      });
+  }, []); // 빈 배열을 두 번째 인수로 전달하여 컴포넌트가 마운트될 때 한 번만 실행
+  
     const { itemId, itemTitle } = route.params;
     // 특정 버스 눌렀을 때 
     const handleItemPress = (item) => {

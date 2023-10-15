@@ -1,24 +1,20 @@
 // Login.js
 import React, { useState, useEffect } from 'react';
-import { View, Button, Text, TextInput, FlatList } from 'react-native';
+import { View, Button, Text, TextInput, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
 import axios from 'axios';
 
-const Login = () => {
+function Login({navigation}) {
   const [userId, setUserId] = useState('');
   const [password, setPassword] = useState('');
-  const [name, setName] = useState(''); // 이름을 추가합니다.
-  const [phoneNum, setPhoneNum] = useState('');
-  const [rideORgetOff, setRideORgetOff] = useState(false);
 
   const registerUser = async () => {
-    const userData = {
-      userId, name, password, phoneNum, rideORgetOff,
-    }
-    // JavaScript 객체를 JSON 문자열로 변환
-    const jsonData = JSON.stringify(userData);
     try {
-        await axios.post("http://bus-project.kro.kr/user/create", jsonData)
-        .then(response => {
+        await axios.post("http://10.20.106.96:8080/user/login",null, {
+          params: {
+            user_id: userId,
+            password: password,
+          }
+        }).then(response => {
           // 성공적으로 요청을 보낸 경우의 처리
           console.log('요청 성공:', response.data);
           navigation.navigate('Main');
@@ -26,9 +22,17 @@ const Login = () => {
         })
         .catch(error => {
           // 요청이 실패한 경우의 처리
-          console.error('요청 실패:', error);
+          console.error('아이디 또는 비밀번호가 일치하지 않습니다.', error);
+          navigation.navigate('Main');
         });
-        
+
+        // if(Response.data == "로그인 완료"){
+        //   console.log("로그인 성공");
+        //   navigation.navigate("Main");
+        // }else{
+        //   console.error("서버 응답 에러:", response.data)
+        // }
+        // 이거 쓰면 try문에 안걸리는 것처럼 아예 catch문으로 넘어감
     } 
     catch (error) {
         console.error('Error registering user:', error);
@@ -36,37 +40,96 @@ const Login = () => {
   };
 
   return (
-      <View>
-          <Text>Id:</Text>
+    <View backgroundColor='#FFFFFF'>
+      <View style={styles.container}>
+        <Text style={styles.text_title}>로그인</Text>
+          <Text style={styles.text}>아이디</Text>
           <TextInput
-              placeholder="Enter Id"
-              value={userId}
-              onChangeText={text => setUserId(text)}
+            style={styles.textInput}
+            placeholder="아이디를 입력해주세요"
+            value={userId}
+            onChangeText={text => setUserId(text)}
           />
-          <Text>Password:</Text>
+          <Text style={styles.text}>비밀번호</Text>
           <TextInput
-              placeholder="Enter password"
-              secureTextEntry={true}
-              value={password}
-              onChangeText={text => setPassword(text)}
+            style={styles.textInput}
+            placeholder="비밀번호를 입력해주세요"
+            secureTextEntry={true}
+            value={password}
+            onChangeText={text => setPassword(text)}
           />
-          <Text>Name:</Text>
-          <TextInput
-              placeholder="Enter name"
-              value={name}
-              onChangeText={text => setName(text)} // 이름을 상태로 업데이트합니다.
-          />
-          <Text>Phone Number:</Text>
-          <TextInput
-                placeholder="Enter phoneNum"
-                secureTextEntry={true}
-                value={phoneNum}
-                onChangeText={text => setPhoneNum(text)}
-            />
-            
-          <Button title="Submit" onPress={registerUser} />
+          
+          <TouchableOpacity
+                    style={styles.button}
+                    onPress={() => registerUser()}
+                >
+                    <Text style={styles.buttonText}>로그인</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    style={styles.signupButton}
+                    onPress={() => navigation.navigate('Sign')}
+                >
+                    <Text style={styles.signupButtonText}>회원가입</Text>
+                </TouchableOpacity>
       </View>
+    </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+      padding: 30,
+      alignItems: 'center'
+  },
+  text_title: {
+      marginTop: 20,
+      marginBottom: 20,
+      fontSize: 50,
+      alignSelf: 'flex-start'
+  },
+  text: {
+      fontSize: 25,
+      alignSelf: 'flex-start',
+      marginBottom: 10
+  },
+  textInput: {
+      borderColor: "#000000",
+      borderWidth: 1,
+      width: '80%',
+      height: '8%',
+      marginTop: 8,
+      marginBottom: 20,
+      fontSize: 25,
+      borderRadius: 5,
+      paddingLeft: 10
+  },
+  button: {
+      backgroundColor: 'blue',
+      width: '50%',
+      padding: 10,
+      justifyContent: 'center',
+      alignItems: 'center',
+      fontSize: 20,
+      borderRadius: 5,
+      marginBottom: 10
+  },
+  buttonText: {
+      color: 'white',
+      fontSize: 20
+  },
+  signupButton: {
+      backgroundColor: 'green',
+      width: '50%',
+      padding: 10,
+      justifyContent: 'center',
+      alignItems: 'center',
+      fontSize: 20,
+      borderRadius: 5
+  },
+  signupButtonText: {
+      color: 'white',
+      fontSize: 20
+  }
+});
 
 export default Login;
