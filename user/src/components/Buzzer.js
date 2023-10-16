@@ -10,21 +10,25 @@ const Buzzer = ({navigation, route}) => {
 
 
     const { 
-        userId,             // 
-        get_off,            
+        userId,             // user ID
+        start, // 출발 정류장 이름
+        end, // 도착 정류장 이름  
         selectedFirstNum,   // 차 번호
-        selectedCurrentBusStop, // 차 번호판
     } = route.params;
     
 
     const [isPressed, setPressed] = useState(false);
-
+    const [state, setState] = useState('');
     
-    useEffect(() => {
-        axios.post(`http://10.20.105.164:8080/driver/getOff`, null, {
+      const handleBellPress = () => {
+        console.log('하차벨을 눌렀습니다.');
+    
+        axios.post(`http://10.20.106.64:8080/driver/getOff`, null, {
             params : {
-                bus_num : selectedFirstNum,
-                bus_uid : selectedCurrentBusStop,
+                user_id : userId,
+                start : start,
+                bus_uid : selectedFirstNum,
+                end : end,
             }
         })
         .then(response => {
@@ -32,18 +36,14 @@ const Buzzer = ({navigation, route}) => {
             console.log('요청 성공:', response.data);
 
             // 가져온 데이터를 상태에 저장 <- busStop 클래스를 들고옴 stationNames와 nearStationNames라는 필드 존재
-            setBusStops(response.data);
+            setState(response.data);
     
-           
+            // 버틀을 눌린 상태로 변경해준다.
+            setPressed(true);
+            
         }).catch(error => {
             console.error('Error fetching bus stops:', error);
-          });
-      }, []); 
-
-      const handleBellPress = () => {
-        console.log('하차벨을 눌렀습니다.');
-        // 버틀을 눌린 상태로 변경해준다.
-        setPressed(true);
+            });
     };
 
     const buttonStyle = isPressed? styles.pressedButton : styles.button;

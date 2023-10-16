@@ -10,7 +10,7 @@ const Catch = ({navigation, route}) => {
   const [on, setOn] = useState([]);
   const [off, setOff] = useState([]);
   useEffect(() => {
-    axios.post(`http://10.20.105.164:8080/driver/getPassengers`, null,
+    axios.post(`http://10.20.106.64:8080/driver/getPassengers`, null,
     {
       params: {
         bus_uid:busUid,
@@ -44,7 +44,7 @@ const Catch = ({navigation, route}) => {
   return (
     
     <View>
-        <Text style={ styles.titleStyle }>승객 리스트</Text>
+        <Text style={ styles.titleStyle }>탑승 장소</Text>
         <FlatList
         data={passengers}
         renderItem={({ item, index }) => (
@@ -54,6 +54,20 @@ const Catch = ({navigation, route}) => {
                     <ListItem.Title>{item}번</ListItem.Title>
                     <ListItem.Subtitle>{passengers[index]}</ListItem.Subtitle>
                     <ListItem.Subtitle>탑승 장소 : {on[index]}</ListItem.Subtitle>
+                </ListItem.Content>
+                </ListItem>
+            </TouchableOpacity>
+        )}
+    />
+    <Text style={ styles.titleStyle }>하차 장소</Text>
+    <FlatList
+        data={passengers}
+        renderItem={({ item, index }) => (
+            <TouchableOpacity onPress={() => handleItemPress(item,index)}>
+                <ListItem bottomDivider>
+                <ListItem.Content>
+                    <ListItem.Title>{item}번</ListItem.Title>
+                    <ListItem.Subtitle>{passengers[index]}</ListItem.Subtitle>
                     <ListItem.Subtitle>하차 장소 : {off[index]}</ListItem.Subtitle>
                 </ListItem.Content>
                 </ListItem>

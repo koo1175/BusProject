@@ -20,7 +20,7 @@ const BusStop = ({navigation, route}) => {
 
     useEffect(() => {
       // const fetchData = () => {
-        axios.get(`http://10.20.105.164:8080/getStationByUid?arsId=${selectedUID}`)
+        axios.get(`http://10.20.106.64:8080/getStationByUid?arsId=${selectedUID}`)
         .then(response => {
           // 가져온 데이터를 상태에 저장 response.data == bus Class
           console.log('200 요청 성공');
@@ -60,7 +60,7 @@ const BusStop = ({navigation, route}) => {
     const selectedSecondNum = busSecondNum[index];
     const selectedCurrentBusStop = currentBusStop[index];
     const selectedDir = busDirs[index];
-    const seletedRoutedId = busRoutedId[index];
+    const seletedRoutedId = busRoutedId[index];   // 출발 정류장 노선 ID
     // 선택한 문자열을 다음 페이지인 'EndPoint' 페이지로 전달
     navigation.navigate('EndPoint', {
       selectedNum,

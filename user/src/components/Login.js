@@ -9,7 +9,7 @@ function Login({navigation}) {
 
   const login = async () => {
     try {
-        await axios.post("http://10.20.105.164:8080/user/login",null, {
+        await axios.post("http://10.20.106.64:8080/user/login",null, {
           params: {
             user_id: userId,
             password: password,
