@@ -153,24 +153,83 @@ function Sign({navigation}) {
 };
 
 const styles = StyleSheet.create({
+  formContainer: {
+      width: '80%',
+  },
+  container: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: 'white',
+  },
+  text_title: {
+      fontSize: 50,
+      color: '#125688', // 텍스트 색상 설정
+      marginBottom: 30,
+      fontWeight: 'bold',
+  },
+  inputContainer: {
+      flexDirection: 'column',
+      marginBottom: 20,
+  },
+  inputLabel: {
+      fontSize: 18,
+      marginBottom: 10,
+      color: 'gray',
+      textAlign: 'left',
+  },
+  textInput: {
+      borderColor: "#E5E5E5",
+      borderWidth: 1,
+      height: 40,
+      fontSize: 18,
+      borderRadius: 5,
+      paddingLeft: 10,
+      textAlign: 'left',
+      backgroundColor: '#FAFAFA',
+  },
+  InputId: {
+      borderColor: "#E5E5E5",
+      borderWidth: 1,
+      width : '70%',
+      height: 40,
+      fontSize: 18,
+      borderRadius: 5,
+      paddingLeft: 10,
+      textAlign: 'left',
+      backgroundColor: '#FAFAFA',
+  },
+  idInputContainer: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+  },
+  signupButton: {
+      backgroundColor: '#0095F6',
+      padding: 15,
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderRadius: 5,
+      marginTop: 20,
+  },
+  buttonText: {
+      color: 'white',
+      fontSize: 20,
+      fontWeight: 'bold',
+  },
   validationButton: {
-    backgroundColor: 'gray',
-    width: '20%',
-    height: 40,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 5,
-    marginLeft: 10,
-},
-signupButton: {
-  backgroundColor: 'green',
-  width: '50%',
-  padding: 10,
-  justifyContent: 'center',
-  alignItems: 'center',
-  fontSize: 20,
-  borderRadius: 5
-},
-})
-
+      backgroundColor: '#0095F6',
+      width: 80,
+      height: 40,
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderRadius: 5,
+      marginLeft: 10,
+  },
+  validationMessage: {
+      color: '#0095F6',
+      marginTop: 5,
+      textAlign: 'left',
+  },
+});
 export default Sign;

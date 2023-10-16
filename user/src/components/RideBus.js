@@ -2,10 +2,10 @@
 
 import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Text, FlatList, TouchableOpacity } from 'react-native';
-import { ListItem } from 'react-native-elements';
-import { PermissionsAndroid } from 'react-native';
+import { ListItem, Icon } from 'react-native-elements';
 import axios from 'axios';
 
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
   
 const RideBus = ({ navigation,route }) => {
@@ -72,12 +72,28 @@ const RideBus = ({ navigation,route }) => {
 };
 
 const styles = StyleSheet.create({
-  titleStyle: {
-    fontSize: 24, 
-    fontWeight: 'bold', 
-    marginVertical: 10
+  container: {
+      flex: 1,
+      backgroundColor: 'white',
   },
-  
-});
+  titleStyle: {
+      fontSize: 24,
+      fontWeight: 'bold',
+      marginVertical: 10,
+  },
+  locationInfo: {
+      marginBottom: 20,
+      padding: 10,
+      backgroundColor: '#F0F0F0',
 
+  },
+  listItem: {
+      marginHorizontal: 16,
+      marginVertical: 8,
+      borderRadius: 8,
+  },
+  listItemTitle: {
+      fontSize: 23,
+  },
+});
 export default RideBus;
