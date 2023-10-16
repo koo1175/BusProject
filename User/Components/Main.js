@@ -94,7 +94,7 @@ function Main({ navigation, route }) {      //navigation 있어야
         try {
             await axios({
                 method: "post",
-                url: "http://10.20.100.72:8080/saveVoice",
+                url: "http://10.20.100.31:8080/saveVoice",
                 data: formData,
                 headers: { "Content-Type": "multipart/form-data" },
             })
