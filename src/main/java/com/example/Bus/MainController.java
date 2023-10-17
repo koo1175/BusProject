@@ -11,7 +11,7 @@ import java.net.*;
 import java.util.*;
 
 @RestController
-@CrossOrigin(origins = "https://port-0-java-springboot-12fhqa2blnemug25.sel5.cloudtype.app/") // 리액트 네이티브와 스프링 부트의 포트를 통일하기 위함
+@CrossOrigin("*") // 리액트 네이티브와 스프링 부트의 포트를 통일하기 위함
 @RequiredArgsConstructor
 public class MainController {
 
@@ -23,7 +23,8 @@ public class MainController {
     private final UserService userService;
 
     @PostMapping("/user/create")
-    public String create(@RequestParam(name = "user_id") String user_id, @RequestParam("name") String name, @RequestParam("password") String password, @RequestParam("phone_num") String phone_num){
+    public String create(@RequestParam("user_id") String user_id, @RequestParam("name") String name, @RequestParam("password") String password, @RequestParam("phone_num") String phone_num){
+        System.out.println("연결");
         if(isPrimary(user_id)){
             User user = new User();
             user.setUserId(user_id);
@@ -33,6 +34,7 @@ public class MainController {
             user.setRideORgetOff(false);
 
             Long newUserId = userService.save(user);
+            
             return newUserId + "번 유저 등록 완료";
         }else{
             return "이미 존재하는 아이디입니다.";
