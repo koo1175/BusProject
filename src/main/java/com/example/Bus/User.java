@@ -20,20 +20,17 @@ public class User {
     private String name;
     @Column(name = "password")
     private String password;
-    @Column(name = "ride_or_getoff")
-    private boolean ride_or_getoff;
     @Column(name = "phone_num")
     private String phone_num;
-    @Column(name = "voice") // 오디오 파일을 저장하기 위한 컬럼
-    private  byte[] voice;
+    @Column(name = "destination")
+    private String destination;
 
-    public User(String user_id, String name, String password, Boolean ride_or_getoff, String phone_num, byte[] voice){
+    public User(String user_id, String name, String password, Boolean ride_or_getoff, String phone_num, String destination){
         this.user_id = user_id;
         this.name = name;
         this.password = password;
-        this.ride_or_getoff = ride_or_getoff;
         this.phone_num = phone_num;
-        this.voice = voice;
+        this.destination = destination;
     }
 
     public User() {
@@ -64,14 +61,6 @@ public class User {
         this.password = password;
     }
 
-    public Boolean getRideORgetOff() {
-        return ride_or_getoff;
-    }
-
-    public void setRideORgetOff(Boolean ride_or_getoff) {
-        this.ride_or_getoff = ride_or_getoff;
-    }
-
     public String getPhoneNum() {
         return phone_num;
     }
@@ -88,9 +77,11 @@ public class User {
         return id;
     }
 
-    public void setVoice(byte[] voice){
-        this.voice = voice;
+    public String getDestination() {
+        return destination;
     }
 
-    public byte[] getVoice() {return voice;}
+    public void setDestination(String destination) {
+        this.destination = destination;
+    }
 }

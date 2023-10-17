@@ -14,6 +14,8 @@ import CheckRoad from "./CheckRoad";
 import CheckRideBus from "./CheckRideBus";
 import BusStop from "./BusStop";
 import HowLong from "./HowLong";
+import EndPoint from "./EndPoint";
+import Buzzer from "./Buzzer";
 
 
 
@@ -37,6 +39,8 @@ const StackNavigator = () => {
             <Stack.Screen name="RideBus" component={RideBus}/>
             <Stack.Screen name="RoadSetting" component={RoadSetting}/>
             <Stack.Screen name="SignUp" component={SignUp}/>
+            <Stack.Screen name="EndPoint" component={EndPoint}/>
+            <Stack.Screen name="Buzzer" component={Buzzer}/>
 
 
 

@@ -67,15 +67,20 @@ function Main({ navigation, route }) {      //navigation 있어야
                 allowsRecordingIOS: true,
                 playsInSilentModeIOS: true,
             });
-
+            if (recording) {
+                await recording.stopAndUnloadAsync();
+                setRecording(null);
+            }
             console.log('음성 녹음 시작');
-            const { recording } = await Audio.Recording.createAsync(Audio.RecordingOptionsPresets.HIGH_QUALITY);
+            const { recording } = await Audio.Recording.createAsync(recordingOptions); // Use recordingOptions
             setRecording(recording);
             console.log('Recording started');
         } catch (err) {
             console.error('음성 녹음 시작 실패', err);
         }
     }
+
+
 
     async function stopRecording() {
         console.log('Recording 중지');
@@ -94,7 +99,7 @@ function Main({ navigation, route }) {      //navigation 있어야
         try {
             await axios({
                 method: "post",
-                url: "http://10.20.100.31:8080/saveVoice",
+                url: "http://10.20.100.31:8080/Voice",
                 data: formData,
                 headers: { "Content-Type": "multipart/form-data" },
             })
@@ -174,14 +179,14 @@ function Main({ navigation, route }) {      //navigation 있어야
                 {/*)}*/}
                 <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('RoadSetting')}>
                     <View style={styles.buttonContent}>
-                        <FontAwesome5 name="route" size={24} color="black" style={styles.icon} />
+                        <FontAwesome5 name="route" size={24} color="white" style={styles.icon} />
                         <Text style={styles.buttonText}>경로 설정</Text>
                     </View>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('CheckRoad')}>
                     <View style={styles.buttonContent}>
-                        <FontAwesome5 name="route" size={24} color="black" style={styles.icon} />
+                        <FontAwesome5 name="route" size={24} color="white" style={styles.icon} />
                         <Text style={styles.buttonText}>경로 확인</Text>
                     </View>
                 </TouchableOpacity>
@@ -191,7 +196,7 @@ function Main({ navigation, route }) {      //navigation 있어야
                     longitude: 37.56205,
                 })}>
                     <View style={styles.buttonContent}>
-                        <FontAwesome5 name="bus" size={24} color="black" style={styles.thirdIcon} />
+                        <FontAwesome5 name="bus" size={24} color="white" style={styles.thirdIcon} />
                         <Text style={styles.thirdButtonText}>버스 탑승 등록</Text>
                     </View>
                 </TouchableOpacity>
@@ -258,6 +263,7 @@ const styles = StyleSheet.create({
     buttonText: {
         color: 'white',
         fontSize: 18,
+        fontWeight: 'bold',
         textAlign: 'center',
         marginRight: 80,
     },
@@ -272,6 +278,7 @@ const styles = StyleSheet.create({
     thirdButtonText: {
         color: 'white',
         fontSize: 18,
+        fontWeight: 'bold',
         textAlign: 'center',
         marginRight: 60,
     },

@@ -1,6 +1,5 @@
 package com.example.Bus;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.w3c.dom.Document;
@@ -24,9 +23,9 @@ public class ArriveBusListController {
     @GetMapping("/getStationByUid")
     public Bus ABList(String arsId) throws IOException {
         Bus bus = new Bus(); // 각 요청마다 새로운 Bus 객체 생성
-        // http://10.20.100.72:8080/getStationByUid?arsId=13118 형식으로 사용
+        // http://10.20.100.31:8080/getStationByUid?arsId=13118 형식으로 사용
         StringBuilder urlBuilder = new StringBuilder("http://ws.bus.go.kr/api/rest/stationinfo/getStationByUid"); /*URL*/
-        urlBuilder.append("?" + URLEncoder.encode("serviceKey","UTF-8") + "=7qe7vg3zUQdiZErzcHVVolstffAp3wUBke37nX4dyFcWCPsjYsiHmb5Su25Dw%2Fs1uv5zk6sh3oQq4sIynl8z0A%3D%3D"); /*Service Key*/
+        urlBuilder.append("?" + URLEncoder.encode("serviceKey","UTF-8") + "=t2qs2a1o15tXR1NhKWY%2FTplsMnvey2e3kTFt8BIlR8dJ6JsaALNvYI6%2B5dKPSJbl%2FJ9C0dF7%2Boi2NwGJKHikSQ%3D%3D"); /*Service Key*/
         urlBuilder.append("&" + URLEncoder.encode("arsId","UTF-8") + "=" + URLEncoder.encode(arsId, "UTF-8")); /*정류소 번호*/
         URL url = new URL(urlBuilder.toString());
 
@@ -94,8 +93,8 @@ public class ArriveBusListController {
                     String busRouteId = getTagValue("busRouteId", eElement); // 노선 ID
                     String staOrd = getTagValue("staOrd", eElement); // 순번
 
-                    // ABLIST를 요청하자 첫번째 도착 버스의 번호판, 두번째 도착 버스의 번호판을 가져오자.
-                    ArrInfoByRoute.ABList2(stId, busRouteId,staOrd, bus);
+                    // ABLIST2를 요청하자. 첫번째 도착 버스의 번호판, 두번째 도착 버스의 번호판을 가져오자.
+                    ArrInfoByRouteController.ABList2(stId, busRouteId,staOrd, bus);
 
                     System.out.println("첫번째 도착 예정 버스  : " + arrmsg1);
                     System.out.println("두번째 도착 예정 버스  : " + arrmsg2);

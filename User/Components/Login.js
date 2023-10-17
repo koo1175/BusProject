@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {View, Text, TextInput, Button, StyleSheet, TouchableOpacity, TouchableWithoutFeedback, Keyboard} from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import axios from 'axios';
 import { useNavigation } from "@react-navigation/native";
 
@@ -7,7 +7,9 @@ const Login = () => {
     const navigation = useNavigation();
     const [userId, setUserId] = useState('');
     const [password, setPassword] = useState('');
+    const [errorMessage, setErrorMessage] = useState(''); // 에러 메시지 상태 추가
 
+    // 사용자 로그인을 시도하는 함수
     const registerUser = async () => {
         try {
             // await axios.post("http://bus-project.kro.kr/user/login", null, {
@@ -38,54 +40,55 @@ const Login = () => {
                     <Text style={styles.logoText}>BusProject</Text>
                 </View>
 
-
                 <View style={styles.formContainer}>
-                <TextInput
-                    style={styles.textInput}
-                    keyboardType='default'
-                    placeholder='아이디'
-                    value={userId}
-                    onChangeText={text => setUserId(text)}
-                />
+                    <TextInput
+                        style={styles.textInput}
+                        keyboardType='default'
+                        placeholder='아이디'
+                        value={userId}
+                        onChangeText={text => setUserId(text)}
+                    />
 
-                <TextInput
-                    style={styles.textInput}
-                    keyboardType='default'
-                    secureTextEntry={true}
-                    placeholder='비밀번호'
-                    value={password}
-                    onChangeText={text => setPassword(text)}
-                />
+                    <TextInput
+                        style={styles.textInput}
+                        keyboardType='default'
+                        secureTextEntry={true}
+                        placeholder='비밀번호'
+                        value={password}
+                        onChangeText={text => setPassword(text)}
+                    />
 
-                <TouchableOpacity
-                    style={styles.loginButton}
-                    onPress={registerUser}
-                >
-                    <Text style={styles.buttonText}>로그인</Text>
-                </TouchableOpacity>
+                    {errorMessage && ( // 에러 메시지가 있는 경우에만 표시
+                        <Text style={styles.errorText}>{errorMessage}</Text>
+                    )}
+                    <TouchableOpacity
+                        style={styles.loginButton}
+                        onPress={registerUser}
+                    >
+                        <Text style={styles.buttonText}>로그인</Text>
+                    </TouchableOpacity>
+                    <Text style={styles.orText}>또는</Text>
 
-                <Text style={styles.orText}>또는</Text>
-
-                <TouchableOpacity
-                    style={styles.signupButton}
-                    onPress={() => navigation.navigate('SignUp')}
-                >
-                    <Text style={styles.signupButtonText}>회원가입</Text>
-                </TouchableOpacity>
+                    <TouchableOpacity
+                        style={styles.signupButton}
+                        onPress={() => navigation.navigate('SignUp')}
+                    >
+                        <Text style={styles.signupButtonText}>회원가입</Text>
+                    </TouchableOpacity>
+                </View>
             </View>
-        </View>
-            </TouchableWithoutFeedback>
+        </TouchableWithoutFeedback>
     );
 }
 
 const styles = StyleSheet.create({
-    formContainer: {        //전체 비율 조정
+    formContainer: { //전체 비율 조정
         width: '50%',
     },
     container: {
         flex: 1,
         justifyContent: 'center', // 세로 중앙 정렬
-        alignItems: 'center',     // 가로 중앙 정렬
+        alignItems: 'center', // 가로 중앙 정렬
         backgroundColor: 'white',
     },
     logoContainer: {
@@ -95,12 +98,10 @@ const styles = StyleSheet.create({
         color: '#125688', // 텍스트 색상 설정
         fontSize: 50,
         fontWeight: 'bold',
-
     },
-
     textInput: {
         borderColor: "#E5E5E5",
-        opacity : 0.7,
+        opacity: 0.7,
         borderWidth: 1,
         padding: 10,
         marginBottom: 15,
@@ -108,7 +109,6 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         paddingLeft: 30,
         width: '100%',
-
     },
     loginButton: {
         backgroundColor: '#458eff',
@@ -138,7 +138,13 @@ const styles = StyleSheet.create({
     signupButtonText: {
         color: 'white',
         fontSize: 20,
-    }
+    },
+    errorText: { // 에러 메시지 스타일
+        color: 'red',
+        fontSize: 16,
+        textAlign: 'center',
+        marginVertical: 10,
+    },
 });
 
 export default Login;

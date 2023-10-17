@@ -6,20 +6,29 @@ import { ListItem } from 'react-native-elements';
 import { FontAwesome5 } from '@expo/vector-icons';
 
 const BusStop = ({ navigation, route }) => {
-    const { selectedUID, selectedName } = route.params;
-
-    const [busNums, setBusNums] = useState([]);
+    const { selectedName , selectedUID, userId } = route.params;
+    const [busNums, setBusNums] = useState([]);             // 도착 버스 번호
     const [busFirstTime, setBusFirstTime] = useState([]);
     const [busSecondTime, setBusSecondTime] = useState([]);
+    const [busFirstNum, setBusFirstNum] = useState([]);
+    const [busSecondNum, setBusSecondNum] = useState([]);
+    const [busDirs, setBusDirs] = useState([]);
+    const [currentBusStop, setCurrentBusStop] = useState([]); // 현재 정류장 번호
+    const [busRoutedId, setBusRoutedId] = useState([]); // 노선 ID -> 다음 axiod시 필요 ( 노선 ID에 해당하는 경유 정류장 리스트 조회 )
 
     useEffect(() => {
         const fetchData = () => {
             axios.get(`http://10.20.100.31:8080/getStationByUid?arsId=${selectedUID}`)
                 .then(response => {
                     console.log('200 요청 성공');
-                    setBusNums(response.data.arriveBusNum);
-                    setBusFirstTime(response.data.arriveBusFirstTime);
-                    setBusSecondTime(response.data.arriveBusSecondTime);
+                    setBusNums(response.data.arriveBusNum);            // 도착 버스 번호
+                    setBusFirstTime(response.data.arriveBusFirstTime); // 도착 정보(첫번째)
+                    setBusSecondTime(response.data.arriveBusSecondTime); // 도착 정보(두번째)
+                    setBusFirstNum(response.data.arriveBusFirstNum);   // 차 번호판(첫번째)
+                    setBusSecondNum(response.data.arriveBusSecondNum); // 차 번호판(두번째)
+                    setCurrentBusStop(response.data.currentBusStop);   // 현재 버스 정류장 번호
+                    setBusDirs(response.data.arriveBusDir);            // 버스 방향
+                    setBusRoutedId(response.data.busRoutedId);         // 노선 ID
                 })
                 .catch(error => {
                     console.log('error: 요청 실패');
@@ -29,7 +38,7 @@ const BusStop = ({ navigation, route }) => {
 
         const interval = setInterval(() => {
             fetchData();
-        }, 1000000);
+        }, 100000);
 
         return () => {
             clearInterval(interval);
@@ -40,10 +49,24 @@ const BusStop = ({ navigation, route }) => {
         const selectedNum = busNums[index];
         const selectedFirstTime = busFirstTime[index];
         const selectedSecondTime = busSecondTime[index];
-        navigation.navigate('HowLong', {
+        const selectedFirstNum = busFirstNum[index];
+        const selectedSecondNum = busSecondNum[index];
+        const selectedCurrentBusStop = currentBusStop[index];
+        const selectedDir = busDirs[index];
+        const seletedRoutedId = busRoutedId[index];
+        // 선택한 문자열을 다음 페이지인 'EndPoint' 페이지로 전달
+        navigation.navigate('EndPoint', {
             selectedNum,
             selectedFirstTime,
             selectedSecondTime,
+            selectedFirstNum,
+            selectedSecondNum,
+            selectedCurrentBusStop,
+            selectedDir,
+            seletedRoutedId,
+            selectedUID,
+            userId: userId,
+            selectedName: selectedName,// 현재 정류장 이름 - > 기사한테 승객이 타는 위치를 알려주기 위해 전달해두자
         });
     };
 
@@ -58,7 +81,7 @@ const BusStop = ({ navigation, route }) => {
                     <TouchableOpacity onPress={() => handleItemPress(item, index)}>
                         <ListItem bottomDivider>
                             <View style={styles.leftContainer}>
-                            <FontAwesome5 name="bus" size={30} color="#125688" style={styles.icon} />
+                                <FontAwesome5 name="bus" size={30} color="#125688" style={styles.icon} />
 
                                 <ListItem.Title style={styles.busNumber}>{item}번</ListItem.Title>
                             </View>

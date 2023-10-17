@@ -11,6 +11,7 @@ public class Bus {
     private List<String> arriveBusSecondNum;  // 두번째 도착하는 버스의 차 번호판
     private List<String> arriveBusDir;        // 버스의 방향
     private List<String> currentBusStop; // 현재 버스 정류장 번호
+    private List<String> busRoutedId; //  현재 정류장에서의 노선 ID? 암튼 노선 ID
 
     // Getter & Setter
     public List<String> getArriveBusNum() {
@@ -69,6 +70,14 @@ public class Bus {
         this.currentBusStop.add(currentBusStop);
     }
 
+    public List<String> getBusRoutedId() {
+        return busRoutedId;
+    }
+
+    public void setBusRoutedId(String busRoutedId) {
+        this.busRoutedId.add(busRoutedId);
+    }
+
     public Bus(){
         this.arriveBusNum = new ArrayList<>();
         this.arriveBusFirstTime = new ArrayList<>();
@@ -76,5 +85,7 @@ public class Bus {
         this.arriveBusDir = new ArrayList<>();
         this.arriveBusFirstNum = new ArrayList<>();
         this.arriveBusSecondNum = new ArrayList<>();
+        this.currentBusStop = new ArrayList<>();
+        this.busRoutedId = new ArrayList<>();
     }
 }

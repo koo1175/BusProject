@@ -16,7 +16,7 @@ const busUids = [
 
 function HowLong ({navigation, route}) {
     const { itemId, itemTitle } = route.params;
-    // 특정 버스 눌렀을 때 
+    // 특정 버스 눌렀을 때
     const handleItemPress = (item) => {
         navigation.navigate('CheckRideBus', {
           itemId: item.id,
@@ -40,18 +40,18 @@ function HowLong ({navigation, route}) {
             )}
         />
         </View>
-        
+
     );
 };
 
 const styles = StyleSheet.create({
     titleStyle: {
-      fontSize: 24, 
-      fontWeight: 'bold', 
+      fontSize: 24,
+      fontWeight: 'bold',
       marginVertical: 10
     },
-    
+
 });
-  
+
 
 export default HowLong;

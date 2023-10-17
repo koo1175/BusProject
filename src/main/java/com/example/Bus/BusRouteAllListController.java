@@ -26,11 +26,11 @@ public class BusRouteAllListController {
 
     // 해당 버스 노선 전체를 조회한다.
     @GetMapping("/getArrInfoByRouteAll")
-    public List<BusStop> getArrInfoByRouteAllList(@RequestParam String busRouteId) throws IOException {
-        List<BusStop> busStops = new ArrayList<>();
-    // http://10.20.100.72:8080/getArrInfoByRouteAll?busRouteId=100100118 형식으로 사용
+    public BusStop getArrInfoByRouteAllList(@RequestParam String busRouteId) throws IOException {
+        BusStop busStop = new BusStop();
+        // http://10.20.100.31:8080/getArrInfoByRouteAll?busRouteId=100100118 형식으로 사용
         StringBuilder urlBuilder = new StringBuilder("http://ws.bus.go.kr/api/rest/arrive/getArrInfoByRouteAll"); /*URL*/
-        urlBuilder.append("?" + URLEncoder.encode("serviceKey","UTF-8") + "=7qe7vg3zUQdiZErzcHVVolstffAp3wUBke37nX4dyFcWCPsjYsiHmb5Su25Dw%2Fs1uv5zk6sh3oQq4sIynl8z0A%3D%3D"); /*Service Key*/
+        urlBuilder.append("?" + URLEncoder.encode("serviceKey","UTF-8") + "=t2qs2a1o15tXR1NhKWY%2FTplsMnvey2e3kTFt8BIlR8dJ6JsaALNvYI6%2B5dKPSJbl%2FJ9C0dF7%2Boi2NwGJKHikSQ%3D%3D"); /*Service Key*/
         urlBuilder.append("&" + URLEncoder.encode("busRouteId","UTF-8") + "=" + URLEncoder.encode(busRouteId, "UTF-8")); /*노선ID*/
         URL url = new URL(urlBuilder.toString());
 
@@ -43,7 +43,7 @@ public class BusRouteAllListController {
         if(conn.getResponseCode() >= 200 && conn.getResponseCode() <= 300) {
             rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
             // XML 데이터 파싱 및 출력
-            busStops = getData(url);
+            busStop = getData(url);
         } else {
             rd = new BufferedReader(new InputStreamReader(conn.getErrorStream()));
         }
@@ -51,11 +51,12 @@ public class BusRouteAllListController {
         rd.close();
         conn.disconnect();
 
-        return busStops;
+        return busStop;
     }
 
-    public static List<BusStop> getData(URL url) {
+    public static BusStop getData(URL url) {
         List<BusStop> busStops = new ArrayList<>();
+        BusStop busStop = new BusStop();
 
         try {
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -78,15 +79,23 @@ public class BusRouteAllListController {
                     Element eElement = (Element) nNode;
 
                     String stationName = eElement.getElementsByTagName("stNm").item(0).getTextContent();
-
+                    String busRouteId = eElement.getElementsByTagName("busRouteId").item(0).getTextContent();
+                    String plainNo1 = eElement.getElementsByTagName("plainNo1").item(0).getTextContent();
+                    String stId = eElement.getElementsByTagName("stId").item(0).getTextContent();
                     // 현재 정류소명과 이전 정류소명 비교
                     if (stationName != null && !stationName.equals(previousStationName)) {
                         System.out.println("정류소명: " + stationName);
+                        System.out.println("정류소 노선ID: " + busRouteId);
+                        System.out.println("첫번째 도착 버스 번호: " + plainNo1);
+                        System.out.println("정류소 ID : " + stId);
                         previousStationName = stationName;
 
-                        // BusStop 객체를 생성하고 정류소명을 설정한 뒤 리스트에 추가
-                        BusStop busStop = new BusStop();
+                        // BusStop 객체를 생성하고 정류소명, 노선ID, 번호를 설정한 뒤 리스트에 추가
                         busStop.setStationNames(stationName);
+//                        busStop.setBusRouteId(busRouteId);
+//                        busStop.setBusNum(plainNo1);
+//                        busStop.setRouteId();
+//                        busStops.setBusNum();
                         busStops.add(busStop);
                     } else {
                         break;
@@ -97,6 +106,6 @@ public class BusRouteAllListController {
             e.printStackTrace();
         }
 
-        return busStops;
+        return busStop;
     }
 }

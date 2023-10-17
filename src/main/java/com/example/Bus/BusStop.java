@@ -3,18 +3,18 @@ import java.util.*;
 
 public class BusStop {
 
-    private String stationNames;
+    private List<String> stationNames;
 
     private List<String> nearStationNames;
     private List<String> nearStationUIDs;
 
     // Getter & Setter
-    public String getStationNames(){
+    public List<String> getStationNames(){
         return stationNames;
     }
 
     public void setStationNames(String stationName){
-        this.stationNames = stationName;
+        this.stationNames.add(stationName);
     }
 
     public List<String> getNearStationName() {
@@ -44,6 +44,7 @@ public class BusStop {
     }
 
     public BusStop(){
+        this.stationNames = new ArrayList<>();
         this.nearStationNames = new ArrayList<>();
         this.nearStationUIDs = new ArrayList<>();
     }
