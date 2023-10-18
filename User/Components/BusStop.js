@@ -5,6 +5,7 @@ import { ListItem } from 'react-native-elements';
 
 import { FontAwesome5 } from '@expo/vector-icons';
 
+
 const BusStop = ({ navigation, route }) => {
     const { selectedName , selectedUID, userId } = route.params;
     const [busNums, setBusNums] = useState([]);             // 도착 버스 번호

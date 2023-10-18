@@ -13,7 +13,7 @@ import java.nio.file.Paths;
 @RestController
 public class getVoice {
 
-    private static String UPLOADED_FOLDER = "../voice";
+    private static String UPLOADED_FOLDER = "/Users/songdongjun/Desktop/BusProject/voice/";
 
     @PostMapping("/Voice")
     public String voiceRecognition(@RequestParam("userId") String userId,
@@ -41,18 +41,31 @@ public class getVoice {
         return temp;
     }
 
+    //    public void convertM4AToPCM(String sourcePath, String targetPath) {
+//        try {
+//            Runtime runtime = Runtime.getRuntime();
+//            Process process = runtime.exec(new String[]{"/bin/bash", "ffmpeg_converter.sh", sourcePath, targetPath});
+//            process.waitFor();  // Wait for the process to finish.
+//            System.out.println("변환 완료.");
+//        } catch (IOException | InterruptedException e) {
+//
+//            e.printStackTrace();
+//
+//        }
+//    }
     public void convertM4AToPCM(String sourcePath, String targetPath) {
-
         try {
-            Runtime runtime = Runtime.getRuntime();
-            Process process = runtime.exec(new String[]{"C:/ffmpeg-2023-10-12-git-a7663c9604-essentials_build/bin/ffmpeg.exe", "-i", sourcePath, "-acodec", "pcm_s16le", "-f", "s16le", "-ac", "1", "-ar","16000",targetPath});
-            process.waitFor();  // Wait for the process to finish.
+            // Build the FFmpeg command for conversion
+            String[] cmd = {"ffmpeg", "-i", sourcePath, "-acodec", "pcm_s16le", "-f", "s16le", "-ac", "1", "-ar", "16000", targetPath};
+            ProcessBuilder processBuilder = new ProcessBuilder(cmd);
+            Process process = processBuilder.start();
 
-
+            // Wait for the process to finish
+            process.waitFor();
+            System.out.println("변환 완료.");
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
-
-        System.out.println("변환 완료.");
     }
 }
+
