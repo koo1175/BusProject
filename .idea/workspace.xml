@@ -9,20 +9,14 @@
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/Components/BusStop.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/BusStop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/User/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/User/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/User/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/getVoice.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/getVoice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/getVoice.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/getVoice.class.uniqueId0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/getVoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/getVoice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voice/hello.wav" beforeDir="false" afterPath="$PROJECT_DIR$/voice/hello.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/Components/EndPoint.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/EndPoint.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/Components/StackNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/StackNavigator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/voice/KOR_M_RM0276MKDH0135.pcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/voice/converted_recording_1697629941160.m4a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/voice/hello.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/voice/recording_1697629941160.m4a" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -358,7 +352,7 @@
       <workItem from="1697612056171" duration="3058000" />
       <workItem from="1697616920990" duration="8000" />
       <workItem from="1697616944700" duration="2488000" />
-      <workItem from="1697624919723" duration="5050000" />
+      <workItem from="1697624919723" duration="6952000" />
     </task>
     <servers />
   </component>

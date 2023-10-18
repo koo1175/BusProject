@@ -41,10 +41,15 @@ const EndPoint = ({navigation, route}) => {
     }, []);
 
 
+    // const handleItemPress = (item, index) => {
+    //     const selectedEndPoint = station[index];
+    //     const selectedEndPointRouteId = routeId[index];
+    //     const selectedEndPointBusNum = busNum[index];        위 코드에서 밑에 코드로 수정.
     const handleItemPress = (item, index) => {
         const selectedEndPoint = station[index];
-        const selectedEndPointRouteId = routeId[index];
-        const selectedEndPointBusNum = busNum[index];
+        const selectedEndPointRouteId = routeId && routeId.length > index ? routeId[index] : null;
+        const selectedEndPointBusNum = busNum && busNum.length > index ? busNum[index] : null;
+
         // 선택한 문자열을 다음 페이지인 'CheckRideBus' 페이지로 전달
         navigation.navigate('CheckRideBus', {
             selectedNum: selectedNum,  // 현재 선택된 버스 번호

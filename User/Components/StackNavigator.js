@@ -19,6 +19,7 @@ import Buzzer from "./Buzzer";
 
 
 
+
 const Stack = createNativeStackNavigator();
 
 // StackNavigator 함수 
@@ -41,6 +42,7 @@ const StackNavigator = () => {
             <Stack.Screen name="SignUp" component={SignUp}/>
             <Stack.Screen name="EndPoint" component={EndPoint}/>
             <Stack.Screen name="Buzzer" component={Buzzer}/>
+
 
 
 
