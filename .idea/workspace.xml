@@ -4,67 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d8dc476-c3cf-47ec-bf48-7da97b20820c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Driver/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/Driver/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Driver/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/Driver/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Driver/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/Driver/babel.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Driver/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Driver/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Driver/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Driver/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Driver/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Driver/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/Components/BusStop.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/BusStop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/Components/Catch.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/Catch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/Components/CheckRideBus.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/CheckRideBus.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/Components/HowLong.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/HowLong.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/Components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/Components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/Components/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/SignUp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/Components/StackNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/StackNavigator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/User/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/User/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/User/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/ArrInfoByRoute.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/ArriveBusListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/ArriveBusListController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/AskToDriver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/Bus.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/Bus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/BusApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/BusApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/BusRouteAllListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/BusRouteAllListController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/BusStop.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/BusStop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/Driver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/DriverRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/DriverRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/DriverService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/DriverService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/MainController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/NearBusStationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/NearBusStationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/SaveVoice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/VoiceAPI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MainController.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/SaveVoice.class.uniqueId1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/User.class.uniqueId3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/UserRepository.class.uniqueId2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/UserService.class.uniqueId4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/ArrInfoByRoute.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/ArriveBusListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/ArriveBusListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/AskToDriver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/Bus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/BusRouteAllListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/BusRouteAllListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/BusStop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/BusStop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/DriverRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/DriverRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/DriverService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/DriverService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/MainController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/NearBusStationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/NearBusStationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/SaveVoice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/VoiceAPI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/VoiceAPI2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/test.java" beforeDir="false" />
-    </list>
+    <list default="true" id="2d8dc476-c3cf-47ec-bf48-7da97b20820c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -391,6 +331,10 @@
       <workItem from="1697502380146" duration="86000" />
       <workItem from="1697502623142" duration="71000" />
       <workItem from="1697503143189" duration="120000" />
+      <workItem from="1697603166162" duration="627000" />
+      <workItem from="1697605590851" duration="1485000" />
+      <workItem from="1697608168772" duration="1981000" />
+      <workItem from="1697611506166" duration="377000" />
     </task>
     <servers />
   </component>

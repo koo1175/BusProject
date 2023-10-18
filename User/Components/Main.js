@@ -3,13 +3,10 @@ import { View, Text, StyleSheet, TouchableOpacity, Button } from 'react-native';
 import * as Location from 'expo-location';
 import { Audio } from 'expo-av';
 import axios from 'axios';
-
-import MapView, { Marker } from 'react-native-maps';
-
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-
+import MapView, { Marker } from 'react-native-maps';
 
 const recordingOptions = {
     isMeteringEnabled: true,
@@ -38,7 +35,7 @@ const recordingOptions = {
     },
 };
 
-function Main({ navigation, route }) {      //navigation 있어야
+function Main({ navigation, route }) {
     const [location, setLocation] = useState(null);
     const [errorMsg, setErrorMsg] = useState(null);
     let timestamp = Date.now();
@@ -56,7 +53,8 @@ function Main({ navigation, route }) {      //navigation 있어야
         })();
     }, []);
 
-    const [isRecording, setRecording] = React.useState(false);
+    const [isRecording, setRecording] = useState(false);
+    const [recording, setRecordingUri] = useState(null);
 
     async function startRecording() {
         try {
@@ -67,26 +65,26 @@ function Main({ navigation, route }) {      //navigation 있어야
                 allowsRecordingIOS: true,
                 playsInSilentModeIOS: true,
             });
+
             if (recording) {
                 await recording.stopAndUnloadAsync();
                 setRecording(null);
             }
+
             console.log('음성 녹음 시작');
-            const { recording } = await Audio.Recording.createAsync(recordingOptions); // Use recordingOptions
-            setRecording(recording);
+            const { recording } = await Audio.Recording.createAsync(recordingOptions);
+            setRecordingUri(recording);
             console.log('Recording started');
         } catch (err) {
             console.error('음성 녹음 시작 실패', err);
         }
     }
 
-
-
     async function stopRecording() {
         console.log('Recording 중지');
         await recording.stopAndUnloadAsync();
         const uri = recording.getURI();
-        setRecording(null);
+        setRecordingUri(uri);
 
         let formData = new FormData();
         formData.append('audio', {
@@ -168,15 +166,7 @@ function Main({ navigation, route }) {      //navigation 있어야
                 </TouchableOpacity>
             </View>
 
-            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center',backgroundColor: 'white'  }}>
-                {/*{errorMsg ? (<Text>{errorMsg}</Text>) : location ? (*/}
-                {/*    <View>*/}
-                {/*        /!*<Text style={styles.locationText}>위도: {location.coords.latitude}</Text>*!/*/}
-                {/*        /!*<Text style={styles.locationText}>경도: {location.coords.longitude}</Text>*!/*/}
-                {/*    </View>*/}
-                {/*) : (*/}
-                {/*    <Text style={styles.loadingText}>로딩 중...</Text>*/}
-                {/*)}*/}
+            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'white' }}>
                 <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('RoadSetting')}>
                     <View style={styles.buttonContent}>
                         <FontAwesome5 name="route" size={24} color="white" style={styles.icon} />
@@ -200,7 +190,6 @@ function Main({ navigation, route }) {      //navigation 있어야
                         <Text style={styles.thirdButtonText}>버스 탑승 등록</Text>
                     </View>
                 </TouchableOpacity>
-
             </View>
         </View>
     );
@@ -217,15 +206,13 @@ const styles = StyleSheet.create({
     },
     TitleText: {
         fontSize: 35,
-        color: '#125688', // 텍스트 색상 설정
+        color: '#125688',
         fontWeight: 'bold',
-        marginLeft: 20, // 왼쪽 여백
-        marginRight: 20, // 오른쪽 여백
-        marginTop: 20, // 위쪽 여백
+        marginLeft: 20,
+        marginRight: 20,
+        marginTop: 20,
         marginBottom: '-5%',
-        // backgroundColor: 'red', // 확인용 색
     },
-
     mapContainer: {
         flex: 1,
         marginTop: '20%',
@@ -240,7 +227,6 @@ const styles = StyleSheet.create({
     startMic: {
         width: 60,
         height: 60,
-        // backgroundColor: 'red', // 확인용 색 넣기
         opacity: 1,
         justifyContent: 'center',
         alignItems: 'center',
@@ -267,10 +253,9 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginRight: 80,
     },
-
     buttonContent: {
         flexDirection: 'row',
-        justifyContent: 'space-between', // 아이콘과 텍스트를 양쪽 끝으로 정렬
+        justifyContent: 'space-between',
     },
     icon: {
         marginRight: 70,
