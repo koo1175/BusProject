@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d8dc476-c3cf-47ec-bf48-7da97b20820c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/580827ce-fd9a-4a05-9e1b-8a40e36b7327.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/580827ce-fd9a-4a05-9e1b-8a40e36b7327.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/Components/BusStop.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/BusStop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/Components/CheckRideBus.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/CheckRideBus.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/Components/EndPoint.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/EndPoint.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/getVoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/getVoice.java" afterDir="false" />
-    </list>
+    <list default="true" id="2d8dc476-c3cf-47ec-bf48-7da97b20820c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -344,6 +336,7 @@
       <workItem from="1697608168772" duration="1981000" />
       <workItem from="1697611506166" duration="377000" />
       <workItem from="1697612056171" duration="3058000" />
+      <workItem from="1697616920990" duration="8000" />
     </task>
     <servers />
   </component>
