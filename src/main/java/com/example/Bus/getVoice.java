@@ -13,7 +13,7 @@ import java.nio.file.Paths;
 @RestController
 public class getVoice {
 
-    private static String UPLOADED_FOLDER = "/Users/songdongjun/Desktop/BusProject-- 3/voice";
+    private static String UPLOADED_FOLDER = "../voice";
 
     @PostMapping("/Voice")
     public String voiceRecognition(@RequestParam("userId") String userId,

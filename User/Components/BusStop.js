@@ -35,10 +35,10 @@ const BusStop = ({ navigation, route }) => {
                     console.error('Error fetching bus stops:', error);
                 });
         };
-
+        fetchData();
         const interval = setInterval(() => {
             fetchData();
-        }, 100000);
+        }, 10000000);
 
         return () => {
             clearInterval(interval);

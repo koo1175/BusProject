@@ -15,12 +15,13 @@ function CheckRideBus ({navigation, route}) {
         selectedFirstNum,   // 버스 번호판
         selectedSecondNum,
         selectedCurrentBusStop, // 현재 정류장 번호
+        seletedRoutedId,        // 출발 정류장 노선 ID
         selectedDir,
         selectedName, //  현재 정류장 이름
         selectedEndPoint, // 전해받은 destination 도착지
+        selectedEndPointRouteId, // 전해받은 도착지 노선ID
         userId                  // 유저 아이디
     } = route.params;
-
     const [busStops, setBusStops] = useState([]);
 
 // 확인 버튼 눌렀을 때
@@ -29,10 +30,13 @@ function CheckRideBus ({navigation, route}) {
         try{
             await axios.post(`http://10.20.100.31:8080/driver/ride`, null, {
                 params : {
-                    bus_uid : selectedFirstNum,
-                    bus_stop : selectedName,
+                    bus_uid : selectedFirstNum, //  버스 번호판
+                    start : selectedName, // 출발 정류소 이름
+                    start_route_id : seletedRoutedId,
                     user_id: userId,
-                    destination: selectedEndPoint,
+                    end: selectedEndPoint, // 도착 정류소 이름
+                    end_route_id : selectedEndPointRouteId, // 도착 정류소 노선 ID
+
                 }
             })
                 .then(response => {
@@ -42,10 +46,17 @@ function CheckRideBus ({navigation, route}) {
                         selectedFirstNum: selectedFirstNum,
                         selectedCurrentBusStop: selectedCurrentBusStop,
                         selectedEndPoint: selectedEndPoint,
+                        start : selectedName,
+                        end : selectedEndPoint,
                         userId: userId,
                     });
+                    console.log('CheckRideBus ');
+                    console.log('출발 정류소 이름: ', selectedName);
+                    console.log('출발 정류소 노선 ID: ', seletedRoutedId);
+                    console.log('도착지 이름: ', selectedEndPoint);
+                    console.log('도착 정류소 노선 ID: ', selectedEndPointRouteId);
                     // 가져온 데이터를 상태에 저장 <- busStop 클래스를 들고옴 stationNames와 nearStationNames라는 필드 존재
-                    setBusStops(response.data);
+                    setBusStops(response.data.setStationName);
 
 
                 }).catch(error => {
