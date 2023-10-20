@@ -19,7 +19,7 @@ const RideBus = ({ navigation,route }) => {
 
       useEffect(() => {
         // 스프링 부트 서버(BusRouteAllListController)에서 api에 요청해서 받아온 정류장 데이터를 가져온다
-        axios.get(`http://10.20.106.64:8080/getStationByPos?X=126.9407&Y=37.56223`) 
+        axios.get(`http://10.20.106.112:8080/getStationByPos?X=126.9407&Y=37.56223`) 
           .then(response => {
 
 

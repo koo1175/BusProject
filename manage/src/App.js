@@ -1,18 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Register from './components/Register';
+import Main from './components/Main';
+import Login from './components/Login';
+import Manage from './components/Manage';
+import Detail from './components/Detail';
 
-function App(props) {
-  console.log(props);
-  const subject = props.subject;
+function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-        <p>
-          {subject}
-        </p>
-        
-      </header>
+    <div className='App'>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/login' element={<Login />}></Route> 
+          <Route path='/main' element={<Main />}></Route>
+          <Route path='/regist' element={<Register />}></Route>
+          <Route path='/manage' element={<Manage />}></Route>
+          <Route path='/detail' element={<Detail />}></Route>
+        </Routes> 
+      </BrowserRouter>
     </div>
   );
 }

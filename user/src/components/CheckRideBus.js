@@ -28,7 +28,7 @@ function CheckRideBus ({navigation, route}) {
 // 해야하는 것 
 const handleItemPress = async () => {
     try{
-        await axios.post(`http://10.20.106.64:8080/driver/ride`, null, {
+        await axios.post(`http://10.20.106.112:8080/driver/ride`, null, {
             params : {
                 bus_uid : selectedFirstNum, //  버스 번호판
                 start : selectedName, // 출발 정류소 이름

@@ -25,7 +25,7 @@ const EndPoint = ({navigation, route}) => {
     const [routeId, setRouteId] = useState([]);  // 정류소 노선 ID
     useEffect(() => {
       // const fetchData = () => {
-        axios.get(`http://10.20.106.64:8080/getArrInfoByRouteAll?busRouteId=${seletedRoutedId}`) // 노선 ID
+        axios.get(`http://10.20.106.112:8080/getArrInfoByRouteAll?busRouteId=${seletedRoutedId}`) // 노선 ID
         .then(response => {
           // 가져온 데이터를 상태에 저장 response.data == bus Class
           setStation(response.data.stationNames);
