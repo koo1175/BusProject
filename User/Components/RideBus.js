@@ -10,9 +10,10 @@ const RideBus = ({ navigation, route }) => {
     const [busStops, setBusStops] = useState([]);
     const [busUIDs, setBusUIDs] = useState([]);
     const [busNames, setBusNames] = useState([]);
+    const { userId } = route.params;
 
     useEffect(() => {
-        axios.get(`http://10.20.100.31:8080/getStationByPos?X=126.9407&Y=37.56223`)
+        axios.get(`http://10.20.100.37:8080/getStationByPos?X=126.9407&Y=37.56223`)
             .then(response => {
                 setBusStops(response.data);
                 setBusNames(response.data.nearStationName);
@@ -29,6 +30,7 @@ const RideBus = ({ navigation, route }) => {
         navigation.navigate('BusStop', {
             selectedName,
             selectedUID,
+            userId: userId
         });
     };
 

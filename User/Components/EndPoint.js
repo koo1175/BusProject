@@ -25,7 +25,7 @@ const EndPoint = ({navigation, route}) => {
     const [routeId, setRouteId] = useState([]);  // 정류소 노선 ID
     useEffect(() => {
         // const fetchData = () => {
-        axios.get(`http://10.20.100.31:8080/getArrInfoByRouteAll?busRouteId=${seletedRoutedId}`) // 노선 ID
+        axios.get(`http://10.20.100.37:8080/getArrInfoByRouteAll?busRouteId=${seletedRoutedId}`) // 노선 ID
             .then(response => {
                 // 가져온 데이터를 상태에 저장 response.data == bus Class
                 setStation(response.data.stationNames);
@@ -44,7 +44,7 @@ const EndPoint = ({navigation, route}) => {
     // const handleItemPress = (item, index) => {
     //     const selectedEndPoint = station[index];
     //     const selectedEndPointRouteId = routeId[index];
-    //     const selectedEndPointBusNum = busNum[index];        위 코드에서 밑에 코드로 수정.
+    //     const selectedEndPointBusNum = busNum[index];        //위 코드에서 밑에 코드로 수정.
     const handleItemPress = (item, index) => {
         const selectedEndPoint = station[index];
         const selectedEndPointRouteId = routeId && routeId.length > index ? routeId[index] : null;
@@ -62,7 +62,7 @@ const EndPoint = ({navigation, route}) => {
             seletedRoutedId: seletedRoutedId,
             selectedName : selectedName, // 현재(탑승) 정류장 이름
             userId: userId,
-            selectedEndPointRouteId,       // 하차 정류소 노선 ID
+            end_route_id : selectedEndPointRouteId,      // 하차 정류소 노선 ID
             selectedEndPointBusNum,        // 하차 정류소의 첫번째 도착 버스 ( <- 저장해두면 안될것 같음 )
             selectedEndPoint               // 하차 정류소 이름
         });
@@ -71,6 +71,7 @@ const EndPoint = ({navigation, route}) => {
 
     return (
         <View>
+            <Text style={ styles.titleStyle }> {end_route_id} </Text>
             <Text style={ styles.titleStyle }> 도착지 설정 </Text>
 
             <Text style={ styles.titleStyle }> 출발 정류장 : {selectedName} 정류장 </Text>

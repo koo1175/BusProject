@@ -23,7 +23,7 @@ public class ArriveBusListController {
     @GetMapping("/getStationByUid")
     public Bus ABList(String arsId) throws IOException {
         Bus bus = new Bus(); // 각 요청마다 새로운 Bus 객체 생성
-        // http://10.20.100.31:8080/getStationByUid?arsId=13118 형식으로 사용
+        // http://10.20.100.37:8080/getStationByUid?arsId=13118 형식으로 사용
         StringBuilder urlBuilder = new StringBuilder("http://ws.bus.go.kr/api/rest/stationinfo/getStationByUid"); /*URL*/
         urlBuilder.append("?" + URLEncoder.encode("serviceKey","UTF-8") + "=t2qs2a1o15tXR1NhKWY%2FTplsMnvey2e3kTFt8BIlR8dJ6JsaALNvYI6%2B5dKPSJbl%2FJ9C0dF7%2Boi2NwGJKHikSQ%3D%3D"); /*Service Key*/
         urlBuilder.append("&" + URLEncoder.encode("arsId","UTF-8") + "=" + URLEncoder.encode(arsId, "UTF-8")); /*정류소 번호*/

@@ -14,8 +14,8 @@ public class Passenger {
     @Column(name = "id") // Primary Key
     private Integer id;
     // 버스 정류장 이름
-    @Column(name = "bus_stop")
-    private String bus_stop;
+    @Column(name = "start")
+    private String start;
     // 버스 번호판 uid
     @Column(name = "bus_uid")
     private String bus_uid;
@@ -23,16 +23,22 @@ public class Passenger {
     @Column(name = "user_id")
     private String user_id;
     // 내릴지 말지 boolean값
-    @Column(name = "destination")
-    private String destination;
+    @Column(name = "end")
+    private String end;
+    // start point의 routeID : 노선 아이디
+    @Column(name = "start_route_id")
+    private String start_route_id;
+    // end point의 routeID : 노선 아이디
+    @Column(name = "end_route_id")
+    private String end_route_id;
 
 
-    public String getBus_stop() {
-        return bus_stop;
+    public String getStart() {
+        return start;
     }
 
-    public void setBus_stop(String bus_stop_name) {
-        this.bus_stop = (bus_stop_name);
+    public void setStart(String start) {
+        this.start = (start);
     }
 
     public String getBus_uid() {
@@ -51,14 +57,31 @@ public class Passenger {
         this.user_id = (user_id);
     }
 
-    public String getDestination() {
-        return destination;
+    public String getEnd() {
+        return end;
     }
 
-    public void setDestination(String destination) {
-        this.destination = destination;
+    public void setEnd(String end) {
+        this.end = (end);
+    }
+
+    public String getStart_route_id() {
+        return start_route_id;
+    }
+
+    public void setStart_route_id(String start_route_id) {
+        this.start_route_id = start_route_id;
+    }
+
+    public String getEnd_route_id() {
+        return end_route_id;
+    }
+
+    public void setEnd_route_id(String end_route_id) {
+        this.end_route_id = end_route_id;
     }
 
     public Passenger(){
     }
 }
+

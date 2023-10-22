@@ -19,7 +19,7 @@ const BusStop = ({ navigation, route }) => {
 
     useEffect(() => {
         const fetchData = () => {
-            axios.get(`http://10.20.100.31:8080/getStationByUid?arsId=${selectedUID}`)
+            axios.get(`http://10.20.100.37:8080/getStationByUid?arsId=${selectedUID}`)
                 .then(response => {
                     console.log('200 요청 성공');
                     setBusNums(response.data.arriveBusNum);            // 도착 버스 번호
@@ -39,7 +39,7 @@ const BusStop = ({ navigation, route }) => {
         fetchData();
         const interval = setInterval(() => {
             fetchData();
-        }, 10000000);
+        }, 100000000);
 
         return () => {
             clearInterval(interval);
@@ -75,6 +75,7 @@ const BusStop = ({ navigation, route }) => {
         <View style={styles.container}>
             <Text style={styles.titleStyle}> {selectedName} 정류장 </Text>
             <Text style={styles.titleStyle}> {selectedUID} 정류장 UID </Text>
+
 
             <FlatList
                 data={busNums}

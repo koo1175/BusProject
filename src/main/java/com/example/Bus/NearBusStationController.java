@@ -26,7 +26,7 @@ public class NearBusStationController {
     @GetMapping("/getStationByPos")
     public BusStop nearSt(String X, String Y) throws IOException {
         BusStop busStop = new BusStop();
-        // http://10.20.100.31:8080/getStationByPos?X=126.9407&Y=37.56223 형태로 사용해야함
+        // http://10.20.100.37:8080/getStationByPos?X=126.9407&Y=37.56223 형태로 사용해야함
         StringBuilder urlBuilder = new StringBuilder("http://ws.bus.go.kr/api/rest/stationinfo/getStationByPos"); /*URL*/
         urlBuilder.append("?" + URLEncoder.encode("serviceKey","UTF-8") + "=0Fdhoh8PtruSsgs%2FDtWVvlxqcjTWEI7QPfeDB1SwDPbX311RBVfaatvVkZvZRum3gM0QwziF2OJts4FG11Y1uw%3D%3D"); /*Service Key*/
         urlBuilder.append("&" + URLEncoder.encode("tmX","UTF-8") + "=" + URLEncoder.encode(X, "UTF-8")); /*기준위치 X*/

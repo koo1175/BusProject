@@ -4,27 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d8dc476-c3cf-47ec-bf48-7da97b20820c" name="Changes" comment="">
+    <list default="true" id="bb6e1113-ac4a-4a99-8784-da256fb0f660" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/Components/BusStop.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/BusStop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/Components/Buzzer.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/Buzzer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/Components/CheckRideBus.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/CheckRideBus.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User/Components/EndPoint.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/EndPoint.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/Components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/Components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/Components/RideBus.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/RideBus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/Components/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/SignUp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User/Components/StackNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/StackNavigator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voice/KOR_M_RM0276MKDH0135.pcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/voice/converted_recording_1697629941160.m4a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/voice/hello.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/voice/recording_1697629941160.m4a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/User/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/User/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/User/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/Driver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/getVoice.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/ArrInfoByRouteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/ArrInfoByRouteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/ArriveBusListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/ArriveBusListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/BusRouteAllListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/BusRouteAllListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/DriverController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/DriverController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/NearBusStationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/NearBusStationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/Passenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/PassengerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/PassengerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="CompilerWorkspaceConfiguration">
-    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -34,9 +53,6 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <task path="$PROJECT_DIR$">
-          <activation />
-        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -46,140 +62,41 @@
       </state>
     </system>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-        <option value="JavaScript File" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
   <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 0
 }</component>
-  <component name="ProjectId" id="2Vk4W9Igp3pa4umHGODwpjhH1ry" />
+  <component name="ProjectId" id="2WwCSwcMCZ2zFuaU1vJqzSUCpIz" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "동준",
-    "last_opened_file_path": "/Users/songdongjun/Desktop/무제 폴더",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "라이브러리",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.3757094",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "957789d64df2cdc7d9c8afa128e7071d",
-    "ts.external.directory.path": "/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
-    ]
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;동준&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;957789d64df2cdc7d9c8afa128e7071d&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/ad" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/example/Bus" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/User" />
-      <recent name="$PROJECT_DIR$/voice" />
-      <recent name="$PROJECT_DIR$/User/node_modules" />
-      <recent name="$PROJECT_DIR$/ad" />
-      <recent name="$PROJECT_DIR$/ad/public" />
-    </key>
-  </component>
-  <component name="RunAnythingCache">
-    <option name="myCommands">
-      <command value="gradle bootjar" />
-    </option>
-  </component>
-  <component name="RunManager" selected="Spring Boot.BusApplication">
-    <configuration name="Example" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.Bus.Example" />
-      <module name="Bus.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.Bus.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="VoiceAPI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="VoiceAPI" />
-      <module name="Bus.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="VoiceApi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="VoiceApi" />
-      <module name="Bus.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="com.example.Bus.VoiceAPI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.Bus.VoiceAPI" />
-      <module name="Bus.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.Bus.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.Bus.test" />
-      <module name="Bus.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.Bus.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+}</component>
+  <component name="RunManager">
     <configuration name="BusApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="Bus.main" />
@@ -188,179 +105,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 9.0.80" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.80" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment />
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="11e4c915-81fd-41d8-ad8c-75ca6505f43b" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="55103" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Spring Boot.BusApplication" />
-      <item itemvalue="Tomcat 서버.Tomcat 9.0.80" />
-      <item itemvalue="애플리케이션.test" />
-      <item itemvalue="애플리케이션.VoiceAPI" />
-      <item itemvalue="애플리케이션.com.example.Bus.VoiceAPI" />
-      <item itemvalue="애플리케이션.VoiceApi" />
-      <item itemvalue="애플리케이션.Example" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="애플리케이션.test" />
-        <item itemvalue="애플리케이션.com.example.Bus.VoiceAPI" />
-        <item itemvalue="애플리케이션.VoiceAPI" />
-        <item itemvalue="애플리케이션.VoiceApi" />
-        <item itemvalue="애플리케이션.Example" />
-      </list>
-    </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="2d8dc476-c3cf-47ec-bf48-7da97b20820c" name="Changes" comment="" />
-      <created>1695366772876</created>
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="bb6e1113-ac4a-4a99-8784-da256fb0f660" name="변경" comment="" />
+      <created>1697634259262</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1695366772876</updated>
-      <workItem from="1695366773949" duration="14412000" />
-      <workItem from="1695648320822" duration="4279000" />
-      <workItem from="1695653570671" duration="25859000" />
-      <workItem from="1696269901060" duration="1428000" />
-      <workItem from="1696271656249" duration="602000" />
-      <workItem from="1696316305334" duration="1347000" />
-      <workItem from="1696415889097" duration="4986000" />
-      <workItem from="1696580278957" duration="15585000" />
-      <workItem from="1696672374085" duration="1259000" />
-      <workItem from="1696755645877" duration="4460000" />
-      <workItem from="1696766337742" duration="4472000" />
-      <workItem from="1696863033145" duration="2852000" />
-      <workItem from="1696922033632" duration="2470000" />
-      <workItem from="1696931725468" duration="827000" />
-      <workItem from="1696932560559" duration="2782000" />
-      <workItem from="1696935414288" duration="6000" />
-      <workItem from="1696944052611" duration="43000" />
-      <workItem from="1696945408610" duration="691000" />
-      <workItem from="1697023355728" duration="7563000" />
-      <workItem from="1697033205799" duration="15000" />
-      <workItem from="1697033230912" duration="9667000" />
-      <workItem from="1697075749487" duration="4072000" />
-      <workItem from="1697085157200" duration="533000" />
-      <workItem from="1697090190331" duration="35000" />
-      <workItem from="1697090233799" duration="3459000" />
-      <workItem from="1697107469218" duration="7713000" />
-      <workItem from="1697117651603" duration="1580000" />
-      <workItem from="1697119343121" duration="1275000" />
-      <workItem from="1697120629687" duration="34000" />
-      <workItem from="1697120696604" duration="1053000" />
-      <workItem from="1697121787754" duration="456000" />
-      <workItem from="1697122253654" duration="7238000" />
-      <workItem from="1697198315237" duration="236000" />
-      <workItem from="1697199904146" duration="703000" />
-      <workItem from="1697261438836" duration="19000" />
-      <workItem from="1697262193878" duration="11445000" />
-      <workItem from="1697273883126" duration="19657000" />
-      <workItem from="1697347751145" duration="11731000" />
-      <workItem from="1697375293452" duration="4000" />
-      <workItem from="1697376898382" duration="216000" />
-      <workItem from="1697378611305" duration="819000" />
-      <workItem from="1697385852488" duration="10000" />
-      <workItem from="1697385885556" duration="3017000" />
-      <workItem from="1697390662593" duration="1781000" />
-      <workItem from="1697416273275" duration="2634000" />
-      <workItem from="1697418935184" duration="1521000" />
-      <workItem from="1697421339654" duration="4962000" />
-      <workItem from="1697454042297" duration="5611000" />
-      <workItem from="1697464178038" duration="3180000" />
-      <workItem from="1697502380146" duration="86000" />
-      <workItem from="1697502623142" duration="71000" />
-      <workItem from="1697503143189" duration="120000" />
-      <workItem from="1697603166162" duration="627000" />
-      <workItem from="1697605590851" duration="1485000" />
-      <workItem from="1697608168772" duration="1981000" />
-      <workItem from="1697611506166" duration="377000" />
-      <workItem from="1697612056171" duration="3058000" />
-      <workItem from="1697616920990" duration="8000" />
-      <workItem from="1697616944700" duration="2488000" />
-      <workItem from="1697624919723" duration="6952000" />
+      <updated>1697634259262</updated>
+      <workItem from="1697634261248" duration="45000" />
+      <workItem from="1697634487356" duration="77000" />
+      <workItem from="1697634573753" duration="7258000" />
+      <workItem from="1697684580808" duration="18000" />
+      <workItem from="1697721051498" duration="76000" />
+      <workItem from="1697729039170" duration="35000" />
+      <workItem from="1697730363244" duration="4104000" />
+      <workItem from="1697734480774" duration="2000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>
