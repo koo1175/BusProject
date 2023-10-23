@@ -5,6 +5,8 @@ import Main from './components/Main';
 import Login from './components/Login';
 import Manage from './components/Manage';
 import Detail from './components/Detail';
+import Delete from './components/Delete';
+import Modify from './components/Modify';
 
 function App() {
   return (
@@ -16,6 +18,11 @@ function App() {
           <Route path='/regist' element={<Register />}></Route>
           <Route path='/manage' element={<Manage />}></Route>
           <Route path='/detail' element={<Detail />}></Route>
+          {/* <Route path='/detail/:busUid' element={<Detail />}></Route>
+          <Route path='/delete/:busUid' element={<Delete />}></Route> */}
+          <Route path='/delete' element={<Delete />}></Route>
+          <Route path='/modify' element={<Modify />}></Route>
+          <Route path='/modify/:busUid' element={<Modify />}></Route>
         </Routes> 
       </BrowserRouter>
     </div>

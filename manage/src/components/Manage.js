@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import styled from 'styled-components';
 
-function Manage() {
+function Manage( ) {
 
     // const [drivers, seThrivers] = useState([]);
     const [test, setTest] = useState('');
@@ -14,10 +14,6 @@ function Manage() {
     const [companys, setCompanys] = useState([]);
 
     const navigate = useNavigate();
-    const handleClick = (id) => {
-      navigate(`/detail/${id}`);
-      
-    };
 
     // const navigate = useNavigate();
     const Table = styled.table`
@@ -45,7 +41,7 @@ function Manage() {
 
     useEffect(() => {
         // 스프링 부트 서버(BusRouteAllListController)에서 api에 요청해서 받아온 정류장 데이터를 가져온다
-        axios.post("http://10.20.106.57:8080/driver/all", {}) 
+        axios.post("http://10.20.106.98:8080/driver/all", {}) 
           .then(response => {
             // seThrivers(response.data);
             setTest(response.data.driverNames);
@@ -61,7 +57,14 @@ function Manage() {
           });
       }, []); // 빈 배열을 두 번째 인수로 전달하여 컴포넌트가 마운트될 때 한 번만 실행
       
-      
+    const handleClick = ( name, phoneNum, busNum, busUid, company ) => {
+      sessionStorage.setItem("name", name);
+      sessionStorage.setItem("phoneNum", phoneNum);
+      sessionStorage.setItem("busNum", busNum);
+      sessionStorage.setItem("busUid", busUid);
+      sessionStorage.setItem("company", company);
+      navigate(`/detail`);
+    }; 
     return (
         <>
         <h1>기사님 관리 페이지</h1>
@@ -77,7 +80,9 @@ function Manage() {
           </thead>
           <tbody>
           {names.map((item, index) => (
-            <TableRow key={index} onClick={() => handleClick(busUids[index])}>
+            <TableRow key={index} onClick={() => handleClick(names[index], phoneNums[index],
+               busNums[index], busUids[index], companys[index]
+              )}>
               <Td>{names[index]}</Td>
               <Td>{phoneNums[index]}</Td>
               <Td>{busNums[index]}</Td>
@@ -87,7 +92,6 @@ function Manage() {
           ))}
           </tbody>
         </Table>
-        
         </>
     )
 }

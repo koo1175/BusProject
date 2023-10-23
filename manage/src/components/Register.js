@@ -13,7 +13,7 @@ const Register = () => {
     
   const regist = async () => {
       try{
-          await axios.post("http://10.20.106.57:8080/driver/create",null, {
+          await axios.post("http://10.20.106.98:8080/driver/create",null, {
               params: {
                 bus_num: busNum,
                 bus_uid: busUid,

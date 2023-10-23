@@ -8,7 +8,7 @@ function Login({navigation}) {
 
   const login = async () => {
     try {
-        await axios.post("http://10.20.106.64:8080/driver/login",null, {
+        await axios.post("http://10.20.106.98:8080/driver/login",null, {
           params: {
             phone_num: phoneNum,
             bus_uid: busUid,
