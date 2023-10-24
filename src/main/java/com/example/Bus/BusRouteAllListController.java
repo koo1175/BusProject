@@ -28,7 +28,7 @@ public class BusRouteAllListController {
     @GetMapping("/getArrInfoByRouteAll")
     public BusStop getArrInfoByRouteAllList(@RequestParam String busRouteId) throws IOException {
         BusStop busStop = new BusStop();
-        // http://10.20.100.37:8080/getArrInfoByRouteAll?busRouteId=100100118 형식으로 사용
+        // http://10.20.100.15:8080/getArrInfoByRouteAll?busRouteId=100100118 형식으로 사용
         StringBuilder urlBuilder = new StringBuilder("http://ws.bus.go.kr/api/rest/arrive/getArrInfoByRouteAll"); /*URL*/
         urlBuilder.append("?" + URLEncoder.encode("serviceKey","UTF-8") + "=t2qs2a1o15tXR1NhKWY%2FTplsMnvey2e3kTFt8BIlR8dJ6JsaALNvYI6%2B5dKPSJbl%2FJ9C0dF7%2Boi2NwGJKHikSQ%3D%3D"); /*Service Key*/
         urlBuilder.append("&" + URLEncoder.encode("busRouteId","UTF-8") + "=" + URLEncoder.encode(busRouteId, "UTF-8")); /*노선ID*/

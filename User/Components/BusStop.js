@@ -19,7 +19,7 @@ const BusStop = ({ navigation, route }) => {
 
     useEffect(() => {
         const fetchData = () => {
-            axios.get(`http://10.20.100.37:8080/getStationByUid?arsId=${selectedUID}`)
+            axios.get(`http://10.20.100.15:8080/getStationByUid?arsId=${selectedUID}`)
                 .then(response => {
                     console.log('200 요청 성공');
                     setBusNums(response.data.arriveBusNum);            // 도착 버스 번호

@@ -13,7 +13,7 @@ const Login = () => {
     const registerUser = async () => {
         try {
             // await axios.post("http://bus-project.kro.kr/user/login", null, {
-            await axios.post("http://10.20.100.37:8080/user/login", null, {
+            await axios.post("http://10.20.100.15:8080/user/login", null, {
                 params: {
                     user_id: userId,
                     password: password,

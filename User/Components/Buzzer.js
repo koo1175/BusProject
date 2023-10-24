@@ -23,7 +23,7 @@ const Buzzer = ({navigation, route}) => {
     const handleBellPress = () => {
         console.log('하차벨을 눌렀습니다.');
 
-        axios.post(`http://10.20.100.37:8080/driver/getOff`, null, {
+        axios.post(`http://10.20.100.15:8080/driver/getOff`, null, {
             params : {
                 user_id : userId,
                 start : start,

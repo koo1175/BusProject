@@ -13,7 +13,7 @@ const RideBus = ({ navigation, route }) => {
     const { userId } = route.params;
 
     useEffect(() => {
-        axios.get(`http://10.20.100.37:8080/getStationByPos?X=126.9407&Y=37.56223`)
+        axios.get(`http://10.20.100.15:8080/getStationByPos?X=126.9407&Y=37.56223`)
             .then(response => {
                 setBusStops(response.data);
                 setBusNames(response.data.nearStationName);

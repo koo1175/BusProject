@@ -13,31 +13,23 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/.env" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/User/Components/BusStop.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/BusStop.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User/Components/Buzzer.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/Buzzer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User/Components/CheckRideBus.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/CheckRideBus.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User/Components/EndPoint.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/EndPoint.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User/Components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/Components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/Main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User/Components/RideBus.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/RideBus.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User/Components/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/SignUp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/Components/StackNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/User/Components/StackNavigator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/User/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/User/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/User/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/Bus/Driver.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/getVoice.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/DriverController$PassengerData.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/DriverController.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Passenger.class.uniqueId4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/PassengerRepository.class.uniqueId3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/PassengerService.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/ArrInfoByRouteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/ArrInfoByRouteController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/ArriveBusListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/ArriveBusListController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/BusRouteAllListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/BusRouteAllListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/DriverController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/DriverController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/NearBusStationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/NearBusStationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/Passenger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bus/PassengerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bus/PassengerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,6 +114,12 @@
       <workItem from="1697729039170" duration="35000" />
       <workItem from="1697730363244" duration="4104000" />
       <workItem from="1697734480774" duration="2000" />
+      <workItem from="1697966985694" duration="97000" />
+      <workItem from="1698020637936" duration="897000" />
+      <workItem from="1698074000635" duration="618000" />
+      <workItem from="1698113553524" duration="18000" />
+      <workItem from="1698113583105" duration="61000" />
+      <workItem from="1698153566461" duration="4026000" />
     </task>
     <servers />
   </component>
