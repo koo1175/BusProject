@@ -1,0 +1,20 @@
+
+Njavascript:S1128"&Remove this unused import of 'Button'.(“È–Þûÿÿÿÿ8¾Žá‹¶1
+Mjavascript:S3863"*'@expo/vector-icons' import is duplicated.(€Ü˜ 8¾Žá‹¶1
+Pjavascript:S1128
+"(Remove this unused import of 'response'.(ßÎ½ýûÿÿÿÿ8¾Žá‹¶1
+ajavascript:S1481)"9Remove the declaration of the unused 'errorMsg' variable.(¯šóæýÿÿÿÿ8¾Žá‹¶1
+^javascript:S1854)"6Remove this useless assignment to variable "errorMsg".(¯šóæýÿÿÿÿ8¾Žá‹¶1
+djavascript:S1481)"<Remove the declaration of the unused 'setErrorMsg' variable.(¯šóæýÿÿÿÿ8¾Žá‹¶1
+ajavascript:S1854)"9Remove this useless assignment to variable "setErrorMsg".(¯šóæýÿÿÿÿ8¾Žá‹¶1
+[javascript:S1481-"9Remove the declaration of the unused 'latitude' variable.(‰¾ˆ)8¾Žá‹¶1
+Xjavascript:S1854-"6Remove this useless assignment to variable "latitude".(‰¾ˆ)8¾Žá‹¶1
+^javascript:S1481-"<Remove the declaration of the unused 'setLatitude' variable.(‰¾ˆ)8¿Žá‹¶1
+[javascript:S1854-"9Remove this useless assignment to variable "setLatitude".(‰¾ˆ)8¿Žá‹¶1
+bjavascript:S1481.":Remove the declaration of the unused 'longitude' variable.(ÈÖèùÿÿÿÿ8¿Žá‹¶1
+_javascript:S1854."7Remove this useless assignment to variable "longitude".(ÈÖèùÿÿÿÿ8¿Žá‹¶1
+ejavascript:S1481."=Remove the declaration of the unused 'setLongitude' variable.(ÈÖèùÿÿÿÿ8¿Žá‹¶1
+bjavascript:S1854.":Remove this useless assignment to variable "setLongitude".(ÈÖèùÿÿÿÿ8¿Žá‹¶1
+^javascript:S1125="6Refactor the code to avoid using this boolean literal.(©ûŸ¦üÿÿÿÿ8¿Žá‹¶1
+ejavascript:S1481J"=Remove the declaration of the unused 'recordingUri' variable.(ö¼ã»üÿÿÿÿ8¿Žá‹¶1
+bjavascript:S1854J":Remove this useless assignment to variable "recordingUri".(ö¼ã»üÿÿÿÿ8¿Žá‹¶1

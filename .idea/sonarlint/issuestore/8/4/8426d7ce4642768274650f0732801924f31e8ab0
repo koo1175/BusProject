@@ -1,0 +1,10 @@
+
+i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(¬„›×8úÍ±™´1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(’Ö”üÿÿÿÿÿ8üÍ±™´1
+w
+java:S3008"ZRename this field "UPLOADED_FOLDER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ì¦ù•8±Î±™´1
+L	java:S106*"+Replace this use of System.out by a logger.(åßùÏÿÿÿÿÿ8ÃÎ±™´1
+{
+java:S2142A"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(òž¶È8ÆÎ±™´1
+L	java:S106?"+Replace this use of System.out by a logger.(êšãÿþÿÿÿÿ8ËÎ±™´1
+]	java:S125E"<This block of commented-out lines of code should be removed.(™üýÞÿÿÿÿÿ8ÍÎ±™´1

@@ -1,0 +1,9 @@
+
+r	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Êá‚ýùÿÿÿÿ8åË‘äµ1
+r	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Êá‚ýùÿÿÿÿ8åË‘äµ1
+r	java:S1171"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ËðÖûÿÿÿÿ8åË‘äµ1
+r	java:S117I"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( Üî²ûÿÿÿÿ8åË‘äµ1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(’Ö”üÿÿÿÿÿ8æË‘äµ1
+]	java:S125"<This block of commented-out lines of code should be removed.(°—êýÿÿÿÿ8çË‘äµ1
+n	java:S116"RRename this field "user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„ž¡Ü8èË‘äµ1
+p	java:S116"TRename this field "phone_num" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ô‚ª8èË‘äµ1

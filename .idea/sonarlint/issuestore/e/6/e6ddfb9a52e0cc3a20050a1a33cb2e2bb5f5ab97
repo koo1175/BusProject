@@ -1,0 +1,14 @@
+
+k	java:S117!"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıãæïıÿÿÿÿ
+k	java:S117)"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É²¿ıÿÿÿÿ
+f	java:S1179"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äøì
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(’Ö”üÿÿÿÿÿ
+g	java:S116"RRename this field "bus_num" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êç¾Ø
+l	java:S116"RRename this field "bus_uid" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±Ö¡ƒüÿÿÿÿ
+i	java:S116"TRename this field "phone_num" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ô‚ª
+Q	java:S125"<This block of commented-out lines of code should be removed.(ªÓê®
+h	java:S1005"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êúøÿÿÿÿ
+c	java:S1009"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äøì
+Q	java:S125E"<This block of commented-out lines of code should be removed.(˜ıã®
+<
+java:S1128"&Remove this unused import 'java.util'.(Î€ŒÙ

@@ -1,0 +1,13 @@
+
+Qjavascript:S1128")Remove this unused import of 'useEffect'.(ñÓ¦øÿÿÿÿ8œìñ‹¶1
+Pjavascript:S1128"(Remove this unused import of 'FlatList'.(ÑÂµÖÿÿÿÿÿ8œìñ‹¶1
+cjavascript:S1481"@Remove the declaration of the unused 'setRideORgetOff' variable.(Òæ÷ê8œìñ‹¶1
+`javascript:S1854"=Remove this useless assignment to variable "setRideORgetOff".(Òæ÷ê8œìñ‹¶1
+ljavascript:S1481"DRemove the declaration of the unused 'idValidationMessage' variable.(¡³™êùÿÿÿÿ8œìñ‹¶1
+ijavascript:S1854"ARemove this useless assignment to variable "idValidationMessage".(¡³™êùÿÿÿÿ8œìñ‹¶1
+ojavascript:S1481"GRemove the declaration of the unused 'setIdValidationMessage' variable.(¡³™êùÿÿÿÿ8œìñ‹¶1
+ljavascript:S1854"DRemove this useless assignment to variable "setIdValidationMessage".(¡³™êùÿÿÿÿ8œìñ‹¶1
+^javascript:S1481";Remove the declaration of the unused 'regexrName' variable.(‰Ìê­8ìñ‹¶1
+[javascript:S1854"8Remove this useless assignment to variable "regexrName".(‰Ìê­8ìñ‹¶1
+^javascript:S6353";Use concise character class syntax '\d' instead of '[0-9]'.(™‘Ø²8ìñ‹¶1
+Ajavascript:S125F"Remove this commented out code.(Œ˜Ã8ìñ‹¶1

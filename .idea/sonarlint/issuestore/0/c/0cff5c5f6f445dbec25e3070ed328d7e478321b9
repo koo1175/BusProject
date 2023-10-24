@@ -1,0 +1,17 @@
+
+c
+java:S1192"FDefine a constant instead of duplicating this literal "UTF-8" 3 times.(çãÔü8¤î¿Îµ1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(’Ö”üÿÿÿÿÿ8¬î¿Îµ1
+U
+java:S2755D"3Disable access to external entities in XML parsing.(©¯ëøûÿÿÿÿ8üï¿Îµ1
+i	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†áç8üï¿Îµ1
+L	java:S106$"+Replace this use of System.out by a logger.(³°Íøÿÿÿÿ8…ğ¿Îµ1
+I
+java:S1905;"'Remove this unnecessary cast to "Node".(ÚèÓıÿÿÿÿ8…ğ¿Îµ1
+F	java:S106J"+Replace this use of System.out by a logger.(«Ã¥8…ğ¿Îµ1
+G	java:S106O"+Replace this use of System.out by a logger.(û³¨8…ğ¿Îµ1
+G	java:S106V"+Replace this use of System.out by a logger.(©…¸Å8ğ¿Îµ1
+G	java:S106c"+Replace this use of System.out by a logger.(âÕ‰„8ğ¿Îµ1
+G	java:S106d"+Replace this use of System.out by a logger.(ÅÙ³8ğ¿Îµ1
+L	java:S106e"+Replace this use of System.out by a logger.(Û×Æ¥ùÿÿÿÿ8ğ¿Îµ1
+L	java:S106f"+Replace this use of System.out by a logger.(¯‰Éüÿÿÿÿ8ğ¿Îµ1

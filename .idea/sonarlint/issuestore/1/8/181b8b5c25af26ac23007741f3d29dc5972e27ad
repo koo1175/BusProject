@@ -1,0 +1,23 @@
+
+a
+java:S1192"FDefine a constant instead of duplicating this literal "UTF-8" 7 times.(®¦Ô§üÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âü÷ÿÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âü÷ÿÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(’Ö”üÿÿÿÿÿ
+N
+java:S2755I"3Disable access to external entities in XML parsing.(©¯ëøûÿÿÿÿ
+E	java:S106("+Replace this use of System.out by a logger.(³°Íøÿÿÿÿ
+B
+java:S1905@"'Remove this unnecessary cast to "Node".(ÚèÓıÿÿÿÿ
+?	java:S106O"+Replace this use of System.out by a logger.(«Ã¥
+@	java:S106T"+Replace this use of System.out by a logger.(û³¨
+E	java:S106b"+Replace this use of System.out by a logger.(İŠ™¹üÿÿÿÿ
+@	java:S106c"+Replace this use of System.out by a logger.(ïËÇî
+@	java:S106d"+Replace this use of System.out by a logger.(¾‘Ğç
+@	java:S106h"+Replace this use of System.out by a logger.(ŒûÁó
+f
+java:S1128"PRemove this unused import 'org.springframework.web.bind.annotation.CrossOrigin'.(º´Ñ†
+F
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ
+F
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ

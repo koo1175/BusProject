@@ -1,0 +1,13 @@
+
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Μ‡½΄ϊÿÿÿÿ8μίδµ1
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Òέ„ώÿÿÿÿ8μίδµ1
+r	java:S117%"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…ύ΅ώÿÿÿÿ8μίδµ1
+m	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(κϊΞ8μίδµ1
+r	java:S117>"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«¬®Ζÿÿÿÿÿ8μίδµ1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(’Φ”όÿÿÿÿÿ8νίδµ1
+]	java:S125"<This block of commented-out lines of code should be removed.(‰Μϊÿÿÿÿ8χίδµ1
+X	java:S125"<This block of commented-out lines of code should be removed.(΅Υ±8ψίδµ1
+c
+java:S11265"AReplace this if-then-else statement by a single return statement.(‰’μυϋÿÿÿÿ8ωίδµ1
+K
+java:S11443".Remove this unused private "isPrimary" method.(κϊΞ8ϋίδµ1

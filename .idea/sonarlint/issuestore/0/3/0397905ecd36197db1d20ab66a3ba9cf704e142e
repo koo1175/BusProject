@@ -1,0 +1,16 @@
+
+\
+java:S1192!"FDefine a constant instead of duplicating this literal "UTF-8" 3 times.(çãÔü
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(’Ö”üÿÿÿÿÿ
+I
+java:S2755>"3Disable access to external entities in XML parsing.(²µŸš
+E	java:S106("+Replace this use of System.out by a logger.(³°Íøÿÿÿÿ
+?	java:S106D"+Replace this use of System.out by a logger.(«Ã¥
+@	java:S106H"+Replace this use of System.out by a logger.(û³¨
+E	java:S106W"+Replace this use of System.out by a logger.(ŸÀÜˆûÿÿÿÿ
+@	java:S106X"+Replace this use of System.out by a logger.(İ®Ñİ
+@	java:S106Y"+Replace this use of System.out by a logger.(şÄû
+@	java:S106Z"+Replace this use of System.out by a logger.(Ü—ÔÕ
+V	java:S125_"<This block of commented-out lines of code should be removed.(÷¹Œşÿÿÿÿ
+f
+java:S1128"PRemove this unused import 'org.springframework.web.bind.annotation.CrossOrigin'.(º´Ñ†

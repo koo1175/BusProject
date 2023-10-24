@@ -1,0 +1,20 @@
+
+k	java:S117""QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„®¬Ýüÿÿÿÿ
+e	java:S117*"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œ¾‹
+k	java:S1172"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅÅòžùÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(’Ö”üÿÿÿÿÿ
+h	java:S116"SRename this field "bus_stop" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´œ‚Þ
+l	java:S116"RRename this field "bus_uid" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±Ö¡ƒüÿÿÿÿ
+g	java:S116"RRename this field "user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„ž¡Ü
+œ
+java:S1186>"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÕÚ¼Ùüÿÿÿÿ
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™êþÜüÿÿÿÿ
+h	java:S100""NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„®¬Ýüÿÿÿÿ
+c	java:S100&"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€Ýóé
+b	java:S100*"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œ¾‹
+b	java:S100."NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã‹³.
+h	java:S1002"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅÅòžùÿÿÿÿ
+F
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ
+F
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ
