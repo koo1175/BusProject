@@ -57,7 +57,6 @@ function Main({ navigation, route }) {
 
             // 서버에서 blind 여부 확인
             const res = await axios.get(`http://10.20.100.163:8080/api/checkBlind/${userId}`);
-            console.log('여기까지는 됩니다.2');
             if (res.data == true) {  // 예시로 사용한 키 값입니다. 실제 응답에서 어떤 키를 사용하는지 확인하십시오.
 
                 navigation.navigate('BlindBusStop', {

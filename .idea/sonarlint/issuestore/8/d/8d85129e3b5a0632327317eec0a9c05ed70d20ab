@@ -1,0 +1,21 @@
+
+h
+java:S1192"FDefine a constant instead of duplicating this literal "UTF-8" 3 times.(®¦Ô§üÿÿÿÿ8ªäÒ´¶1
+U
+java:S2755D"3Disable access to external entities in XML parsing.(©¯ëøûÿÿÿÿ8ÍéÒ´¶1
+i	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†áç8ÑéÒ´¶1
+L	java:S106$"+Replace this use of System.out by a logger.(³°Íøÿÿÿÿ8×éÒ´¶1
+I
+java:S1905;"'Remove this unnecessary cast to "Node".(ÚèÓıÿÿÿÿ8ßéÒ´¶1
+[
+java:S1854_"9Remove this useless assignment to local variable "arsId".(¾¯ñëúÿÿÿÿ8àéÒ´¶1
+F	java:S106J"+Replace this use of System.out by a logger.(«Ã¥8ãéÒ´¶1
+G	java:S106O"+Replace this use of System.out by a logger.(û³¨8äéÒ´¶1
+G	java:S106V"+Replace this use of System.out by a logger.(©…¸Å8åéÒ´¶1
+L
+java:S1481_"*Remove this unused "arsId" local variable.(¾¯ñëúÿÿÿÿ8çéÒ´¶1
+G	java:S106c"+Replace this use of System.out by a logger.(âÕ‰„8èéÒ´¶1
+G	java:S106d"+Replace this use of System.out by a logger.(ÅÙ³8èéÒ´¶1
+L	java:S106e"+Replace this use of System.out by a logger.(Û×Æ¥ùÿÿÿÿ8èéÒ´¶1
+L	java:S106f"+Replace this use of System.out by a logger.(¯‰Éüÿÿÿÿ8ééÒ´¶1
+G	java:S106g"+Replace this use of System.out by a logger.(ãç¢”8ééÒ´¶1

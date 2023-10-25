@@ -1,0 +1,18 @@
+
+h
+java:S1192"FDefine a constant instead of duplicating this literal "UTF-8" 7 times.(®¦Ô§üÿÿÿÿ8ŽÞÒ´¶1
+U
+java:S2755<"3Disable access to external entities in XML parsing.(©¯ëøûÿÿÿÿ8ŒâÒ´¶1
+W
+java:S1118":Add a private constructor to hide the implicit public one.(Ýâ¦ÿ8âÒ´¶1
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€¤ž¿ÿÿÿÿÿ8âÒ´¶1
+L	java:S106 "+Replace this use of System.out by a logger.(³°Íøÿÿÿÿ8 âÒ´¶1
+I
+java:S19054"'Remove this unnecessary cast to "Node".(ÚèÓýÿÿÿÿ8¤âÒ´¶1
+F	java:S106B"+Replace this use of System.out by a logger.(«Ã¥8¨âÒ´¶1
+G	java:S106G"+Replace this use of System.out by a logger.(û³ž¨8¨âÒ´¶1
+G	java:S106N"+Replace this use of System.out by a logger.(©…¸Å8ªâÒ´¶1
+L	java:S106U"+Replace this use of System.out by a logger.(Îô¥ëÿÿÿÿÿ8°âÒ´¶1
+G	java:S106V"+Replace this use of System.out by a logger.(ËÄ£8±âÒ´¶1
+L	java:S106W"+Replace this use of System.out by a logger.(‡àþþÿÿÿÿ8²âÒ´¶1
+L	java:S106X"+Replace this use of System.out by a logger.(ÝŠ™¹üÿÿÿÿ8³âÒ´¶1

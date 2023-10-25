@@ -1,0 +1,12 @@
+
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(¬„›×
+Ï
+java:S1598"³This file "getVoice_Android.java" should be located in "com\example\Bus" directory, not in "C:\Users\ìœ ì§„\final_voiceAPI\BusProject\springboot\src\main\java\com\example\second".(’Ö”üÿÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(’Ö”üÿÿÿÿÿ
+p
+java:S3008"ZRename this field "UPLOADED_FOLDER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ì¦ù•
+E	java:S106*"+Replace this use of System.out by a logger.(åßùÏÿÿÿÿÿ
+t
+java:S2142A"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(òž¶È
+E	java:S106?"+Replace this use of System.out by a logger.(êšãÿþÿÿÿÿ
+V	java:S125E"<This block of commented-out lines of code should be removed.(™üýÞÿÿÿÿÿ

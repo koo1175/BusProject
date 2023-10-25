@@ -8,7 +8,7 @@ function Catch({navigation, route})  {
   const [passengers, setPassengers] = useState([]);
   const [busStops, setBusStops] = useState([]);
   useEffect(() => {
-    axios.post(`http://10.20.105.164:8080/driver/getPassengers`, null,
+    axios.post(`http://192.168.13.122:8080/driver/getPassengers`, null,
     {
       params: {
         bus_uid:busUid,}

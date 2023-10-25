@@ -47,9 +47,6 @@ const StackNavigator = () => {
             <Stack.Screen name="BlindBusStop" component={BlindBusStop}/>
             <Stack.Screen name="BlindBusList" component={BlindBusList}/>
 
-
-
-
         </Stack.Navigator>
     )
 }

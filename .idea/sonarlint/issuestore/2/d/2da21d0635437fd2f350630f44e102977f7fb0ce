@@ -1,0 +1,12 @@
+
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì‡½´úÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒÝ„þÿÿÿÿ
+k	java:S117%"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ž…ý¡þÿÿÿÿ
+f	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆêúÎ
+k	java:S117>"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«¬®Æÿÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(‰ŒÌúÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(¡Õ±š
+\
+java:S11265"AReplace this if-then-else statement by a single return statement.(‰’ìõûÿÿÿÿ
+D
+java:S11443".Remove this unused private "isPrimary" method.(ˆêúÎ
