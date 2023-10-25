@@ -13,8 +13,9 @@ const Register = () => {
     
   const regist = async () => {
       try{
-          await axios.post("http://10.20.106.98:8080/driver/create",null, {
-              params: {
+        await axios.post("https://port-0-java-springboot-12fhqa2blnemug25.sel5.cloudtype.app/driver/create",null, {
+          // await axios.post("https://10.20.106.156:8080/driver/create",null, {
+          params: {
                 bus_num: busNum,
                 bus_uid: busUid,
                 name: name,

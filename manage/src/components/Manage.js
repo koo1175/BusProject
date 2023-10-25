@@ -36,26 +36,28 @@ function Manage( ) {
   const TableRow = styled.tr`
   &:not(:last-child) {
     margin-bottom: 10px; /* 행 사이의 간격을 조절합니다. */
-  }
-`;
+  }`;
 
     useEffect(() => {
-        // 스프링 부트 서버(BusRouteAllListController)에서 api에 요청해서 받아온 정류장 데이터를 가져온다
-        axios.post("http://10.20.106.98:8080/driver/all", {}) 
-          .then(response => {
-            // seThrivers(response.data);
-            setTest(response.data.driverNames);
-            setNames(response.data.driverNames);
-            setBusNums(response.data.busNums);
-            setBusUids(response.data.busUids);
-            setPhoneNums(response.data.phoneNums);
-            setCompanys(response.data.companys);
-          })
-          .catch(error => {
-            console.error('Error fetching bus stops:', error);
-            setTest(error.toString())
-          });
-      }, []); // 빈 배열을 두 번째 인수로 전달하여 컴포넌트가 마운트될 때 한 번만 실행
+      // 스프링 부트 서버(BusRouteAllListController)에서 api에 요청해서 받아온 정류장 데이터를 가져온다
+      axios.post("https://port-0-java-springboot-12fhqa2blnemug25.sel5.cloudtype.app/driver/all", {}) 
+      // axios.post("https://10.20.106.156:8080/driver/all", {}) 
+      
+      .then(response => {
+          // seThrivers(response.data);
+          setTest(response.data.driverNames);
+          setNames(response.data.driverNames);
+          setBusNums(response.data.busNums);
+          setBusUids(response.data.busUids);
+          setPhoneNums(response.data.phoneNums);
+          setCompanys(response.data.companys);
+          sessionStorage.clear(); // 세션 초기화
+        })
+        .catch(error => {
+          console.error('Error fetching bus stops:', error);
+          setTest(error.toString())
+        });
+    }, []); // 빈 배열을 두 번째 인수로 전달하여 컴포넌트가 마운트될 때 한 번만 실행
       
     const handleClick = ( name, phoneNum, busNum, busUid, company ) => {
       sessionStorage.setItem("name", name);

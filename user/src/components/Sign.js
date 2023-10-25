@@ -78,7 +78,7 @@ function Sign({navigation}) {
         console.error("정보를 정확하게 입력해주세요.");
         return;
       }
-        await axios.post("http://10.20.106.98:8080/user/create", null,
+        await axios.post("http://port-0-java-springboot-12fhqa2blnemug25.sel5.cloudtype.app/user/create", null,
         {
           params : {user_id: userId,
             name: name,

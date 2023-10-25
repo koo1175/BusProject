@@ -21,7 +21,7 @@ const BusStop = ({navigation, route}) => {
 
     useEffect(() => {
       // const fetchData = () => {
-        axios.get(`http://10.20.106.98:8080/getStationByUid?arsId=${selectedUID}`)
+        axios.get(`http://port-0-java-springboot-12fhqa2blnemug25.sel5.cloudtype.app/getStationByUid?arsId=${selectedUID}`)
         .then(response => {
           // 가져온 데이터를 상태에 저장 response.data == bus Class
           console.log('200 요청 성공');

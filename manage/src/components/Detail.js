@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, {  useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import styled from 'styled-components';
 
 function Detail( ) {
 
@@ -16,22 +15,23 @@ function Detail( ) {
     const navigate = useNavigate();
     
     const deleteDriver = () => {
-      navigate(`/delete`);
+      navigate('/delete');
     };
-    const modifyDriver = () => {
-      navigate(`/modify`);
+    const updateDriver = () => {
+      navigate(`/update`);
     };
 
     useEffect(() => {
-        // const fetchData = () => {
-          axios.post(`http://10.20.106.98:8080/driver/detail`, null, {
-            params:{
-              busUid: busUid,
+        // const  fetchData = () => {
+          axios.post(`https://port-0-java-springboot-12fhqa2blnemug25.sel5.cloudtype.app/driver/detail`, null, {
+            // axios.post(`https://10.20.106.156:8080/driver/detail`, null, {
+              params:{
+              bus_uid: busUid,
             }
           }) // 노선 ID
           .then(response => {
             // 가져온 데이터를 상태에 저장 response.data == bus Class
-            console.log('EndPoint : 200 요청 성공', response.data.stationNames);
+            console.log('Detail : 200 요청 성공', response.data.stationNames);
           })
           .catch(error => {
             console.log('error : 요청 실패');
@@ -48,8 +48,8 @@ function Detail( ) {
           <p>버스 번호 : {busNum} 번</p>
           <p>버스 차량 번호 : {busUid}</p>
           <p>회사명 : {company}</p>
-          <input type="button" value="삭제" onClick={deleteDriver(busUid)} />
-          <input type="button" value="수정" onClick={modifyDriver(busUid)} />
+          <button onClick={() => deleteDriver()}>삭제</button>
+          <button onClick={() => updateDriver()}>수정</button>
         </>
     )
 }

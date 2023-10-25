@@ -71,8 +71,9 @@ function Login() {
     
     const login = async () => {
         try{
-            await axios.post("http://10.20.106.98:8080/user/login",null, {
-                params: {
+            await axios.post("https://port-0-java-springboot-12fhqa2blnemug25.sel5.cloudtype.app/user/login",null, {
+            // await axios.post("https://10.20.106.156:8080/user/login",null, {
+                    params: {
                   user_id: userId,
                   password: password,
                 }
