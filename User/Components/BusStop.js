@@ -19,7 +19,7 @@ const BusStop = ({ navigation, route }) => {
 
     useEffect(() => {
         const fetchData = () => {
-            axios.get(`http://10.20.100.31:8080/getStationByUid?arsId=${selectedUID}`)
+            axios.get(`http://10.20.100.28:8080/getStationByUid?arsId=${selectedUID}`)
                 .then(response => {
                     console.log('200 요청 성공');
                     setBusNums(response.data.arriveBusNum);            // 도착 버스 번호
@@ -73,8 +73,7 @@ const BusStop = ({ navigation, route }) => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.titleStyle}> {selectedName} 정류장 </Text>
-            <Text style={styles.titleStyle}> {selectedUID} 정류장 UID </Text>
+            <Text style={styles.titleStyle}> {selectedName} 정류장 {selectedUID} </Text>
 
             <FlatList
                 data={busNums}
@@ -82,10 +81,9 @@ const BusStop = ({ navigation, route }) => {
                     <TouchableOpacity onPress={() => handleItemPress(item, index)}>
                         <ListItem bottomDivider>
                             <View style={styles.leftContainer}>
-                                <FontAwesome5 name="bus" size={30} color="#125688" style={styles.icon} />
-
-                                <ListItem.Title style={styles.busNumber}>{item}번</ListItem.Title>
+                                <FontAwesome5 name="bus" size={60} color="#125688" style={styles.icon} />
                             </View>
+                            <ListItem.Title style={styles.busNumber}>{item}번</ListItem.Title>
                             <View style={styles.rightContainer}>
                                 <ListItem.Subtitle style={styles.Bus1Time}>{busFirstTime[index]}</ListItem.Subtitle>
                                 <ListItem.Subtitle style={styles.Bus2Time}>{busSecondTime[index]}</ListItem.Subtitle>
@@ -121,6 +119,8 @@ const styles = StyleSheet.create({
     },
     busNumber: {
         flex: 1,
+        fontSize:20,
+        fontWeight: 'bold',
     },
     timeContainer: {
         flex: 1,
@@ -137,9 +137,11 @@ const styles = StyleSheet.create({
     },
     Bus1Time: {
         textAlign: 'right',
+        fontSize: 16,
     },
     Bus2Time: {
         textAlign: 'right',
+        fontSize: 16,
     },
 });
 

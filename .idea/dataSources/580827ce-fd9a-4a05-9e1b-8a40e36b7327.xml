@@ -918,8 +918,8 @@
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="292" parent="1" name="BusProject">
-      <IntrospectionTimestamp>2023-10-16.20:10:56</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-10-16.02:10:56</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-11-09.05:12:05</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-11-08.11:12:05</LocalIntrospectionTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="293" parent="1" name="User">
@@ -1019,7 +1019,7 @@
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="315" parent="300" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>2</AutoIncrement>
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1044,12 +1044,16 @@
       <DasType>varchar(30)|0s</DasType>
       <Position>6</Position>
     </column>
-    <index id="321" parent="300" name="PRIMARY">
+    <column id="321" parent="300" name="blind">
+      <DasType>bit(1)|0s</DasType>
+      <Position>7</Position>
+    </column>
+    <index id="322" parent="300" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="322" parent="300" name="PRIMARY">
+    <key id="323" parent="300" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

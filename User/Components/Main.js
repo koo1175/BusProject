@@ -97,7 +97,7 @@ function Main({ navigation, route }) {
         try {
             await axios({
                 method: "post",
-                url: "http://10.20.100.31:8080/Voice",
+                url: "http://10.20.100.28:8080/Voice",
                 data: formData,
                 headers: { "Content-Type": "multipart/form-data" },
             })
