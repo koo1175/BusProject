@@ -97,7 +97,7 @@ function Main({ navigation, route }) {
         try {
             await axios({
                 method: "post",
-                url: "http://10.20.100.37:8080/Voice",
+                url: "http://10.20.100.28:8080/Voice",
                 data: formData,
                 headers: { "Content-Type": "multipart/form-data" },
             })
@@ -130,6 +130,7 @@ function Main({ navigation, route }) {
     return (
         <View style={styles.container}>
             <Text style={styles.TitleText}>busproject</Text>
+
             <View style={styles.mapContainer}>
                 {location ? (
                     <MapView
@@ -183,7 +184,6 @@ function Main({ navigation, route }) {
                 <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('RideBus', {
                     latitude: 126.924145806,
                     longitude: 37.56205,
-                    userId : userId,
                 })}>
                     <View style={styles.buttonContent}>
                         <FontAwesome5 name="bus" size={24} color="white" style={styles.thirdIcon} />

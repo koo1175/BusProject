@@ -1,102 +1,104 @@
-//Buzzer 하차벨 누르는 페이지
-
 import axios from 'axios';
-import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, Text, FlatList, TouchableOpacity } from 'react-native';
-import { ListItem } from 'react-native-elements';
+import React, { useState } from 'react';
+import { View, Text, TouchableOpacity, StyleSheet, Animated } from 'react-native';
 
-
-const Buzzer = ({navigation, route}) => {
-
-
+const Buzzer = ({ route }) => {
     const {
-        userId,             // user ID
-        start, // 출발 정류장 이름
-        end, // 도착 정류장 이름
-        selectedFirstNum,   // 차 번호
+        userId,
+        selectedCurrentBusStop,
+        selectedEndPoint,
+        selectedFirstNum,
     } = route.params;
 
-
     const [isPressed, setPressed] = useState(false);
-    const [state, setState] = useState('');
+
+    // 버튼의 스케일을 위한 상태
+    const scaleValue = new Animated.Value(1);
+
+    const handlePressIn = () => {
+        // 버튼을 눌렀을 때 스케일을 줄임
+        Animated.spring(scaleValue, {
+            toValue: 0.95,
+            friction: 5,
+            useNativeDriver: true,
+        }).start();
+    }
+
+    const handlePressOut = () => {
+        // 버튼에서 손을 떼면 스케일을 원래대로 복구
+        Animated.spring(scaleValue, {
+            toValue: 1,
+            friction: 5,
+            useNativeDriver: true,
+        }).start();
+    }
 
     const handleBellPress = () => {
         console.log('하차벨을 눌렀습니다.');
 
-        axios.post(`http://10.20.100.15:8080/driver/getOff`, null, {
-            params : {
-                user_id : userId,
-                start : start,
-                bus_uid : selectedFirstNum,
-                end : end,
+        axios.post(`http://10.20.100.28:8080/driver/getOff`, null, {
+            params: {
+                user_id: userId,
+                start: selectedCurrentBusStop,
+                bus_uid: selectedFirstNum,
+                end: selectedEndPoint,
             }
         })
             .then(response => {
-                // 성공적으로 요청을 보낸 경우의 처리
                 console.log('요청 성공:', response.data);
-
-                // 가져온 데이터를 상태에 저장 <- busStop 클래스를 들고옴 stationNames와 nearStationNames라는 필드 존재
-                setState(response.data);
-
-                // 버틀을 눌린 상태로 변경해준다.
                 setPressed(true);
-
-            }).catch(error => {
-            console.error('Error fetching bus stops:', error);
-        });
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
     };
 
-    const buttonStyle = isPressed? styles.pressedButton : styles.button;
+    // 버튼 스타일 변경
+    const buttonColor = isPressed ? '#CCCCCC' : '#FF4136';
+    const buttonText = isPressed ? '완료!' : '하차벨';
 
     return (
-        <View>
-            <Text style={ styles.titleStyle }>하차벨</Text>
-
-            <TouchableOpacity
-                style={buttonStyle}
-                onPress={handleBellPress}
-                activeOpacity={0.7} // 투명도 조절
-            >
-                <Text style={styles.buttonText}>버스 하차벨</Text>
-            </TouchableOpacity>
+        <View style={styles.container}>
+            <Animated.View style={{ transform: [{ scale: scaleValue }] }}>
+                <TouchableOpacity
+                    style={[styles.button, { backgroundColor: buttonColor }]}
+                    onPress={handleBellPress}
+                    onPressIn={handlePressIn}
+                    onPressOut={handlePressOut}
+                    activeOpacity={0.7}
+                    disabled={isPressed}
+                >
+                    <Text style={styles.buttonText}>{buttonText}</Text>
+                </TouchableOpacity>
+            </Animated.View>
         </View>
-
     );
 };
 
-
 const styles = StyleSheet.create({
-    titleStyle: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        marginVertical: 10,
-        textAlign: 'center'
-    },
-    text: {
-        color:'white',
-        textAlign: 'center'
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#FFFFFF',
     },
     button: {
-        backgroundColor: '#c23a3a', // 기본 배경색 (탁한 빨간색)
-        padding: 20,
-        borderRadius: 10,
-    },
-    pressedButton: {
-        backgroundColor: '#eb2a2a', // 눌린 상태의 배경색 (밝은 빨간색)
-        padding: 20,
-        borderRadius: 10,
+        width: 400,
+        height: 400,
+        borderRadius: 200, // Make it circle
+        justifyContent: 'center',
+        alignItems: 'center',
+        elevation: 10, // Shadow for Android
+        shadowColor: '#000000', // Shadow for iOS
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
     },
     buttonText: {
-        color: 'white', // 버튼 텍스트 색상
-        fontSize: 24,
+        color: '#FFFFFF',
+        fontSize: 100,
+        fontWeight: 'bold',
     },
-    viewStyle: {
-        flex: 0,
-        justifyContent: 'center',
-        alignItems: 'center'
-    }
-
 });
-
 
 export default Buzzer;

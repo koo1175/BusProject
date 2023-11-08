@@ -79,7 +79,7 @@ const SignUp = () => {
                 console.error("정보를 정확하게 입력해주세요.");
                 return;
             }
-            await axios.post("http://10.20.100.15:8080/user/create", null,
+            await axios.post("http://10.20.100.28:8080/user/create", null,
                 {
                     params : {user_id: userId,
                         name: name,
