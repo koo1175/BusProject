@@ -3,6 +3,7 @@ package com.example.Bus;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -71,11 +72,13 @@ public class DriverController {
         }
     }
 
-    private boolean isValidPassenger(String user_id, String bus_stop, String bus_uid, String destination){
+    private boolean isValidPassenger(String user_id, String start, String start_route_id, String bus_uid, String end, String end_route_id){
         if(passengerService.findByUserId(user_id)!=null && !Objects.equals(passengerService.findByUserId(user_id).toString(), "")){
             // 이미 탑승 등록을 한 유저인 경우 중복 등록이 안되도록 update 처리를 해준다.
 
-            passengerService.update(user_id, bus_stop, bus_uid, destination);
+            passengerService.update(user_id, start, start_route_id, bus_uid, end, end_route_id);
+            System.out.println(user_id + "님 " + end+" 정류장 하차예정");
+
             return false;
         }else{
             // 일치하는 승객이 없는 경우
@@ -86,29 +89,33 @@ public class DriverController {
     // 타겠다 유저가 요청
     @PostMapping("/driver/ride")
     public void ride(@RequestParam(name = "bus_uid")String bus_uid,
-                       @RequestParam(name = "bus_stop")String bus_stop,
-                       @RequestParam(name = "user_id")String user_id,
-                       @RequestParam(name = "destination")String destination)
+                     @RequestParam(name = "start")String start,
+                     @RequestParam(name = "start_route_id")String start_route_id,
+                     @RequestParam(name = "user_id")String user_id,
+                     @RequestParam(name = "end")String end,
+                     @RequestParam(name = "end_route_id")String end_route_id)
     {
-        if(isValidPassenger(user_id, bus_stop, bus_uid, destination)){
-        // 버스 번호판을 운행하는 driver를 불러온다
-        Passenger p = new Passenger();
-        p.setBus_stop(bus_stop);
-        p.setBus_uid(bus_uid);
-        p.setUser_id(user_id);
-        p.setDestination(destination);
+        if(isValidPassenger(user_id, start, start_route_id, bus_uid, end, end_route_id)){
+            // 버스 번호판을 운행하는 driver를 불러온다
+            Passenger p = new Passenger();
+            p.setStart(start);
+            p.setStart_route_id(start_route_id);
+            p.setBus_uid(bus_uid);
+            p.setUser_id(user_id);
+            p.setEnd(end);
+            p.setEnd_route_id(end_route_id);
 
-        // 기사님 버스 정류장, 유저 아이디 리스트에 추가시켜준다.
+            // 기사님 버스 정류장, 유저 아이디 리스트에 추가시켜준다.
 
-        // 해당하는 기사님을 가져와서 입력받은 애들로 update해준다
-//        driverService.update(bus_uid, bus_stop, user_id);
+            // 해당하는 기사님을 가져와서 입력받은 애들로 update해준다
+            // driverService.update(bus_uid, bus_stop, user_id);
 
-        // passenger에 등록
-        String bus_uid_check = passengerService.save(p);
+            // passenger에 등록
+            String bus_uid_check = passengerService.save(p);
+            System.out.println(user_id + "님 " + bus_uid_check+ " 탑승 등록 완료 " + end+" 정류장 하차예정");
 
-        System.out.println(user_id + "님 " + bus_uid_check+ " 탑승 등록 완료");
-    }
-
+        }
+        System.out.println(user_id + "님 " + end+" 정류장 하차예정");
 
     }
 
@@ -117,7 +124,7 @@ public class DriverController {
     // 타는 버스 번호판에 해당하는 기사님에게 탑승객 정보를 리턴해준다.
     @PostMapping("/driver/getPassengers")
     public PassengerData passengers(
-                            @RequestParam("bus_uid")String bus_uid){
+            @RequestParam("bus_uid")String bus_uid){
         PassengerData pd = new PassengerData();
         List<String> passengerID = new ArrayList<>();
         List<String> passengerBusStop = new ArrayList<>();
@@ -133,11 +140,11 @@ public class DriverController {
                 if(p.getBus_uid().equals(bus_uid)){
                     System.out.println("탑승객이 있습니다.");
                     System.out.println("id : "+ p.getUser_id());
-                    System.out.println("탑승 장소 : "+ p.getBus_stop());
-                    System.out.println("하차 장소 : "+ p.getDestination());
+                    System.out.println("탑승 장소 : "+ p.getStart());
+                    System.out.println("하차 장소 : "+ p.getEnd());
                     passengerID.add(p.getUser_id());
-                    passengerBusStop.add(p.getBus_stop());
-                    passengerDestination.add(p.getDestination());
+                    passengerBusStop.add(p.getStart());
+                    passengerDestination.add(p.getEnd());
                 }else{
                     System.out.println("안쪽 else문에 들어왔습니다.");
                 }
@@ -152,6 +159,15 @@ public class DriverController {
 
         return pd;
     }
+
+    // 기사님의 좌표기반으로 1m 안에 해당 정류장이 들어오면 delete 될 수 있도록
+    @PostMapping("/driver/update")
+    public void updatePassengers(
+            @RequestParam("x")String x,
+            @RequestParam("y")String y) throws IOException {
+
+
+    }
 //    @GetMapping("/driver/get/busStops")
 //    public List<String> busStops(
 //            @RequestParam("bus_uid")String bus_uid){
@@ -163,13 +179,21 @@ public class DriverController {
 //    }
 
     // 내리겠다
-//    @PostMapping("/driver/getOff")
-//    public String getOff(@RequestParam(name = "bus_num") String bus_num, @RequestParam("bus_uid")String bus_uid){
-//        // 버스 번호, 번호판
-//        if(isValidBus(bus_uid)){
-//            return "완료";
-//        }else{
-//            return "실패";
-//        }
-//    }
+    @PostMapping("/driver/getOff")
+    public String getOff(@RequestParam(name = "user_id") String user_id,
+                         @RequestParam(name = "start") String start,
+                         @RequestParam(name = "start_route_id") String start_route_id,
+                         @RequestParam("bus_uid")String bus_uid,
+                         @RequestParam("end")String end,
+                         @RequestParam("end_route_id")String end_route_id){
+        // 지금 탄 버스의 다음 정류장 이름을 가져와야함..
+
+        // 버스 번호, 번호판
+        if(!isValidPassenger(user_id, start, start_route_id, bus_uid, end, end_route_id)){
+            passengerService.update(user_id, start, start_route_id, bus_uid, end, end_route_id);
+            return "완료";
+        }else{
+            return "실패";
+        }
+    }
 }

@@ -19,12 +19,12 @@ public class Driver {
     private String phone_num;
     @Column(name = "company")
     private String company;
-//    @ElementCollection
-//    @Column(name = "bus_stop")
-//    private List<String> bus_stop;
-//    @ElementCollection
-//    @Column(name = "user_id")
-//    private List<String> user_id;
+    @ElementCollection
+    @Column(name = "bus_stop")
+    private List<String> bus_stop;
+    @ElementCollection
+    @Column(name = "user_id")
+    private List<String> user_id;
 
     public String getBusNum() {
         return bus_num;
@@ -65,28 +65,28 @@ public class Driver {
     public void setCompany(String company) {
         this.company = company;
     }
-//
-//    public List<String> getBus_stop() {
-//        return bus_stop;
-//    }
-//
-//    public void setBus_stop(String bus_stop) {
-//        this.bus_stop.add(bus_stop);
-//    }
-//
-//    public List<String> getUser_id() {
-//        return user_id;
-//    }
-//
-//    public void setUser_id(String user_id) {
-//        this.user_id.add(user_id);
-//    }
-//
-//    public Driver() {
-//        this.bus_stop = new ArrayList<>();
-//        this.user_id = new ArrayList<>();
-//
-//    }
+
+    public List<String> getBus_stop() {
+        return bus_stop;
+    }
+
+    public void setBus_stop(String bus_stop) {
+        this.bus_stop.add(bus_stop);
+    }
+
+    public List<String> getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(String user_id) {
+        this.user_id.add(user_id);
+    }
+
+    public Driver() {
+        this.bus_stop = new ArrayList<>();
+        this.user_id = new ArrayList<>();
+
+    }
 
 
 }

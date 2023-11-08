@@ -19,11 +19,13 @@ public class PassengerService {
     }
 
     // 이미 내가 등록해놓은게 있다면 update 되도록
-    public String update(String user_id, String bus_stop, String bus_uid, String destination){
+    public String update(String user_id, String start, String start_route_id, String bus_uid, String end, String end_route_id){
         Passenger updatePassenger = passengerRepository.findByUserId(user_id);
-        updatePassenger.setBus_stop(bus_stop);
+        updatePassenger.setStart(start);
+        updatePassenger.setStart_route_id(start_route_id);
         updatePassenger.setBus_uid(bus_uid);
-        updatePassenger.setDestination(destination);
+        updatePassenger.setEnd(end);
+        updatePassenger.setEnd_route_id(end_route_id);
 
         passengerRepository.save(updatePassenger);
         return updatePassenger.getBus_uid();
