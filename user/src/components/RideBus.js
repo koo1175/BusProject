@@ -5,8 +5,6 @@ import { View, StyleSheet, Text, FlatList, TouchableOpacity } from 'react-native
 import { ListItem, Icon } from 'react-native-elements';
 import axios from 'axios';
 
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-
   
 const RideBus = ({ navigation,route }) => {
 
@@ -19,13 +17,11 @@ const RideBus = ({ navigation,route }) => {
 
       useEffect(() => {
         // 스프링 부트 서버(BusRouteAllListController)에서 api에 요청해서 받아온 정류장 데이터를 가져온다
-        axios.get(`http://port-0-java-springboot-12fhqa2blnemug25.sel5.cloudtype.app/getStationByPos?X=126.9407&Y=37.56223`) 
+        axios.get(`https://port-0-java-springboot-12fhqa2blnemug25.sel5.cloudtype.app/getStationByPos?X=126.9407&Y=37.56223`) 
           .then(response => {
-
-
+            console.log(response.data);
             setBusNames(response.data.nearStationName);
             setBusUIDs(response.data.nearStationUIDs);
-            
           })
           .catch(error => {
             console.error('Error fetching bus stops:', error);
@@ -36,7 +32,7 @@ const RideBus = ({ navigation,route }) => {
         const selectedName = busNames[index]; 
         const selectedUID = busUIDs[index];
         // 선택한 문자열을 다음 페이지인 'BusStop' 페이지로 전달
-        navigation.navigate('BusStop', {
+        navigation.navigate('RideBusData', {
           selectedName,
           selectedUID,
           userId: userId,

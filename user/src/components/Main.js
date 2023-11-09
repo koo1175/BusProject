@@ -78,86 +78,84 @@ function Main({navigation, route}) {
 };
 
 const styles = StyleSheet.create({
-  locationText: {
-      fontSize: 16,
-      marginBottom: 8,
-  },
-  container: {
-      flex: 1,
-      backgroundColor: 'white',
-  },
-  TitleText: {
-      fontSize: 35,
-      color: '#125688', // 텍스트 색상 설정
-      fontWeight: 'bold',
-      marginLeft: 20, // 왼쪽 여백
-      marginRight: 20, // 오른쪽 여백
-      marginTop: 20, // 위쪽 여백
-      marginBottom: '-5%',
-      // backgroundColor: 'red', // 확인용 색
-  },
-
-  mapContainer: {
-      flex: 1,
-      marginTop: '20%',
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: 'white',
-  },
-  loadingText: {
-      fontSize: 16,
-      marginBottom: 16,
-  },
-  startMic: {
-      width: 60,
-      height: 60,
-      // backgroundColor: 'red', // 확인용 색 넣기
-      opacity: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-  },
-  micContainer: {
-      position: 'absolute',
-      top: 10,
-      right: 10,
-      zIndex: 1,
-  },
-  button: {
-      backgroundColor: '#458eff',
-      padding: 12,
-      borderRadius: 8,
-      alignItems: 'center',
-      justifyContent: 'center',
-      marginBottom: 20,
-      width: '70%',
-  },
-  buttonText: {
-      color: 'white',
-      fontSize: 18,
-      textAlign: 'center',
-      marginRight: 80,
-  },
-
-  buttonContent: {
-      flexDirection: 'row',
-      justifyContent: 'space-between', // 아이콘과 텍스트를 양쪽 끝으로 정렬
-  },
-  icon: {
-      marginRight: 70,
-  },
-  thirdButtonText: {
-      color: 'white',
-      fontSize: 18,
-      textAlign: 'center',
-      marginRight: 60,
-  },
-  thirdIcon: {
-      marginRight: 50,
-  },
-  map: {
-      width: 500,
-      height: 400,
-  },
+    locationText: {
+        fontSize: 16,
+        marginBottom: 8,
+    },
+    container: {
+        flex: 1,
+        backgroundColor: 'white',
+    },
+    TitleText: {
+        fontSize: 35,
+        color: '#125688',
+        fontWeight: 'bold',
+        marginLeft: 20,
+        marginRight: 20,
+        marginTop: 20,
+        marginBottom: '-5%',
+    },
+    mapContainer: {
+        flex: 1,
+        marginTop: '20%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'white',
+    },
+    loadingText: {
+        fontSize: 16,
+        marginBottom: 16,
+    },
+    startMic: {
+        width: 60,
+        height: 60,
+        opacity: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    micContainer: {
+        position: 'absolute',
+        top: 10,
+        right: 10,
+        zIndex: 1,
+    },
+    button: {
+        backgroundColor: '#458eff',
+        padding: 12,
+        borderRadius: 8,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: 20,
+        width: '70%',
+    },
+    buttonText: {
+        color: 'white',
+        fontSize: 18,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        marginRight: 80,
+    },
+    buttonContent: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+    },
+    icon: {
+        marginRight: 70,
+    },
+    thirdButtonText: {
+        color: 'white',
+        fontSize: 18,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        marginRight: 60,
+    },
+    thirdIcon: {
+        marginRight: 50,
+    },
+    map: {
+        width: 500,
+        height: 400,
+    },
 });
 
 

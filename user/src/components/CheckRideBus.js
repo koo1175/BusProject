@@ -2,8 +2,8 @@
 
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, Text, FlatList, TouchableOpacity } from 'react-native';
-import { ListItem } from 'react-native-elements';
+import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { FontAwesome5 } from '@expo/vector-icons';
 
 
 function CheckRideBus ({navigation, route}) {
@@ -23,7 +23,7 @@ function CheckRideBus ({navigation, route}) {
         userId                  // 유저 아이디
     } = route.params;
     const [busStops, setBusStops] = useState([]);
-    
+    console.log("selectedFirstNum: "+selectedFirstNum);
 // 확인 버튼 눌렀을 때
 // 해야하는 것 
 const handleItemPress = async () => {
@@ -68,19 +68,30 @@ const handleItemPress = async () => {
         }
   };
     return (
-        <View>
-            <Text style={ styles.titleStyle }> 버스를 탑승하시겠습니까? </Text>
-            <Text style={ styles.titleStyle }> 탑승할 버스 번호 : {selectedNum} 번</Text>
-            <Text style={ styles.titleStyle }> 탑승할 버스 번호판 : {selectedFirstNum} </Text>
-            <Text style={ styles.titleStyle }> 내릴 정류장 : {selectedEndPoint}</Text>
-            <View  style={ styles.viewStyle }>
+        <View style={styles.container}>
+            <View style={styles.header}>
+                <Text style={styles.titleStyle}>버스 탑승 확인</Text>
+            </View>
+
+            <View style={styles.busIconContainer}>
+                <FontAwesome5 name="bus" size={300} color="black" />
+                <Text style={styles.busIconText}>{selectedNum}</Text>
+                <Text style={styles.busIconNum}>{selectedFirstNum}</Text>
+            </View>
+
+            <View style={styles.infoContainer}>
+                <Text style={styles.infoText}>탑승할 버스 번호판: {selectedFirstNum}</Text>
+                <Text style={styles.infoText}>내릴 정류장: {selectedEndPoint}</Text>
+            </View>
+
+            <View style={styles.buttonContainer}>
                 <TouchableOpacity style={styles.button} onPress={() => handleItemPress()}>
-                    <Text style={ styles.text }>탑승 확인</Text>
+                    <Text style={styles.buttonText}>탑승 확인</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.button}>
-                    <Text style={ styles.text }>탑승 취소</Text> 
-                </TouchableOpacity> 
+                <TouchableOpacity style={styles.button} onPress={() => {/* 탑승 취소 처리 */}}>
+                    <Text style={styles.buttonText}>탑승 취소</Text>
+                </TouchableOpacity>
             </View>
         </View>
         
@@ -89,30 +100,64 @@ const handleItemPress = async () => {
 
 
 const styles = StyleSheet.create({
-    titleStyle: {
-        fontSize: 24, 
-        fontWeight: 'bold', 
-        marginVertical: 10,
-        textAlign: 'center'
+    container: {
+        flex: 1,
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        backgroundColor: '#f0f0f0',
     },
-    text: {
-        color:'white', 
-        textAlign: 'center'
+    header: {
+        marginTop: 50,
+    },
+    titleStyle: {
+        fontSize: 28,
+        fontWeight: 'bold',
+        color: '#125688',
+    },
+    busIconContainer: {
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    busIconText: {
+        position: 'absolute',
+        color: '#125688',
+        fontSize: 80,
+        fontWeight: 'bold',
+        top: '24%', // 아이콘 내에서의 상대적 위치 조정
+        textAlign: 'center', // 텍스트 중앙 정렬
+        width: '100%', // 부모 컨테이너의 전체 너비 사용
+    },
+    busIconNum: {
+        position: 'absolute',
+        color: '#ffffff',
+        fontSize: 20,
+        fontWeight: 'bold',
+        top: '70%', // 아이콘 내에서의 상대적 위치 조정
+        textAlign: 'center', // 텍스트 중앙 정렬
+        width: '100%', // 부모 컨테이너의 전체 너비 사용
+    },
+    infoContainer: {
+        alignItems: 'center',
+    },
+    infoText: {
+        fontSize: 20,
+        color: '#333',
+        marginBottom: 5,
+    },
+    buttonContainer: {
+        flexDirection: 'row',
+        marginBottom: 50,
     },
     button: {
-        width: '40%',
-        backgroundColor:'gray', 
-        marginTop :40 ,
-        paddingVertical :16,
-        paddingHorizontal :32,
+        backgroundColor: '#125688',
+        padding: 15,
+        marginHorizontal: 10,
+        borderRadius: 25,
     },
-    viewStyle: {
-        flex: 0, 
-        justifyContent: 'center', 
-        alignItems: 'center' 
-    }
-    
+    buttonText: {
+        color: '#fff',
+        fontSize: 18,
+    },
 });
-  
 
 export default CheckRideBus;
