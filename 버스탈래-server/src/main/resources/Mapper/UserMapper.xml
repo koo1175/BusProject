@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.00//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.Bus.Model.Mapper.UserMapper">
+
+    <!-- 유저(탑승자) 등록 -->
+    <insert id="regist" parameterType="UserDto">
+        INSERT INTO user (user_id, name, password, phone_num, blind)
+        VALUES (#{user_id},#{name},#{password},#{phone_num},#{blind})
+    </insert>
+
+    <!-- 유저(탑승자) 전체 정보 검색 -->
+    <select id="findAll" resultType="UserDto">
+        SELECT user_id, name, password, phone_num, blind
+        FROM user
+    </select>
+
+    <!-- 유저(탑승자) 정보 수정 -->
+    <update id="update" parameterType="UserDto">
+        UPDATE user SET user_id=#{user_id}, name=#{name}, password=#{password}, phone_num=#{phone_num}, blind=#{blind}
+        WHERE user_id=#{user_id}
+    </update>
+
+    <!-- 유저(탑승자) 정보 삭제 -->
+    <delete id="delete" parameterType="UserDto">
+        DELETE FROM user
+        WHERE user_id=#{user_id}
+    </delete>
+
+    <!-- 유저(탑승자) 정보 검색 -->
+    <select id="findSearch" parameterType="UserDto" resultType="UserDto">
+        SELECT user_id, name, password, phone_num, blind
+        FROM user
+        <if test='keyword!=null and keyword!=""'>
+            where ${searchCode} = #{keyword}<!-- $표시 -> statement -->
+        </if>
+    </select>
+
+    <!-- 유저(탑승자) 로그인 -->
+    <select id="login" parameterType="UserDto" resultType="UserDto">
+        SELECT user_id, name, password, phone_num, blind
+        FROM user
+        where user_id = #{user_id} and password = #{password}<!-- $표시 -> statement -->
+    </select>
+
+    <!-- 사용자의 Blind 여부 -->
+    <select id="checkBlind" parameterType="UserDto" resultType="UserDto">
+        SELECT blind
+        FROM user
+        WHERE user_id = #{user_id}
+    </select>
+
+</mapper>

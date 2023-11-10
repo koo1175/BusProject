@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.00//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.Bus.Model.Mapper.DriverMapper">
+
+    <!-- 운전자 등록 -->
+    <insert id="regist" parameterType="DriverDto">
+        INSERT INTO driver (bus_num, bus_uid, company, name, phone_num)
+        VALUES (#{bus_num},#{bus_uid},#{company},#{name},#{phone_num})
+    </insert>
+
+    <!-- 운전자 전체 정보 검색 -->
+    <select id="findAll" resultType="DriverDto">
+        SELECT bus_num, bus_uid, company, name, phone_num
+        FROM dirver
+    </select>
+
+    <!-- 운전자 정보 수정 -->
+    <update id="update" parameterType="DriverDto">
+        UPDATE driver SET bus_uid=#{bus_uid}, bus_num=#{bus_num}, phone_num=#{phone_num}, company=#{company}
+        WHERE name=#{name}
+    </update>
+
+    <!-- 운전자 정보 삭제 -->
+    <delete id="delete" parameterType="DriverDto">
+        DELETE FROM driver
+        WHERE bus_uid=#{bus_uid}
+    </delete>
+
+    <!-- 운전자 정보 검색 -->
+    <select id="findSearch" parameterType="DriverDto" resultType="DriverDto">
+        SELECT bus_num, bus_uid, company, name, phone_num
+        FROM Driver
+        <if test='keyword!=null and keyword!=""'>
+            where ${searchCode} = #{keyword} and ${searchCode} = #{keyword}<!-- $표시 -> statement -->
+        </if>
+    </select>
+
+    <!-- 운전자 로그인 -->
+    <select id="login" parameterType="DriverDto" resultType="DriverDto">
+        SELECT bus_num, bus_uid, company, name, phone_num
+        FROM Driver
+        where bus_uid = #{bus_uid} and phone_num = #{phone_num}<!-- $표시 -> statement -->
+    </select>
+
+
+</mapper>

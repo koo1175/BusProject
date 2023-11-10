@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.00//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.Bus.Model.Mapper.PassengerMapper">
+
+    <!-- 탑승자 등록 -->
+    <insert id="regist" parameterType="PassengerDto">
+        INSERT INTO passenger (start, bus_uid, user_id, arrive, start_route_id, end_route_id)
+        VALUES (#{start},#{bus_uid},#{user_id},#{arrive},#{start_route_id},#{end_route_id})
+    </insert>
+
+    <!-- 운전자 정보 수정 -->
+    <update id="update" parameterType="PassengerDto">
+        UPDATE passenger SET start=#{start}, bus_uid=#{bus_uid}, arrive=#{arrive}, start_route_id=#{start_route_id}, end_route_id=#{end_route_id}
+        WHERE user_id=#{user_id}
+    </update>
+
+    <!-- 탑승자 정보 삭제 -->
+    <delete id="delete" parameterType="PassengerDto">
+        DELETE FROM passenger
+        WHERE user_id=#{user_id}
+    </delete>
+
+    <!-- 탑승자 정보 검색 -->
+    <select id="findSearch" parameterType="PassengerDto" resultType="PassengerDto">
+        SELECT start, bus_uid, user_id, arrive,start_route_id, end_route_id
+        FROM passenger
+        <if test='keyword!=null and keyword!=""'>
+            where ${searchCode} = #{keyword}<!-- $표시 -> statement -->
+        </if>
+    </select>
+
+
+</mapper>

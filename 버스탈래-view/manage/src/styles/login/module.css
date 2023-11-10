@@ -1,0 +1,126 @@
+/* Frame 1 */
+.outer{
+    position: relative;
+    width: 142px;
+    height: 116px;
+    
+    background: #E4E9FF;
+}
+
+
+
+/* Rectangle 1 */
+.innerDiv{
+    position: absolute;
+    width: 53px;
+    height: 55px;
+    left: 45px;
+    top: 31px;
+
+    background: #FFFFFF;
+    border-radius: 2px;
+}
+
+
+/* Rectangle 2 */
+
+.idDiv{
+    position: absolute;
+    width: 38px;
+    height: 7px;
+    left: 52px;
+    top: 43px;
+    
+    background: #FFFFFF;
+    border: 0.1px solid #000000;
+    border-radius: 3px;
+    
+}
+
+/* Rectangle 3 */
+
+.pwDiv{
+    position: absolute;
+    width: 38px;
+    height: 7px;
+    left: 52px;
+    top: 55px;
+
+    background: #FFFFFF;
+    border: 0.1px solid #000000;
+    border-radius: 3px;
+}
+
+
+
+/* Rectangle 4 */
+
+.loginBtn{
+    position: absolute;
+    width: 44px;
+    height: 6px;
+    left: 49px;
+    top: 73px;
+
+    background: #6691FF;
+    border-radius: 3px;
+}
+
+
+/* 아이디 */
+.idInput{
+    position: absolute;
+    width: 12px;
+    height: 5px;
+    left: 54px;
+    top: 39px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3px;
+    line-height: 4px;
+    
+    color: #000000;
+}
+
+
+
+
+/* 비밀번호 */
+.pwInput{
+    position: absolute;
+    width: 13px;
+    height: 5px;
+    left: 54px;
+    top: 51px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3px;
+    line-height: 4px;
+    
+    color: #000000;
+}
+
+
+
+/* 회원가입 */
+.registText{
+    position: absolute;
+    width: 12px;
+    height: 4px;
+    left: 66px;
+    top: 80px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3px;
+    line-height: 4px;
+    /* identical to box height */
+    
+    color: #000000;
+}
+
