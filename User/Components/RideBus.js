@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Text, FlatList, TouchableOpacity } from 'react-native';
 import { ListItem, Icon } from 'react-native-elements';
 import axios from 'axios';
-
+import { Ionicons } from '@expo/vector-icons';
   
 const RideBus = ({ navigation,route }) => {
 
@@ -41,27 +41,22 @@ const RideBus = ({ navigation,route }) => {
       };
 
     return (
-        <View>
-        <Text style={ styles.titleStyle }>
-            가까운 정류장
-        </Text>
-        <View>
-            {/* <Text>busStops: {busStops.nearStationName}</Text> */}
-            <Text>busNames: {busNames}</Text>
-            <Text>busUIDs: {busUIDs}</Text>
-        </View>
-        <FlatList
-            data={busNames}
-            renderItem={({ item, index }) => (
-                <TouchableOpacity onPress={() => handleItemPress(item, index)}>
-                    <ListItem bottomDivider>
-                    <ListItem.Content>
-                        <ListItem.Title>{item}</ListItem.Title>
-                    </ListItem.Content>
-                    </ListItem>
-                </TouchableOpacity>
-            )}
-        />
+        <View style={styles.container}>
+            <Text style={styles.titleStyle}>가까운 정류장</Text>
+            <FlatList
+                data={busNames}
+                renderItem={({ item, index }) => (
+                    <TouchableOpacity onPress={() => handleItemPress(item, index)} style={styles.listItem}>
+                        <ListItem bottomDivider>
+                            <ListItem.Content style={styles.listItemContent}>
+                                <Ionicons name="bus" size={30} color="#0066ff" />
+                                <ListItem.Title style={styles.listItemTitle}>{item}</ListItem.Title>
+                            </ListItem.Content>
+                            <Ionicons name="chevron-forward-outline" size={20} color="#999" />
+                        </ListItem>
+                    </TouchableOpacity>
+                )}
+            />
         </View>
     );
 };
@@ -75,6 +70,7 @@ const styles = StyleSheet.create({
       fontSize: 24,
       fontWeight: 'bold',
       marginVertical: 10,
+      paddingHorizontal: 20,
   },
   locationInfo: {
       marginBottom: 20,
@@ -90,5 +86,10 @@ const styles = StyleSheet.create({
   listItemTitle: {
       fontSize: 23,
   },
+    listItemContent: {
+        flexDirection: 'column',
+        alignItems: 'center',
+    },
+
 });
 export default RideBus;
