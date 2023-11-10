@@ -17,7 +17,7 @@ const BlindBusStop = ({ navigation,route }) => {
     const [busNames, setBusNames] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://10.20.100.163:8080/getStationByPos?X=126.9407&Y=37.56223`)
+        axios.get(`http://10.20.100.88:8080/getStationByPos?X=126.9407&Y=37.56223`)
             .then(response => {
                 setBusNames(response.data.nearStationName);
                 setBusUIDs(response.data.nearStationUIDs);
@@ -37,7 +37,7 @@ const BlindBusStop = ({ navigation,route }) => {
         const selectedName = busNames[0];
         const selectedUID = busUIDs[0];
         console.log("busstop", selectedUID);
-        navigation.navigate('BlindBusList', {
+        navigation.navigate('BlindEndPoint', {
             selectedName,
             selectedUID,
             userId: userId

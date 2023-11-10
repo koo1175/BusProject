@@ -9,9 +9,9 @@ const Catch = () => {
         <View backgroundColor="#FFFFFF">
             <View >
                 <Text >Catch</Text>
-                    <TouchableOpacity>
+                <TouchableOpacity>
                     <Text >Catch</Text>
-                    </TouchableOpacity>
+                </TouchableOpacity>
             </View>
         </View>
     )

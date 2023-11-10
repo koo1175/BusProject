@@ -9,7 +9,7 @@ function Login({navigation}) {
 
     const login = async () => {
         try {
-            await axios.post("http://10.20.100.163:8080/user/login",null, {
+            await axios.post("http://10.20.100.88:8080/user/login", null, {
                 params: {
                     user_id: userId,
                     password: password,
@@ -77,7 +77,7 @@ function Login({navigation}) {
 
                     <TouchableOpacity
                         style={styles.signupButton}
-                        onPress={() => navigation.navigate('SignUp')}
+                        onPress={() => navigation.navigate('Sign')}
                     >
                         <Text style={styles.signupButtonText}>회원가입</Text>
                     </TouchableOpacity>

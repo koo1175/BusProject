@@ -8,11 +8,10 @@ import { ListItem } from 'react-native-elements';
 
 const Buzzer = ({navigation, route}) => {
 
-
     const {
         userId,             // user ID
-        start, // 출발 정류장 이름
-        end, // 도착 정류장 이름
+        selectedCurrentBusStop, // 출발 정류장 이름
+        selectedEndPoint, // 도착 정류장 이름
         selectedFirstNum,   // 차 번호
     } = route.params;
 
@@ -23,12 +22,12 @@ const Buzzer = ({navigation, route}) => {
     const handleBellPress = () => {
         console.log('하차벨을 눌렀습니다.');
 
-        axios.post(`http://10.20.100.163:8080/driver/getOff`, null, {
+        axios.post(`http://10.20.100.88:8080/driver/getOff`, null, {
             params : {
                 user_id : userId,
-                start : start,
+                start : selectedCurrentBusStop,
                 bus_uid : selectedFirstNum,
-                end : end,
+                end :  selectedEndPoint,
             }
         })
             .then(response => {
