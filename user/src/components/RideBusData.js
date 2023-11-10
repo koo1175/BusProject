@@ -17,7 +17,7 @@ const RideBusData = ({navigation, route}) => {
     const [busSecondNum, setBusSecondNum] = useState([]);
     const [busDirs, setBusDirs] = useState([]);
     const [currentBusStop, setCurrentBusStop] = useState([]); // 현재 정류장 번호
-    const [busRoutedId, setBusRoutedId] = useState([]); // 노선 ID -> 다음 axiod시 필요 ( 노선 ID에 해당하는 경유 정류장 리스트 조회 )
+    const [busRouteId, setBusRouteId] = useState([]); // 노선 ID -> 다음 axiod시 필요 ( 노선 ID에 해당하는 경유 정류장 리스트 조회 )
   
 
     useEffect(() => {
@@ -36,13 +36,15 @@ const RideBusData = ({navigation, route}) => {
                 setBusSecondNum(response.data.arriveBusSecondNum); 
                 setCurrentBusStop(response.data.currentBusStop);   
                 setBusDirs(response.data.arriveBusDir);            
-                setBusRoutedId(response.data.busRoutedId);         
+                setBusRouteId(response.data.busRoutedId);         
 
                 console.log("====== RideBusData 페이지 ======");
                 console.log(response.data);
                 console.log("busNums :  " + response.data.arriveBusNum);
+                console.log("busRouteId :  " + response.data.busRoutedId);
                 console.log("arriveBusFirstNum :  " + response.data.arriveBusFirstNum);
-                autoStart(response.data.arriveBusNum,
+                autoStart(
+                    response.data.arriveBusNum,
                     response.data.arriveBusFirstTime,
                     response.data.arriveBusSecondTime,
                     response.data.arriveBusFirstNum,
@@ -71,7 +73,7 @@ const autoStart = (busNums, busFirstTime, busSecondTime, busFirstNum, busSecondN
         busSecondNum : busSecondNum,
         busDirs : busDirs,
         currentBusStop : currentBusStop,
-        busRoutedId : busRoutedId, 
+        busRouteId : busRoutedId, 
         selectedUID : selectedUID,
         userId: userId,
         selectedName: selectedName,

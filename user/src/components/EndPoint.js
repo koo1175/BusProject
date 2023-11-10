@@ -1,6 +1,5 @@
 // 정거장 등록 (RideBus) -> 버스 등록 페이지 ( 몇번 버스 탈건지 )
 
-import axios from 'axios';
 import React, { useState, useEffect }from 'react';
 import { View, Button, StyleSheet, Text, FlatList, TouchableOpacity, TextInput } from 'react-native';
 
@@ -14,18 +13,29 @@ const EndPoint = ({navigation, route}) => {
       busSecondNum,
       busDirs,
       currentBusStop,
-      busRoutedId, 
+      busRouteId, 
       selectedUID,
       userId,
       selectedName,              
     } = route.params;
+    
     const [arrive, setArrive] = useState('');
+    const [inputText, setInputText] = useState(''); // 사용자가 입력하는 도중에 사용할 로컬 상태
+
     console.log("==== EndPoint 페이지 ====");
     console.log(busNums);
+    console.log("userId:"+ userId);
+
+  //   useEffect(() => {
+  //     if (!busNums || busNums.length === 0) {
+  //         navigation.navigate('RideBus');
+  //     }
+  // }, [busNums]); // busNums가 변경될 때마다 이 useEffect는 새로 실행됩니다.
 
 
 
   const handleItemPress = () => {
+    setArrive(inputText);
     // 선택한 문자열을 다음 페이지인 'CheckRideBus' 페이지로 전달
     navigation.navigate('EndPointList', {
       busNums,
@@ -35,11 +45,11 @@ const EndPoint = ({navigation, route}) => {
       busSecondNum,
       busDirs,
       currentBusStop,
-      busRoutedId,
+      busRouteId,
       userId, 
       selectedUID,
       selectedName,
-      arrive: arrive // 검색한 정류장 이름(도착)
+      arrive: inputText // 검색한 정류장 이름(도착)
         // selectedNum: selectedNum,  // 현재 선택된 버스 번호
         // selectedFirstTime: selectedFirstTime,
         // selectedSecondTime: selectedSecondTime,
@@ -62,8 +72,8 @@ const EndPoint = ({navigation, route}) => {
             <Text style={ styles.titleStyle }> 도착지 설정 </Text>
             <TextInput
                 style={{height: 40, borderColor: 'gray', borderWidth: 1}}
-                onChangeText={text => setArrive(text)}
-                value={arrive}
+                onChangeText={text => setInputText(text)}
+                value={inputText}
             />
             <Button title="완료" onPress={handleItemPress} />
             {/* <Text style={ styles.titleStyle }> 출발 정류장 : {selectedName} 정류장 </Text>

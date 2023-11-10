@@ -20,21 +20,26 @@ function CheckRideBus ({navigation, route}) {
         selectedName, //  현재 정류장 이름
         selectedEndPoint, // 전해받은 destination 도착지
         selectedEndPointRouteId, // 전해받은 도착지 노선ID
-        userId                  // 유저 아이디
+        userId,                  // 유저 아이디
+        arrive
     } = route.params;
     const [busStops, setBusStops] = useState([]);
     console.log("selectedFirstNum: "+selectedFirstNum);
+    console.log("selectedName: "+selectedName);
+    console.log("seletedRoutedId: "+seletedRoutedId);
+    console.log("userId: "+userId);
+    console.log("selectedEndPointRouteId: "+selectedEndPointRouteId);
 // 확인 버튼 눌렀을 때
 // 해야하는 것 
 const handleItemPress = async () => {
     try{
-        await axios.post(`http://port-0-java-springboot-12fhqa2blnemug25.sel5.cloudtype.app/driver/ride`, null, {
+        await axios.post(`http://port-0-java-springboot-12fhqa2blnemug25.sel5.cloudtype.app/passenger/ride`, null, {
             params : {
                 bus_uid : selectedFirstNum, //  버스 번호판
                 start : selectedName, // 출발 정류소 이름
                 start_route_id : seletedRoutedId,
                 user_id: userId,
-                end: selectedEndPoint, // 도착 정류소 이름
+                end: arrive, // 도착 정류소 이름
                 end_route_id : selectedEndPointRouteId, // 도착 정류소 노선 ID
 
             }
@@ -81,7 +86,7 @@ const handleItemPress = async () => {
 
             <View style={styles.infoContainer}>
                 <Text style={styles.infoText}>탑승할 버스 번호판: {selectedFirstNum}</Text>
-                <Text style={styles.infoText}>내릴 정류장: {selectedEndPoint}</Text>
+                <Text style={styles.infoText}>내릴 정류장: {arrive}</Text>
             </View>
 
             <View style={styles.buttonContainer}>

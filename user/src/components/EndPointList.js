@@ -14,7 +14,7 @@ const EndPointList = ({navigation, route}) => {
         busSecondNum,
         busDirs,
         currentBusStop,
-        busRoutedId,
+        busRouteId,
         userId, 
         selectedUID,
         selectedName,
@@ -26,12 +26,16 @@ const EndPointList = ({navigation, route}) => {
     useEffect(() => {
         axios.get(`http://port-0-java-springboot-12fhqa2blnemug25.sel5.cloudtype.app/getStationByName?stSrch=${arrive}`)
         .then(response => {
+          console.log("==== EndPoint 페이지 ====");
           // 가져온 데이터를 상태에 저장 response.data == bus Class
           console.log('200 요청 성공');
+          console.log('response.data : ' + response.data);
+          console.log('arrive : ' + arrive);
+
           setEBusArsId(response.data.arsId);            // 도착 버스 번호
           
-          console.log('endPointList: ');
           console.log('endArsId: ' + response.data.arsId);
+          console.log('arrive: ' + arrive);
           navigation.navigate('EndPointData', {
             // 출발지의 그것들
             busNums,
@@ -41,7 +45,7 @@ const EndPointList = ({navigation, route}) => {
             busSecondNum,
             busDirs,
             currentBusStop,
-            busRoutedId,
+            busRouteId,
             userId, 
             selectedUID,
             selectedName,

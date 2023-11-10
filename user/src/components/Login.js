@@ -17,6 +17,8 @@ function Login({navigation}) {
         }).then(response => {
           // 성공적으로 요청을 보낸 경우의 처리
           console.log('요청 성공:', response.data);
+          console.log('userId:', userId);
+
           navigation.navigate('Main', {
             userId: userId
           });

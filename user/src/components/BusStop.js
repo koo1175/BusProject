@@ -17,20 +17,32 @@ const BusStop = ({navigation, route}) => {
     busSecondNum,
     busDirs,
     currentBusStop,
-    busRoutedId,
+    busRouteId,
 
-    selectedUID : selectedUID,
-    userId: userId,
-    selectedName: selectedName,
+    selectedUID,
+    userId,
+    selectedName,
     arrive,
 
+    ebusFirstTime,
+    ebusSecondTime,
+    ebusFirstNum,
+    ebusSecondNum,
+    ebusDirs,
+    ecurrentBusStop,
+    ebusRoutedId,
     // 도착지
     ebusNums,
    } = route.params;
    console.log("==== BusStop 페이지 ====")
+   console.log("userId:"+ userId);
    console.log("출발지 버스들 busNums:"+ busNums);
+   console.log("출발지 버스들 busRouteId:"+ busRouteId);
    console.log("출발지 버스들 busFirstNum:"+ busFirstNum);
    console.log("도착지 버스들 ebusNums:"+ ebusNums);
+   console.log("도착지 버스들 ebusRouteId:"+ ebusRoutedId);
+
+
 // 두 배열에서 중복되는 값을 찾아 새 배열을 생성
 const duplicatedBusNums = busNums.filter(value => ebusNums.includes(value));
 
@@ -47,7 +59,7 @@ const busArr = busNumArr.map(index => ({
   busSecondNum: busSecondNum[index],
   busDirs: busDirs[index],
   currentBusStop: currentBusStop[index],
-  busRoutedId: busRoutedId[index],
+  busRouteId: busRouteId[index],
 }));
 
 console.log("busArr:"+ busArr[0].busNum);
@@ -63,7 +75,6 @@ console.log("duplicatedBusNums : " + duplicatedBusNums);
     const selectedSecondNum = item.busSecondNum;
     const selectedCurrentBusStop = item.currentBusStop;
     const selectedDir = item.busDirs;
-    const seletedRoutedId = item.busRoutedId;   // 출발 정류장 노선 ID
     // 선택한 문자열을 다음 페이지인 'EndPoint' 페이지로 전달
     navigation.navigate('CheckRideBus', {
       selectedNum,
@@ -74,9 +85,11 @@ console.log("duplicatedBusNums : " + duplicatedBusNums);
       selectedCurrentBusStop,
       selectedDir,
       selectedName, // 현재 정류장 이름 - > 기사한테 승객이 타는 위치를 알려주기 위해 전달해두자
-      seletedRoutedId,
+      seletedRoutedId : busRouteId,
       userId: userId,
       selectedName: selectedName,
+      arrive,
+      selectedEndPointRouteId : ebusRoutedId
     });
   };
 

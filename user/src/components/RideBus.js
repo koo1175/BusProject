@@ -19,6 +19,7 @@ const RideBus = ({ navigation,route }) => {
         // 스프링 부트 서버(BusRouteAllListController)에서 api에 요청해서 받아온 정류장 데이터를 가져온다
         axios.get(`https://port-0-java-springboot-12fhqa2blnemug25.sel5.cloudtype.app/getStationByPos?X=126.9407&Y=37.56223`) 
           .then(response => {
+            console.log("userId:"+ userId);
             console.log(response.data);
             setBusNames(response.data.nearStationName);
             setBusUIDs(response.data.nearStationUIDs);
@@ -45,8 +46,6 @@ const RideBus = ({ navigation,route }) => {
             가까운 정류장
         </Text>
         <View>
-            <Text>Latitude: {latitude}</Text>
-            <Text>Longitude: {longitude}</Text>
             {/* <Text>busStops: {busStops.nearStationName}</Text> */}
             <Text>busNames: {busNames}</Text>
             <Text>busUIDs: {busUIDs}</Text>

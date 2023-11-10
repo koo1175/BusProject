@@ -13,7 +13,7 @@ const EndPointData = ({navigation, route}) => {
             busSecondNum,
             busDirs,
             currentBusStop,
-            busRoutedId,
+            busRouteId,
             userId, 
             selectedUID,
             selectedName,
@@ -27,7 +27,7 @@ const EndPointData = ({navigation, route}) => {
   const [ebusSecondNum, setEBusSecondNum] = useState([]);
   const [ebusDirs, setEBusDirs] = useState([]);
   const [ecurrentBusStop, setECurrentBusStop] = useState([]); // 현재 정류장 번호
-  const [ebusRoutedId, setEBusRoutedId] = useState([]); // 노선 ID -> 다음 axiod시 필요 ( 노선 ID에 해당하는 경유 정류장 리스트 조회 )
+  const [ebusRouteId, setEBusRouteId] = useState([]); // 노선 ID -> 다음 axiod시 필요 ( 노선 ID에 해당하는 경유 정류장 리스트 조회 )
 
     useEffect(() => {
       const fetchData = async () => {
@@ -43,10 +43,13 @@ const EndPointData = ({navigation, route}) => {
           setEBusSecondNum(response.data.arriveBusSecondNum); // 차 번호판(두번째)
           setECurrentBusStop(response.data.currentBusStop); // 현재 버스 정류장 번호
           setEBusDirs(response.data.arriveBusDir); // 버스 방향
-          setEBusRoutedId(response.data.busRoutedId); // 노선 ID
+          setEBusRouteId(response.data.busRoutedId); // 노선 ID
           
           console.log("==== EndPointData 페이지 ====");  
           console.log("ebusNums : "+response.data.arriveBusNum);
+          console.log("busRouteId : "+busRouteId);
+          console.log("ebusRouteId : "+response.data.busRoutedId);
+          console.log("busFirstNum : "+busFirstNum);
 
           autoStart(
             response.data.arriveBusNum,
@@ -54,8 +57,8 @@ const EndPointData = ({navigation, route}) => {
             response.data.arriveBusSecondTime,
             response.data.arriveBusFirstNum,
             response.data.arriveBusSecondNum,
-            response.data.arriveBusDir,
             response.data.currentBusStop,
+            response.data.arriveBusDir,
             response.data.busRoutedId
           );
         }
@@ -80,7 +83,7 @@ const EndPointData = ({navigation, route}) => {
        busSecondNum,
        busDirs,
        currentBusStop,
-       busRoutedId,
+       busRouteId,
 
        selectedUID: selectedUID,
        userId: userId,

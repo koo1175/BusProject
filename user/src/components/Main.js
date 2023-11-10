@@ -65,6 +65,7 @@ function Main({navigation, route}) {
         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('RideBus', {
             latitude: 126.924145806,
             longitude: 37.56205,
+            userId,
         })}>
             <View style={styles.buttonContent}>
                 <FontAwesome5 name="bus" size={24} color="black" style={styles.thirdIcon} />
