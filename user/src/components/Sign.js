@@ -1,7 +1,8 @@
 // Sign.js
 import React, { useState, useEffect } from 'react';
-import { View, Button, Text, TextInput, FlatList, StyleSheet, TouchableOpacity, Alert } from 'react-native';
+import { View, Text, Button, TouchableWithoutFeedback, TextInput, StyleSheet, TouchableOpacity, Alert, Keyboard, Dimensions } from 'react-native';
 import axios from 'axios';
+import CheckBox from 'expo-checkbox';
 
 function Sign({navigation}) {
   const [userId, setUserId] = useState('');
@@ -12,6 +13,7 @@ function Sign({navigation}) {
   const [rideORgetOff, setRideORgetOff] = useState(false);
   const [idValidationMessage, setIdValidationMessage] = useState(""); // 아이디 유효성 검사 결과 메시지를 저장할 상태 변수
   const [isValid, setIsValid] = useState(false);
+  const [blind, setBlind] = useState(false);
 
   // 정규 표현식 패턴들
   const regexrId = /^[a-zA-Z0-9]{4,12}$/;
@@ -84,7 +86,9 @@ function Sign({navigation}) {
             name: name,
             password: password,
             ride_or_getoff: rideORgetOff,
-            phone_num: phoneNum}
+            phone_num: phoneNum,
+            blind : blind
+        }
           })
         .then(response => {
           // 성공적으로 요청을 보낸 경우의 처리
@@ -101,135 +105,112 @@ function Sign({navigation}) {
         console.error('Error registering user:', error);
     }
   };
-
   return (
-      <View>
-          <Text>아이디 :</Text>
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+    <View style={styles.container}>
+        <Text style={styles.title}>회원가입</Text>
+        <View style={styles.inputContainer}>
+          <Text style={styles.label}>아이디</Text>
           <TextInput
+              style={styles.input}
               placeholder="아이디를 입력하세요"
               value={userId}
               onChangeText={text => setUserId(text)}
           />
-          <TouchableOpacity
-                    style={styles.validationButton}
-                    onPress={handleSignUp}
-                >
-                    <Text style={styles.buttonText}>아이디 확인</Text>
-                </TouchableOpacity>
-          <Text>비밀번호 :</Text>
+        </View>
+        <View style={styles.inputContainer}>
+          <Text style={styles.label}>비밀번호</Text>
           <TextInput
+              style={styles.input}
               placeholder="비밀번호를 입력하세요"
               secureTextEntry={true}
               value={password}
               onChangeText={text => setPassword(text)}
           />
-          <View style={styles.inputContainer}>
-                <Text style={styles.inputLabel}>비밀번호 확인</Text>
-                <TextInput
-                    style={styles.textInput}
-                    keyboardType='default'
-                    secureTextEntry={true}
-                    placeholder='비밀번호를 다시 입력하세요'
-                    value={password2}
-                    onChangeText={(text) => setPassword2(text)}
-                />
-            </View>
-          <Text>이름 :</Text>
+        </View>
+        <View style={styles.inputContainer}>
+          <Text style={styles.label}>비밀번호 확인</Text>
           <TextInput
+              style={styles.input}
+              placeholder="비밀번호를 다시 입력하세요"
+              secureTextEntry={true}
+              value={password2}
+              onChangeText={text => setPassword2(text)}
+          />
+        </View>
+        <View style={styles.inputContainer}>
+          <Text style={styles.label}>이름</Text>
+          <TextInput
+              style={styles.input}
               placeholder="이름을 입력하세요"
               value={name}
-              onChangeText={text => setName(text)} // 이름을 상태로 업데이트합니다.
+              onChangeText={text => setName(text)}
           />
-          <Text>연락처 :</Text>
+        </View>
+        <View style={styles.inputContainer}>
+          <Text style={styles.label}>연락처</Text>
           <TextInput
-                placeholder="연락처를 입력하세요"
-                value={phoneNum}
-                onChangeText={text => setPhoneNum(text)}
-            />
-            
-          <Button style={styles.signupButton} title="회원가입" onPress={() => registerUser()} />
-      </View>
-  );
+              style={styles.input}
+              placeholder="연락처를 입력하세요"
+              value={phoneNum}
+              onChangeText={text => setPhoneNum(text)}
+          />
+        </View>
+        <View style={styles.inputContainer}>
+          <Text style={styles.label}>시각 장애인 여부</Text>
+          <CheckBox
+              value={blind}
+              onValueChange={setBlind}
+          />
+        </View>
+        <TouchableOpacity style={styles.button} onPress={() => registerUser()}>
+          <Text style={styles.buttonText}>회원가입</Text>
+        </TouchableOpacity>
+    </View>
+    </TouchableWithoutFeedback>
+);
 };
 
 const styles = StyleSheet.create({
-  formContainer: {
-      width: '80%',
-  },
-  container: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: 'white',
-  },
-  text_title: {
-      fontSize: 50,
-      color: '#125688', // 텍스트 색상 설정
-      marginBottom: 30,
-      fontWeight: 'bold',
-  },
-  inputContainer: {
-      flexDirection: 'column',
-      marginBottom: 20,
-  },
-  inputLabel: {
-      fontSize: 18,
-      marginBottom: 10,
-      color: 'gray',
-      textAlign: 'left',
-  },
-  textInput: {
-      borderColor: "#E5E5E5",
-      borderWidth: 1,
-      height: 40,
-      fontSize: 18,
-      borderRadius: 5,
-      paddingLeft: 10,
-      textAlign: 'left',
-      backgroundColor: '#FAFAFA',
-  },
-  InputId: {
-      borderColor: "#E5E5E5",
-      borderWidth: 1,
-      width : '70%',
-      height: 40,
-      fontSize: 18,
-      borderRadius: 5,
-      paddingLeft: 10,
-      textAlign: 'left',
-      backgroundColor: '#FAFAFA',
-  },
-  idInputContainer: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-  },
-  signupButton: {
-      backgroundColor: '#0095F6',
-      padding: 15,
-      justifyContent: 'center',
-      alignItems: 'center',
-      borderRadius: 5,
-      marginTop: 20,
-  },
-  buttonText: {
-      color: 'white',
-      fontSize: 20,
-      fontWeight: 'bold',
-  },
-  validationButton: {
-      backgroundColor: '#0095F6',
-      width: 80,
-      height: 40,
-      justifyContent: 'center',
-      alignItems: 'center',
-      borderRadius: 5,
-      marginLeft: 10,
-  },
-  validationMessage: {
-      color: '#0095F6',
-      marginTop: 5,
-      textAlign: 'left',
-  },
+container: {
+  flex: 1,
+  padding: 20,
+  backgroundColor: '#fff',
+  justifyContent: 'center',
+},
+title: {
+  fontSize: 24,
+  fontWeight: 'bold',
+  marginBottom: 20,
+  textAlign: 'center',
+},
+inputContainer: {
+  marginBottom: 10,
+},
+label: {
+  fontSize: 18,
+  marginBottom: 5,
+},
+input: {
+  height: 40,
+  borderColor: '#999',
+  borderWidth: 1,
+  borderRadius: 5,
+  paddingLeft: 10,
+  backgroundColor: '#fafafa',
+},
+button: {
+  backgroundColor: '#0095F6',
+  padding: 10,
+  borderRadius: 5,
+  marginTop: 20,
+},
+buttonText: {
+  color: '#fff',
+  fontSize: 20,
+  fontWeight: 'bold',
+  textAlign: 'center',
+},
 });
+
 export default Sign;

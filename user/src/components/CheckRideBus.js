@@ -24,10 +24,12 @@ function CheckRideBus ({navigation, route}) {
         arrive
     } = route.params;
     const [busStops, setBusStops] = useState([]);
+    console.log("===== checkRideBus 페이지 ===== ");
     console.log("selectedFirstNum: "+selectedFirstNum);
     console.log("selectedName: "+selectedName);
     console.log("seletedRoutedId: "+seletedRoutedId);
     console.log("userId: "+userId);
+    console.log("selectedFirstNum: "+arrive);
     console.log("selectedEndPointRouteId: "+selectedEndPointRouteId);
 // 확인 버튼 눌렀을 때
 // 해야하는 것 
@@ -39,9 +41,8 @@ const handleItemPress = async () => {
                 start : selectedName, // 출발 정류소 이름
                 start_route_id : seletedRoutedId,
                 user_id: userId,
-                end: arrive, // 도착 정류소 이름
+                arrive: arrive, // 도착 정류소 이름
                 end_route_id : selectedEndPointRouteId, // 도착 정류소 노선 ID
-
             }
         })
         .then(response => {
@@ -65,6 +66,14 @@ const handleItemPress = async () => {
             
            
         }).catch(error => {
+            navigation.navigate('Buzzer', {
+                selectedFirstNum: selectedFirstNum,
+                selectedCurrentBusStop: selectedCurrentBusStop,
+                selectedEndPoint: selectedEndPoint,
+                start : selectedName,
+                end : selectedEndPoint,
+                userId: userId,
+            });
             console.error('Error fetching bus stops:', error);
           });
         }

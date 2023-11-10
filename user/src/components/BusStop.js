@@ -75,6 +75,7 @@ console.log("duplicatedBusNums : " + duplicatedBusNums);
     const selectedSecondNum = item.busSecondNum;
     const selectedCurrentBusStop = item.currentBusStop;
     const selectedDir = item.busDirs;
+
     // 선택한 문자열을 다음 페이지인 'EndPoint' 페이지로 전달
     navigation.navigate('CheckRideBus', {
       selectedNum,
@@ -85,7 +86,8 @@ console.log("duplicatedBusNums : " + duplicatedBusNums);
       selectedCurrentBusStop,
       selectedDir,
       selectedName, // 현재 정류장 이름 - > 기사한테 승객이 타는 위치를 알려주기 위해 전달해두자
-      seletedRoutedId : busRouteId,
+      // seletedRoutedId : busRouteId, 기존 코드
+      seletedRoutedId : selectedUID,
       userId: userId,
       selectedName: selectedName,
       arrive,

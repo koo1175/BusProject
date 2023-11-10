@@ -6,6 +6,7 @@ import axios from 'axios';
 function Login({navigation}) {
   const [userId, setUserId] = useState('');
   const [password, setPassword] = useState('');
+  const [blind, setBlind] = useState(false);
 
   const login = async () => {
     try {
@@ -18,9 +19,12 @@ function Login({navigation}) {
           // 성공적으로 요청을 보낸 경우의 처리
           console.log('요청 성공:', response.data);
           console.log('userId:', userId);
-
+          console.log('userId:', response.data.blind);
+          setBlind(response.data.blind);
           navigation.navigate('Main', {
-            userId: userId
+            userId: userId,
+            blind : response.data.blind
+
           });
           // 서버에서 보낸 응답 데이터는 response.data에서 접근할 수 있음
         })

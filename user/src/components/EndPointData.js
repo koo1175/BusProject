@@ -48,7 +48,7 @@ const EndPointData = ({navigation, route}) => {
           console.log("==== EndPointData 페이지 ====");  
           console.log("ebusNums : "+response.data.arriveBusNum);
           console.log("busRouteId : "+busRouteId);
-          console.log("ebusRouteId : "+response.data.busRoutedId);
+          console.log("ebusRouteId : "+ebusArsId);
           console.log("busFirstNum : "+busFirstNum);
 
           autoStart(
@@ -59,7 +59,7 @@ const EndPointData = ({navigation, route}) => {
             response.data.arriveBusSecondNum,
             response.data.currentBusStop,
             response.data.arriveBusDir,
-            response.data.busRoutedId
+            ebusArsId
           );
         }
         catch(error) {
@@ -97,7 +97,7 @@ const EndPointData = ({navigation, route}) => {
         ebusSecondNum,
         ebusDirs,
         ecurrentBusStop,
-        ebusRoutedId
+        ebusRoutedId:ebusArsId
 
         })
 }

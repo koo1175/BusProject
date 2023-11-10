@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Text, FlatList, TouchableOpacity } from 'react-native';
 import { ListItem, Icon } from 'react-native-elements';
 import axios from 'axios';
+import { Ionicons } from '@expo/vector-icons';
+
 
   
 const RideBus = ({ navigation,route }) => {
@@ -14,6 +16,7 @@ const RideBus = ({ navigation,route }) => {
   // 버스 정류장 데이터 관리
   const [busUIDs, setBusUIDs] = useState([]);
   const [busNames, setBusNames] = useState([]);
+  const [busStops, setBusStops] = useState([]);
 
       useEffect(() => {
         // 스프링 부트 서버(BusRouteAllListController)에서 api에 요청해서 받아온 정류장 데이터를 가져온다
@@ -41,24 +44,22 @@ const RideBus = ({ navigation,route }) => {
       };
 
     return (
-        <View>
+        <View style={styles.container}>
         <Text style={ styles.titleStyle }>
             가까운 정류장
         </Text>
-        <View>
-            {/* <Text>busStops: {busStops.nearStationName}</Text> */}
-            <Text>busNames: {busNames}</Text>
-            <Text>busUIDs: {busUIDs}</Text>
-        </View>
         <FlatList
             data={busNames}
             renderItem={({ item, index }) => (
-                <TouchableOpacity onPress={() => handleItemPress(item, index)}>
-                    <ListItem bottomDivider>
+                <TouchableOpacity onPress={() => handleItemPress(item, index)} style={styles.listItem}>
+                    <ListItem style={styles.listItemContent}>
                     <ListItem.Content>
-                        <ListItem.Title>{item}</ListItem.Title>
+                      <Ionicons name="bus-outline" size={50} color="black" />
+                        <ListItem.Title style={styles.listItemTitle}>{item}</ListItem.Title>
                     </ListItem.Content>
+                    <Ionicons name="chevron-forward-outline" size={24} color="#999" />
                     </ListItem>
+                    
                 </TouchableOpacity>
             )}
         />
@@ -68,27 +69,41 @@ const RideBus = ({ navigation,route }) => {
 
 const styles = StyleSheet.create({
   container: {
-      flex: 1,
-      backgroundColor: 'white',
-  },
-  titleStyle: {
-      fontSize: 24,
-      fontWeight: 'bold',
-      marginVertical: 10,
-  },
-  locationInfo: {
-      marginBottom: 20,
-      padding: 10,
-      backgroundColor: '#F0F0F0',
-
-  },
-  listItem: {
-      marginHorizontal: 16,
-      marginVertical: 8,
-      borderRadius: 8,
-  },
-  listItemTitle: {
-      fontSize: 23,
-  },
+    flex: 1,
+    backgroundColor: 'white',
+},
+titleStyle: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginTop: 20,
+    marginBottom: 10,
+    paddingHorizontal: 20,
+},
+listItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    backgroundColor: '#f9f9f9', // 애플 디자인에 맞는 연한 배경색
+    padding: 20,
+    marginHorizontal: 20,
+    marginVertical: 10,
+    borderRadius: 10, // 라운드 코너
+    shadowColor: "#000", // 간단한 그림자 효과
+    shadowOffset: {
+        width: 0,
+        height: 2,
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: 1.41,
+    elevation: 2,
+},
+listItemContent: {
+    flexDirection: 'row',
+    alignItems: 'center',
+},
+listItemTitle: {
+    fontSize: 30,
+    marginLeft: 10, // 아이콘과 텍스트 사이의 간격
+},
 });
 export default RideBus;
